@@ -49,10 +49,7 @@ namespace GameFramework
         /// </summary>
         public Type Type
         {
-            get
-            {
-                return m_Type;
-            }
+            get { return m_Type; }
         }
 
         /// <summary>
@@ -60,10 +57,7 @@ namespace GameFramework
         /// </summary>
         public string Name
         {
-            get
-            {
-                return m_Name;
-            }
+            get { return m_Name; }
         }
 
         /// <summary>

@@ -33,9 +33,5 @@ namespace UnityGameFramework.Editor
 
             Repaint();
         }
-
-        private void OnEnable()
-        {
-        }
     }
 }

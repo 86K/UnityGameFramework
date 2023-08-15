@@ -38,6 +38,7 @@ namespace UnityGameFramework.Editor
         {
             m_HelperTypeName = serializedObject.FindProperty(Utility.Text.Format("m_{0}HelperTypeName", m_Name));
             m_CustomHelper = serializedObject.FindProperty(Utility.Text.Format("m_Custom{0}Helper", m_Name));
+            Debug.Log($"2  m_{m_Name}HelperTypeName  {m_HelperTypeName.stringValue}");
         }
 
         public void Draw()

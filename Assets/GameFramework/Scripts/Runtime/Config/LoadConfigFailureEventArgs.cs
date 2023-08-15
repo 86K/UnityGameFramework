@@ -19,6 +19,7 @@ namespace UnityGameFramework.Runtime
         /// 加载全局配置失败事件编号。
         /// </summary>
         public static readonly int EventId = typeof(LoadConfigFailureEventArgs).GetHashCode();
+            
 
         /// <summary>
         /// 初始化加载全局配置失败事件的新实例。

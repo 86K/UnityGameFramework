@@ -36,6 +36,7 @@ namespace UnityGameFramework.Runtime
         public override bool ReadData(IConfigManager configManager, string configAssetName, object configAsset, object userData)
         {
             TextAsset configTextAsset = configAsset as TextAsset;
+            // configTextAsset.name;
             if (configTextAsset != null)
             {
                 if (configAssetName.EndsWith(BytesAssetExtension, StringComparison.Ordinal))

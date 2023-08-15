@@ -35,10 +35,7 @@ namespace GameFramework
         /// </summary>
         public int Count
         {
-            get
-            {
-                return m_LinkedList.Count;
-            }
+            get { return m_LinkedList.Count; }
         }
 
         /// <summary>
@@ -46,10 +43,7 @@ namespace GameFramework
         /// </summary>
         public int CachedNodeCount
         {
-            get
-            {
-                return m_CachedNodes.Count;
-            }
+            get { return m_CachedNodes.Count; }
         }
 
         /// <summary>
@@ -57,10 +51,7 @@ namespace GameFramework
         /// </summary>
         public LinkedListNode<T> First
         {
-            get
-            {
-                return m_LinkedList.First;
-            }
+            get { return m_LinkedList.First; }
         }
 
         /// <summary>
@@ -68,10 +59,7 @@ namespace GameFramework
         /// </summary>
         public LinkedListNode<T> Last
         {
-            get
-            {
-                return m_LinkedList.Last;
-            }
+            get { return m_LinkedList.Last; }
         }
 
         /// <summary>
@@ -79,10 +67,7 @@ namespace GameFramework
         /// </summary>
         public bool IsReadOnly
         {
-            get
-            {
-                return ((ICollection<T>)m_LinkedList).IsReadOnly;
-            }
+            get { return ((ICollection<T>)m_LinkedList).IsReadOnly; }
         }
 
         /// <summary>
@@ -90,10 +75,7 @@ namespace GameFramework
         /// </summary>
         public object SyncRoot
         {
-            get
-            {
-                return ((ICollection)m_LinkedList).SyncRoot;
-            }
+            get { return ((ICollection)m_LinkedList).SyncRoot; }
         }
 
         /// <summary>
@@ -101,10 +83,7 @@ namespace GameFramework
         /// </summary>
         public bool IsSynchronized
         {
-            get
-            {
-                return ((ICollection)m_LinkedList).IsSynchronized;
-            }
+            get { return ((ICollection)m_LinkedList).IsSynchronized; }
         }
 
         /// <summary>
@@ -335,7 +314,7 @@ namespace GameFramework
             return new Enumerator(m_LinkedList);
         }
 
-        private LinkedListNode<T> AcquireNode(T value)
+        private LinkedListNode<T>  AcquireNode(T value)
         {
             LinkedListNode<T> node = null;
             if (m_CachedNodes.Count > 0)
@@ -407,10 +386,7 @@ namespace GameFramework
             /// </summary>
             public T Current
             {
-                get
-                {
-                    return m_Enumerator.Current;
-                }
+                get { return m_Enumerator.Current; }
             }
 
             /// <summary>
@@ -418,10 +394,7 @@ namespace GameFramework
             /// </summary>
             object IEnumerator.Current
             {
-                get
-                {
-                    return m_Enumerator.Current;
-                }
+                get { return m_Enumerator.Current; }
             }
 
             /// <summary>

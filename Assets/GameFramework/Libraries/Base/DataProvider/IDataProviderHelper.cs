@@ -10,7 +10,7 @@ namespace GameFramework
     /// <summary>
     /// 数据提供者辅助器接口。
     /// </summary>
-    public interface IDataProviderHelper<T>
+    public interface IDataProviderHelper<in T>
     {
         /// <summary>
         /// 读取数据。

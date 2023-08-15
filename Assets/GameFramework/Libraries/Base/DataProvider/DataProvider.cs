@@ -20,9 +20,11 @@ namespace GameFramework
         private static byte[] s_CachedBytes = null;
 
         private readonly T m_Owner;
+        
         private readonly LoadAssetCallbacks m_LoadAssetCallbacks;
         private readonly LoadBinaryCallbacks m_LoadBinaryCallbacks;
         private IResourceManager m_ResourceManager;
+        
         private IDataProviderHelper<T> m_DataProviderHelper;
         private EventHandler<ReadDataSuccessEventArgs> m_ReadDataSuccessEventHandler;
         private EventHandler<ReadDataFailureEventArgs> m_ReadDataFailureEventHandler;
