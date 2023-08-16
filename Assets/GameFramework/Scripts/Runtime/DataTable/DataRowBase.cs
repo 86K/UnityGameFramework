@@ -5,8 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework.DataTable;
-
 namespace UnityGameFramework.Runtime
 {
     /// <summary>

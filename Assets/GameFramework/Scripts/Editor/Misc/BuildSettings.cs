@@ -5,7 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml;
@@ -25,7 +24,8 @@ namespace UnityGameFramework.Editor
 
         static BuildSettings()
         {
-            s_ConfigurationPath = Type.GetConfigurationPath<BuildSettingsConfigPathAttribute>() ?? Utility.Path.GetRegularPath(Path.Combine(Application.dataPath, "GameFramework/Configs/BuildSettings.xml"));
+            string path = Path.Combine(Application.dataPath, "GameFramework/Configs/BuildSettings.xml");
+            s_ConfigurationPath = Type.GetConfigurationPath<BuildSettingsConfigPathAttribute>() ?? path.Replace('\\', '/');
             s_DefaultSceneNames.Clear();
             s_SearchScenePaths.Clear();
 

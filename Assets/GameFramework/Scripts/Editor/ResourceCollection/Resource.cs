@@ -5,8 +5,8 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
 using System.Collections.Generic;
+using UnityGameFramework.Runtime;
 
 namespace UnityGameFramework.Editor.ResourceTools
 {

@@ -5,8 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
-using GameFramework.FileSystem;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,13 +28,7 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取文件系统数量。
         /// </summary>
-        public int Count
-        {
-            get
-            {
-                return m_FileSystemManager.Count;
-            }
-        }
+        public int Count => m_FileSystemManager.Count;
 
         /// <summary>
         /// 游戏框架组件初始化。

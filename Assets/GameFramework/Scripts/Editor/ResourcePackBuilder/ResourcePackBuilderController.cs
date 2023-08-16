@@ -5,8 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
-using GameFramework.Resource;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,6 +12,8 @@ using System.Xml;
 using UnityEditor;
 using UnityEngine;
 using UnityGameFramework.Runtime;
+using FileInfo = UnityGameFramework.Runtime.FileInfo;
+using Version = UnityGameFramework.Runtime.Version;
 
 namespace UnityGameFramework.Editor.ResourceTools
 {
@@ -85,7 +85,7 @@ namespace UnityGameFramework.Editor.ResourceTools
         {
             get
             {
-                return GameFramework.Version.GameFrameworkVersion;
+                return Version.GameFrameworkVersion;
             }
         }
 
@@ -298,7 +298,7 @@ namespace UnityGameFramework.Editor.ResourceTools
                     continue;
                 }
 
-                FileInfo[] versionListFiles = platformDirectoryInfo.GetFiles("GameFrameworkVersion.*.dat", SearchOption.TopDirectoryOnly);
+                System.IO.FileInfo[] versionListFiles = platformDirectoryInfo.GetFiles("GameFrameworkVersion.*.dat", SearchOption.TopDirectoryOnly);
                 if (versionListFiles.Length != 1)
                 {
                     continue;
@@ -405,7 +405,7 @@ namespace UnityGameFramework.Editor.ResourceTools
                 if (sourceVersion != null)
                 {
                     DirectoryInfo sourceDirectoryInfo = new DirectoryInfo(Path.Combine(Path.Combine(SourcePath, sourceVersion), Platform.ToString()));
-                    FileInfo[] sourceVersionListFiles = sourceDirectoryInfo.GetFiles("GameFrameworkVersion.*.dat", SearchOption.TopDirectoryOnly);
+                    System.IO.FileInfo[] sourceVersionListFiles = sourceDirectoryInfo.GetFiles("GameFrameworkVersion.*.dat", SearchOption.TopDirectoryOnly);
                     byte[] sourceVersionListBytes = File.ReadAllBytes(sourceVersionListFiles[0].FullName);
                     sourceVersionListBytes = Utility.Compression.Decompress(sourceVersionListBytes);
                     using (Stream stream = new MemoryStream(sourceVersionListBytes))
@@ -416,7 +416,7 @@ namespace UnityGameFramework.Editor.ResourceTools
 
                 UpdatableVersionList targetUpdatableVersionList = default(UpdatableVersionList);
                 DirectoryInfo targetDirectoryInfo = new DirectoryInfo(Path.Combine(Path.Combine(SourcePath, targetVersion), Platform.ToString()));
-                FileInfo[] targetVersionListFiles = targetDirectoryInfo.GetFiles("GameFrameworkVersion.*.dat", SearchOption.TopDirectoryOnly);
+                System.IO.FileInfo[] targetVersionListFiles = targetDirectoryInfo.GetFiles("GameFrameworkVersion.*.dat", SearchOption.TopDirectoryOnly);
                 byte[] targetVersionListBytes = File.ReadAllBytes(targetVersionListFiles[0].FullName);
                 targetVersionListBytes = Utility.Compression.Decompress(targetVersionListBytes);
                 using (Stream stream = new MemoryStream(targetVersionListBytes))

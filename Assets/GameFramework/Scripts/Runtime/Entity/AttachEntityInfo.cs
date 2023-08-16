@@ -5,7 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
 using UnityEngine;
 
 namespace UnityGameFramework.Runtime
@@ -21,21 +20,9 @@ namespace UnityGameFramework.Runtime
             m_UserData = null;
         }
 
-        public Transform ParentTransform
-        {
-            get
-            {
-                return m_ParentTransform;
-            }
-        }
+        public Transform ParentTransform => m_ParentTransform;
 
-        public object UserData
-        {
-            get
-            {
-                return m_UserData;
-            }
-        }
+        public object UserData => m_UserData;
 
         public static AttachEntityInfo Create(Transform parentTransform, object userData)
         {

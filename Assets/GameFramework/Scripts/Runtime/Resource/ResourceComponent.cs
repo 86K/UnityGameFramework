@@ -5,11 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
-using GameFramework.Download;
-using GameFramework.FileSystem;
-using GameFramework.ObjectPool;
-using GameFramework.Resource;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -1443,57 +1438,57 @@ namespace UnityGameFramework.Runtime
             m_ResourceManager.AddLoadResourceAgentHelper(loadResourceAgentHelper);
         }
 
-        private void OnResourceVerifyStart(object sender, GameFramework.Resource.ResourceVerifyStartEventArgs e)
+        private void OnResourceVerifyStart(object sender, ResourceVerifyStartEventArgs e)
         {
             m_EventComponent.Fire(this, ResourceVerifyStartEventArgs.Create(e));
         }
 
-        private void OnResourceVerifySuccess(object sender, GameFramework.Resource.ResourceVerifySuccessEventArgs e)
+        private void OnResourceVerifySuccess(object sender, ResourceVerifySuccessEventArgs e)
         {
             m_EventComponent.Fire(this, ResourceVerifySuccessEventArgs.Create(e));
         }
 
-        private void OnResourceVerifyFailure(object sender, GameFramework.Resource.ResourceVerifyFailureEventArgs e)
+        private void OnResourceVerifyFailure(object sender, ResourceVerifyFailureEventArgs e)
         {
             m_EventComponent.Fire(this, ResourceVerifyFailureEventArgs.Create(e));
         }
 
-        private void OnResourceApplyStart(object sender, GameFramework.Resource.ResourceApplyStartEventArgs e)
+        private void OnResourceApplyStart(object sender, ResourceApplyStartEventArgs e)
         {
             m_EventComponent.Fire(this, ResourceApplyStartEventArgs.Create(e));
         }
 
-        private void OnResourceApplySuccess(object sender, GameFramework.Resource.ResourceApplySuccessEventArgs e)
+        private void OnResourceApplySuccess(object sender, ResourceApplySuccessEventArgs e)
         {
             m_EventComponent.Fire(this, ResourceApplySuccessEventArgs.Create(e));
         }
 
-        private void OnResourceApplyFailure(object sender, GameFramework.Resource.ResourceApplyFailureEventArgs e)
+        private void OnResourceApplyFailure(object sender, ResourceApplyFailureEventArgs e)
         {
             m_EventComponent.Fire(this, ResourceApplyFailureEventArgs.Create(e));
         }
 
-        private void OnResourceUpdateStart(object sender, GameFramework.Resource.ResourceUpdateStartEventArgs e)
+        private void OnResourceUpdateStart(object sender, ResourceUpdateStartEventArgs e)
         {
             m_EventComponent.Fire(this, ResourceUpdateStartEventArgs.Create(e));
         }
 
-        private void OnResourceUpdateChanged(object sender, GameFramework.Resource.ResourceUpdateChangedEventArgs e)
+        private void OnResourceUpdateChanged(object sender, ResourceUpdateChangedEventArgs e)
         {
             m_EventComponent.Fire(this, ResourceUpdateChangedEventArgs.Create(e));
         }
 
-        private void OnResourceUpdateSuccess(object sender, GameFramework.Resource.ResourceUpdateSuccessEventArgs e)
+        private void OnResourceUpdateSuccess(object sender, ResourceUpdateSuccessEventArgs e)
         {
             m_EventComponent.Fire(this, ResourceUpdateSuccessEventArgs.Create(e));
         }
 
-        private void OnResourceUpdateFailure(object sender, GameFramework.Resource.ResourceUpdateFailureEventArgs e)
+        private void OnResourceUpdateFailure(object sender, ResourceUpdateFailureEventArgs e)
         {
             m_EventComponent.Fire(this, ResourceUpdateFailureEventArgs.Create(e));
         }
 
-        private void OnResourceUpdateAllComplete(object sender, GameFramework.Resource.ResourceUpdateAllCompleteEventArgs e)
+        private void OnResourceUpdateAllComplete(object sender, ResourceUpdateAllCompleteEventArgs e)
         {
             m_EventComponent.Fire(this, ResourceUpdateAllCompleteEventArgs.Create(e));
         }

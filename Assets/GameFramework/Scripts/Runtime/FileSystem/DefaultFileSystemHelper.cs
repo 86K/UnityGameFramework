@@ -5,7 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework.FileSystem;
 using System;
 
 namespace UnityGameFramework.Runtime
@@ -30,10 +29,8 @@ namespace UnityGameFramework.Runtime
             {
                 return new AndroidFileSystemStream(fullPath, access, createNew);
             }
-            else
-            {
-                return new CommonFileSystemStream(fullPath, access, createNew);
-            }
+
+            return new CommonFileSystemStream(fullPath, access, createNew);
         }
     }
 }

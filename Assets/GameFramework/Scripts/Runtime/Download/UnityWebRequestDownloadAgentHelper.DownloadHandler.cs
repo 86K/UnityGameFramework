@@ -5,8 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
-using GameFramework.Download;
 using System;
 #if UNITY_5_4_OR_NEWER
 using UnityEngine.Networking;

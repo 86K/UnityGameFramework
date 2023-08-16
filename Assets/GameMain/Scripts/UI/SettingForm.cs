@@ -5,7 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework.Localization;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityGameFramework.Runtime;

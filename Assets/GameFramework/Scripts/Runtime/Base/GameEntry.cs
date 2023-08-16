@@ -5,7 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -101,7 +100,7 @@ namespace UnityGameFramework.Runtime
 
             if (shutdownType == ShutdownType.Restart)
             {
-                SceneManager.LoadScene(GameFrameworkSceneId);
+                UnityEngine.SceneManagement.SceneManager.LoadScene(GameFrameworkSceneId);
                 return;
             }
 

@@ -5,7 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework.FileSystem;
 using UnityEngine;
 
 namespace UnityGameFramework.Runtime

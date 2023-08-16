@@ -5,7 +5,7 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
+using UnityGameFramework.Runtime;
 
 namespace StarForce
 {

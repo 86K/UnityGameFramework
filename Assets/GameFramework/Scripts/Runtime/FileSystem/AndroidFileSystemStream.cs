@@ -5,8 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
-using GameFramework.FileSystem;
 using System;
 using System.IO;
 using UnityEngine;
@@ -100,7 +98,7 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取或设置文件系统流位置。
         /// </summary>
-        protected override long Position
+        public override long Position
         {
             get
             {
@@ -115,19 +113,13 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取文件系统流长度。
         /// </summary>
-        protected override long Length
-        {
-            get
-            {
-                return InternalAvailable();
-            }
-        }
+        public override long Length => InternalAvailable();
 
         /// <summary>
         /// 设置文件系统流长度。
         /// </summary>
         /// <param name="length">要设置的文件系统流的长度。</param>
-        protected override void SetLength(long length)
+        public override void SetLength(long length)
         {
             throw new GameFrameworkException("SetLength is not supported in AndroidFileSystemStream.");
         }
@@ -178,7 +170,7 @@ namespace UnityGameFramework.Runtime
         /// <param name="startIndex">存储读取文件内容的二进制流的起始位置。</param>
         /// <param name="length">存储读取文件内容的二进制流的长度。</param>
         /// <returns>实际读取了多少字节。</returns>
-        protected override int Read(byte[] buffer, int startIndex, int length)
+        public override int Read(byte[] buffer, int startIndex, int length)
         {
             byte[] result = null;
             int bytesRead = InternalRead(length, out result);
@@ -201,7 +193,7 @@ namespace UnityGameFramework.Runtime
         /// <param name="buffer">存储写入文件内容的二进制流。</param>
         /// <param name="startIndex">存储写入文件内容的二进制流的起始位置。</param>
         /// <param name="length">存储写入文件内容的二进制流的长度。</param>
-        protected override void Write(byte[] buffer, int startIndex, int length)
+        public override void Write(byte[] buffer, int startIndex, int length)
         {
             throw new GameFrameworkException("Write is not supported in AndroidFileSystemStream.");
         }
@@ -209,7 +201,7 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 将文件系统流立刻更新到存储介质中。
         /// </summary>
-        protected override void Flush()
+        public override void Flush()
         {
             throw new GameFrameworkException("Flush is not supported in AndroidFileSystemStream.");
         }
@@ -217,7 +209,7 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 关闭文件系统流。
         /// </summary>
-        protected override void Close()
+        public override void Close()
         {
             InternalClose();
             m_FileStream.Dispose();

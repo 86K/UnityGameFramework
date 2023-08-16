@@ -5,7 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
 using UnityEngine;
 #if UNITY_5_5_OR_NEWER
 using UnityEngine.Rendering;

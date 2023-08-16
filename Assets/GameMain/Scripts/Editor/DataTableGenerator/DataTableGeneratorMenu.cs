@@ -5,9 +5,9 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
 using UnityEditor;
 using UnityEngine;
+using UnityGameFramework.Runtime;
 
 namespace StarForce.Editor.DataTableTools
 {

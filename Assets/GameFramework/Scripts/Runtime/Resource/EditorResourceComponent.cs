@@ -5,11 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
-using GameFramework.Download;
-using GameFramework.FileSystem;
-using GameFramework.ObjectPool;
-using GameFramework.Resource;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -50,156 +45,72 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取资源只读区路径。
         /// </summary>
-        public string ReadOnlyPath
-        {
-            get
-            {
-                return m_ReadOnlyPath;
-            }
-        }
+        public string ReadOnlyPath => m_ReadOnlyPath;
 
         /// <summary>
         /// 获取资源读写区路径。
         /// </summary>
-        public string ReadWritePath
-        {
-            get
-            {
-                return m_ReadWritePath;
-            }
-        }
+        public string ReadWritePath => m_ReadWritePath;
 
         /// <summary>
         /// 获取资源模式。
         /// </summary>
-        public ResourceMode ResourceMode
-        {
-            get
-            {
-                return ResourceMode.Unspecified;
-            }
-        }
+        public ResourceMode ResourceMode => ResourceMode.Unspecified;
 
         /// <summary>
         /// 获取当前变体。
         /// </summary>
-        public string CurrentVariant
-        {
-            get
-            {
-                return null;
-            }
-        }
+        public string CurrentVariant => null;
 
         /// <summary>
         /// 获取单机模式版本资源列表序列化器。
         /// </summary>
-        public PackageVersionListSerializer PackageVersionListSerializer
-        {
-            get
-            {
-                throw new NotSupportedException("ReadWriteVersionListSerializer");
-            }
-        }
+        public PackageVersionListSerializer PackageVersionListSerializer => throw new NotSupportedException("ReadWriteVersionListSerializer");
 
         /// <summary>
         /// 获取可更新模式版本资源列表序列化器。
         /// </summary>
-        public UpdatableVersionListSerializer UpdatableVersionListSerializer
-        {
-            get
-            {
-                throw new NotSupportedException("ReadWriteVersionListSerializer");
-            }
-        }
+        public UpdatableVersionListSerializer UpdatableVersionListSerializer => throw new NotSupportedException("ReadWriteVersionListSerializer");
 
         /// <summary>
         /// 获取本地只读区版本资源列表序列化器。
         /// </summary>
-        public ReadOnlyVersionListSerializer ReadOnlyVersionListSerializer
-        {
-            get
-            {
-                throw new NotSupportedException("ReadWriteVersionListSerializer");
-            }
-        }
+        public ReadOnlyVersionListSerializer ReadOnlyVersionListSerializer => throw new NotSupportedException("ReadWriteVersionListSerializer");
 
         /// <summary>
         /// 获取本地读写区版本资源列表序列化器。
         /// </summary>
-        public ReadWriteVersionListSerializer ReadWriteVersionListSerializer
-        {
-            get
-            {
-                throw new NotSupportedException("ReadWriteVersionListSerializer");
-            }
-        }
+        public ReadWriteVersionListSerializer ReadWriteVersionListSerializer => throw new NotSupportedException("ReadWriteVersionListSerializer");
 
         /// <summary>
         /// 获取资源包版本资源列表序列化器。
         /// </summary>
-        public ResourcePackVersionListSerializer ResourcePackVersionListSerializer
-        {
-            get
-            {
-                throw new NotSupportedException("ResourcePackVersionListSerializer");
-            }
-        }
+        public ResourcePackVersionListSerializer ResourcePackVersionListSerializer => throw new NotSupportedException("ResourcePackVersionListSerializer");
 
         /// <summary>
         /// 获取当前资源适用的游戏版本号。
         /// </summary>
-        public string ApplicableGameVersion
-        {
-            get
-            {
-                throw new NotSupportedException("ApplicableGameVersion");
-            }
-        }
+        public string ApplicableGameVersion => throw new NotSupportedException("ApplicableGameVersion");
 
         /// <summary>
         /// 获取当前内部资源版本号。
         /// </summary>
-        public int InternalResourceVersion
-        {
-            get
-            {
-                throw new NotSupportedException("InternalResourceVersion");
-            }
-        }
+        public int InternalResourceVersion => throw new NotSupportedException("InternalResourceVersion");
 
         /// <summary>
         /// 获取已准备完毕资源数量。
         /// </summary>
-        public int AssetCount
-        {
-            get
-            {
-                throw new NotSupportedException("AssetCount");
-            }
-        }
+        public int AssetCount => throw new NotSupportedException("AssetCount");
 
         /// <summary>
         /// 获取已准备完毕资源数量。
         /// </summary>
-        public int ResourceCount
-        {
-            get
-            {
-                throw new NotSupportedException("ResourceCount");
-            }
-        }
+        public int ResourceCount => throw new NotSupportedException("ResourceCount");
 
         /// <summary>
         /// 获取资源组个数。
         /// </summary>
-        public int ResourceGroupCount
-        {
-            get
-            {
-                throw new NotSupportedException("ResourceGroupCount");
-            }
-        }
+        public int ResourceGroupCount => throw new NotSupportedException("ResourceGroupCount");
 
         /// <summary>
         /// 获取或设置资源更新下载地址。
@@ -492,57 +403,57 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 资源校验开始事件。
         /// </summary>
-        public event EventHandler<GameFramework.Resource.ResourceVerifyStartEventArgs> ResourceVerifyStart = null;
+        public event EventHandler<ResourceVerifyStartEventArgs> ResourceVerifyStart = null;
 
         /// <summary>
         /// 资源校验成功事件。
         /// </summary>
-        public event EventHandler<GameFramework.Resource.ResourceVerifySuccessEventArgs> ResourceVerifySuccess = null;
+        public event EventHandler<ResourceVerifySuccessEventArgs> ResourceVerifySuccess = null;
 
         /// <summary>
         /// 资源校验失败事件。
         /// </summary>
-        public event EventHandler<GameFramework.Resource.ResourceVerifyFailureEventArgs> ResourceVerifyFailure = null;
+        public event EventHandler<ResourceVerifyFailureEventArgs> ResourceVerifyFailure = null;
 
         /// <summary>
         /// 资源应用开始事件。
         /// </summary>
-        public event EventHandler<GameFramework.Resource.ResourceApplyStartEventArgs> ResourceApplyStart = null;
+        public event EventHandler<ResourceApplyStartEventArgs> ResourceApplyStart = null;
 
         /// <summary>
         /// 资源应用成功事件。
         /// </summary>
-        public event EventHandler<GameFramework.Resource.ResourceApplySuccessEventArgs> ResourceApplySuccess = null;
+        public event EventHandler<ResourceApplySuccessEventArgs> ResourceApplySuccess = null;
 
         /// <summary>
         /// 资源应用失败事件。
         /// </summary>
-        public event EventHandler<GameFramework.Resource.ResourceApplyFailureEventArgs> ResourceApplyFailure = null;
+        public event EventHandler<ResourceApplyFailureEventArgs> ResourceApplyFailure = null;
 
         /// <summary>
         /// 资源更新开始事件。
         /// </summary>
-        public event EventHandler<GameFramework.Resource.ResourceUpdateStartEventArgs> ResourceUpdateStart = null;
+        public event EventHandler<ResourceUpdateStartEventArgs> ResourceUpdateStart = null;
 
         /// <summary>
         /// 资源更新改变事件。
         /// </summary>
-        public event EventHandler<GameFramework.Resource.ResourceUpdateChangedEventArgs> ResourceUpdateChanged = null;
+        public event EventHandler<ResourceUpdateChangedEventArgs> ResourceUpdateChanged = null;
 
         /// <summary>
         /// 资源更新成功事件。
         /// </summary>
-        public event EventHandler<GameFramework.Resource.ResourceUpdateSuccessEventArgs> ResourceUpdateSuccess = null;
+        public event EventHandler<ResourceUpdateSuccessEventArgs> ResourceUpdateSuccess = null;
 
         /// <summary>
         /// 资源更新失败事件。
         /// </summary>
-        public event EventHandler<GameFramework.Resource.ResourceUpdateFailureEventArgs> ResourceUpdateFailure = null;
+        public event EventHandler<ResourceUpdateFailureEventArgs> ResourceUpdateFailure = null;
 
         /// <summary>
         /// 资源更新全部完成事件。
         /// </summary>
-        public event EventHandler<GameFramework.Resource.ResourceUpdateAllCompleteEventArgs> ResourceUpdateAllComplete = null;
+        public event EventHandler<ResourceUpdateAllCompleteEventArgs> ResourceUpdateAllComplete = null;
 
 #pragma warning restore 0067, 0414
 
@@ -1169,7 +1080,7 @@ namespace UnityGameFramework.Runtime
             }
 
 #if UNITY_5_5_OR_NEWER
-            AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneAssetName, LoadSceneMode.Additive);
+            AsyncOperation asyncOperation = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneAssetName, LoadSceneMode.Additive);
 #else
             AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(SceneComponent.GetSceneName(sceneAssetName), LoadSceneMode.Additive);
 #endif
@@ -1224,7 +1135,7 @@ namespace UnityGameFramework.Runtime
             }
 
 #if UNITY_5_5_OR_NEWER
-            AsyncOperation asyncOperation = SceneManager.UnloadSceneAsync(sceneAssetName);
+            AsyncOperation asyncOperation = UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(sceneAssetName);
             if (asyncOperation == null)
             {
                 return;

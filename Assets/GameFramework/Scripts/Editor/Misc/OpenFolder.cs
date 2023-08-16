@@ -5,10 +5,10 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
 using System.Diagnostics;
 using UnityEditor;
 using UnityEngine;
+using UnityGameFramework.Runtime;
 
 namespace UnityGameFramework.Editor
 {
@@ -72,7 +72,7 @@ namespace UnityGameFramework.Editor
         /// <param name="folder">要打开的文件夹的路径。</param>
         public static void Execute(string folder)
         {
-            folder = Utility.Text.Format("\"{0}\"", folder);
+            folder = $"\"{folder}\"";
             switch (Application.platform)
             {
                 case RuntimePlatform.WindowsEditor:

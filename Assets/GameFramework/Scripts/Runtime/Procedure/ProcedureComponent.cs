@@ -5,9 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
-using GameFramework.Fsm;
-using GameFramework.Procedure;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -33,24 +30,12 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取当前流程。
         /// </summary>
-        public ProcedureBase CurrentProcedure
-        {
-            get
-            {
-                return m_ProcedureManager.CurrentProcedure;
-            }
-        }
+        public ProcedureBase CurrentProcedure => m_ProcedureManager.CurrentProcedure;
 
         /// <summary>
         /// 获取当前流程持续时间。
         /// </summary>
-        public float CurrentProcedureTime
-        {
-            get
-            {
-                return m_ProcedureManager.CurrentProcedureTime;
-            }
-        }
+        public float CurrentProcedureTime => m_ProcedureManager.CurrentProcedureTime;
 
         /// <summary>
         /// 游戏框架组件初始化。
@@ -63,7 +48,6 @@ namespace UnityGameFramework.Runtime
             if (m_ProcedureManager == null)
             {
                 Log.Fatal("Procedure manager is invalid.");
-                return;
             }
         }
 

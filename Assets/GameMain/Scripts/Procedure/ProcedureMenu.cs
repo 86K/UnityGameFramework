@@ -5,9 +5,8 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework.Event;
 using UnityGameFramework.Runtime;
-using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
+using ProcedureOwner = UnityGameFramework.Runtime.IFsm<UnityGameFramework.Runtime.IProcedureManager>;
 
 namespace StarForce
 {

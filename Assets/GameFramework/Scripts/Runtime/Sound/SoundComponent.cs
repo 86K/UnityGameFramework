@@ -5,12 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
-using GameFramework.Resource;
-#if UNITY_5_3
-using GameFramework.Scene;
-#endif
-using GameFramework.Sound;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -116,8 +110,8 @@ namespace UnityGameFramework.Runtime
             m_AudioListener = gameObject.GetOrAddComponent<AudioListener>();
 
 #if UNITY_5_4_OR_NEWER
-            SceneManager.sceneLoaded += OnSceneLoaded;
-            SceneManager.sceneUnloaded += OnSceneUnloaded;
+            UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
+            UnityEngine.SceneManagement.SceneManager.sceneUnloaded += OnSceneUnloaded;
 #else
             ISceneManager sceneManager = GameFrameworkEntry.GetModule<ISceneManager>();
             if (sceneManager == null)
@@ -192,8 +186,8 @@ namespace UnityGameFramework.Runtime
         private void OnDestroy()
         {
 #if UNITY_5_4_OR_NEWER
-            SceneManager.sceneLoaded -= OnSceneLoaded;
-            SceneManager.sceneUnloaded -= OnSceneUnloaded;
+            UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
+            UnityEngine.SceneManagement.SceneManager.sceneUnloaded -= OnSceneUnloaded;
 #endif
         }
 
@@ -610,7 +604,7 @@ namespace UnityGameFramework.Runtime
             return true;
         }
 
-        private void OnPlaySoundSuccess(object sender, GameFramework.Sound.PlaySoundSuccessEventArgs e)
+        private void OnPlaySoundSuccess(object sender, PlaySoundSuccessEventArgs e)
         {
             PlaySoundInfo playSoundInfo = (PlaySoundInfo)e.UserData;
             if (playSoundInfo != null)
@@ -629,7 +623,7 @@ namespace UnityGameFramework.Runtime
             m_EventComponent.Fire(this, PlaySoundSuccessEventArgs.Create(e));
         }
 
-        private void OnPlaySoundFailure(object sender, GameFramework.Sound.PlaySoundFailureEventArgs e)
+        private void OnPlaySoundFailure(object sender, PlaySoundFailureEventArgs e)
         {
             string logMessage = Utility.Text.Format("Play sound failure, asset name '{0}', sound group name '{1}', error code '{2}', error message '{3}'.", e.SoundAssetName, e.SoundGroupName, e.ErrorCode, e.ErrorMessage);
             if (e.ErrorCode == PlaySoundErrorCode.IgnoredDueToLowPriority)
@@ -644,32 +638,32 @@ namespace UnityGameFramework.Runtime
             m_EventComponent.Fire(this, PlaySoundFailureEventArgs.Create(e));
         }
 
-        private void OnPlaySoundUpdate(object sender, GameFramework.Sound.PlaySoundUpdateEventArgs e)
+        private void OnPlaySoundUpdate(object sender, PlaySoundUpdateEventArgs e)
         {
             m_EventComponent.Fire(this, PlaySoundUpdateEventArgs.Create(e));
         }
 
-        private void OnPlaySoundDependencyAsset(object sender, GameFramework.Sound.PlaySoundDependencyAssetEventArgs e)
+        private void OnPlaySoundDependencyAsset(object sender, PlaySoundDependencyAssetEventArgs e)
         {
             m_EventComponent.Fire(this, PlaySoundDependencyAssetEventArgs.Create(e));
         }
 
-        private void OnLoadSceneSuccess(object sender, GameFramework.Scene.LoadSceneSuccessEventArgs e)
+        private void OnLoadSceneSuccess(object sender, LoadSceneSuccessEventArgs e)
         {
             RefreshAudioListener();
         }
 
-        private void OnLoadSceneFailure(object sender, GameFramework.Scene.LoadSceneFailureEventArgs e)
+        private void OnLoadSceneFailure(object sender, LoadSceneFailureEventArgs e)
         {
             RefreshAudioListener();
         }
 
-        private void OnUnloadSceneSuccess(object sender, GameFramework.Scene.UnloadSceneSuccessEventArgs e)
+        private void OnUnloadSceneSuccess(object sender, UnloadSceneSuccessEventArgs e)
         {
             RefreshAudioListener();
         }
 
-        private void OnUnloadSceneFailure(object sender, GameFramework.Scene.UnloadSceneFailureEventArgs e)
+        private void OnUnloadSceneFailure(object sender, UnloadSceneFailureEventArgs e)
         {
             RefreshAudioListener();
         }

@@ -5,7 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework.ObjectPool;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityGameFramework.Runtime;
@@ -39,11 +38,7 @@ namespace StarForce
             m_HPBarItemObjectPool = GameEntry.ObjectPool.CreateSingleSpawnObjectPool<HPBarItemObject>("HPBarItem", m_InstancePoolCapacity);
             m_ActiveHPBarItems = new List<HPBarItem>();
         }
-
-        private void OnDestroy()
-        {
-        }
-
+        
         private void Update()
         {
             for (int i = m_ActiveHPBarItems.Count - 1; i >= 0; i--)

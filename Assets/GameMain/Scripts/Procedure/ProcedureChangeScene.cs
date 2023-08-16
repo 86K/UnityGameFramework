@@ -5,10 +5,8 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework.DataTable;
-using GameFramework.Event;
 using UnityGameFramework.Runtime;
-using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
+using ProcedureOwner = UnityGameFramework.Runtime.IFsm<UnityGameFramework.Runtime.IProcedureManager>;
 
 namespace StarForce
 {
@@ -20,13 +18,7 @@ namespace StarForce
         private bool m_IsChangeSceneComplete = false;
         private int m_BackgroundMusicId = 0;
 
-        public override bool UseNativeDialog
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public override bool UseNativeDialog => false;
 
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {

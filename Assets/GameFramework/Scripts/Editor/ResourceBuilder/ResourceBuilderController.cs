@@ -5,9 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
-using GameFramework.FileSystem;
-using GameFramework.Resource;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -16,6 +13,7 @@ using System.Xml;
 using UnityEditor;
 using UnityEngine;
 using UnityGameFramework.Runtime;
+using Version = UnityGameFramework.Runtime.Version;
 
 namespace UnityGameFramework.Editor.ResourceTools
 {
@@ -148,7 +146,7 @@ namespace UnityGameFramework.Editor.ResourceTools
         {
             get
             {
-                return GameFramework.Version.GameFrameworkVersion;
+                return Version.GameFrameworkVersion;
             }
         }
 

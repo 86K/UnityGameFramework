@@ -5,8 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework.FileSystem;
-using GameFramework.Resource;
 using System;
 using UnityEngine;
 

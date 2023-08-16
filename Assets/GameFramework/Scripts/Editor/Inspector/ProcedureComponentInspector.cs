@@ -5,7 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework.Procedure;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;

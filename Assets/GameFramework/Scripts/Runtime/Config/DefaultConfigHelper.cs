@@ -5,8 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
-using GameFramework.Config;
 using System;
 using System.IO;
 using System.Text;
@@ -175,7 +173,6 @@ namespace UnityGameFramework.Runtime
             if (m_ResourceComponent == null)
             {
                 Log.Fatal("Resource component is invalid.");
-                return;
             }
         }
     }

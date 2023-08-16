@@ -5,9 +5,8 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
-using GameFramework.DataTable;
 using UnityEngine;
+using UnityGameFramework.Runtime;
 
 namespace StarForce
 {

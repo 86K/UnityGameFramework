@@ -1,9 +1,7 @@
-﻿using GameFramework;
-using GameFramework.Event;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityGameFramework.Runtime;
-using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
+using ProcedureOwner = UnityGameFramework.Runtime.IFsm<UnityGameFramework.Runtime.IProcedureManager>;
 
 namespace StarForce
 {
@@ -148,7 +146,7 @@ namespace StarForce
             return Utility.Text.Format("{0:F2} EB", byteLength / 1152921504606846976f);
         }
 
-        private void OnUpdateResourcesComplete(GameFramework.Resource.IResourceGroup resourceGroup, bool result)
+        private void OnUpdateResourcesComplete(IResourceGroup resourceGroup, bool result)
         {
             if (result)
             {

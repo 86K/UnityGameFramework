@@ -5,14 +5,12 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework.Resource;
 using System;
 using System.Collections;
 using UnityEngine;
 #if UNITY_5_4_OR_NEWER
 using UnityEngine.Networking;
 #endif
-using UnityEngine.SceneManagement;
 
 namespace UnityGameFramework.Runtime
 {
@@ -47,10 +45,10 @@ namespace UnityGameFramework.Runtime
             }
             else
             {
-                SceneManager.UnloadSceneAsync(SceneComponent.GetSceneName(sceneAssetName));
+                UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(SceneComponent.GetSceneName(sceneAssetName));
             }
 #else
-            if (SceneManager.UnloadScene(SceneComponent.GetSceneName(sceneAssetName)))
+            if (UnityEngine.SceneManagement.SceneManager.UnloadScene(SceneComponent.GetSceneName(sceneAssetName)))
             {
                 if (unloadSceneCallbacks.UnloadSceneSuccessCallback != null)
                 {
@@ -104,10 +102,6 @@ namespace UnityGameFramework.Runtime
             */
         }
 
-        private void Start()
-        {
-        }
-
         private IEnumerator LoadBytesCo(string fileUri, LoadBytesCallbacks loadBytesCallbacks, object userData)
         {
             bool isError = false;
@@ -157,7 +151,7 @@ namespace UnityGameFramework.Runtime
 #if UNITY_5_5_OR_NEWER
         private IEnumerator UnloadSceneCo(string sceneAssetName, UnloadSceneCallbacks unloadSceneCallbacks, object userData)
         {
-            AsyncOperation asyncOperation = SceneManager.UnloadSceneAsync(SceneComponent.GetSceneName(sceneAssetName));
+            AsyncOperation asyncOperation = UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(SceneComponent.GetSceneName(sceneAssetName));
             if (asyncOperation == null)
             {
                 yield break;

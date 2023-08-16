@@ -5,11 +5,12 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
 using UnityGameFramework.Editor.ResourceTools;
+using UnityGameFramework.Runtime;
+using FileInfo = System.IO.FileInfo;
 
 namespace StarForce.Editor
 {

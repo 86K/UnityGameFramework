@@ -5,7 +5,7 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework.FileSystem;
+using UnityGameFramework.Runtime;
 
 namespace UnityGameFramework.Editor.ResourceTools
 {

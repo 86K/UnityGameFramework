@@ -5,13 +5,13 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
-using GameFramework.WebRequest;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace UnityGameFramework.Runtime
 {
+    /*默认web请求任务优先级：0*/
+    
     /// <summary>
     /// Web 请求组件。
     /// </summary>
@@ -545,17 +545,17 @@ namespace UnityGameFramework.Runtime
             return m_WebRequestManager.AddWebRequest(webRequestUri, postData, tag, priority, WWWFormInfo.Create(wwwForm, userData));
         }
 
-        private void OnWebRequestStart(object sender, GameFramework.WebRequest.WebRequestStartEventArgs e)
+        private void OnWebRequestStart(object sender, WebRequestStartEventArgs e)
         {
             m_EventComponent.Fire(this, WebRequestStartEventArgs.Create(e));
         }
 
-        private void OnWebRequestSuccess(object sender, GameFramework.WebRequest.WebRequestSuccessEventArgs e)
+        private void OnWebRequestSuccess(object sender, WebRequestSuccessEventArgs e)
         {
             m_EventComponent.Fire(this, WebRequestSuccessEventArgs.Create(e));
         }
 
-        private void OnWebRequestFailure(object sender, GameFramework.WebRequest.WebRequestFailureEventArgs e)
+        private void OnWebRequestFailure(object sender, WebRequestFailureEventArgs e)
         {
             Log.Warning("Web request failure, web request serial id '{0}', web request uri '{1}', error message '{2}'.", e.SerialId, e.WebRequestUri, e.ErrorMessage);
             m_EventComponent.Fire(this, WebRequestFailureEventArgs.Create(e));

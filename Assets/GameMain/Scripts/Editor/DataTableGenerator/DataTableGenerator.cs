@@ -5,13 +5,13 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using UnityEngine;
+using UnityGameFramework.Runtime;
 
 namespace StarForce.Editor.DataTableTools
 {

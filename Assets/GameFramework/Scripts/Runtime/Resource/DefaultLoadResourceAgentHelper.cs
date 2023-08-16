@@ -5,16 +5,12 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
-using GameFramework.FileSystem;
-using GameFramework.Resource;
 using System;
 using UnityEngine;
 #if UNITY_5_4_OR_NEWER
 using UnityEngine.Networking;
 #endif
 using UnityEngine.SceneManagement;
-using Utility = GameFramework.Utility;
 
 namespace UnityGameFramework.Runtime
 {
@@ -280,7 +276,7 @@ namespace UnityGameFramework.Runtime
                 }
 
                 string sceneName = assetName.Substring(sceneNamePositionStart + 1, sceneNamePositionEnd - sceneNamePositionStart - 1);
-                m_AsyncOperation = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+                m_AsyncOperation = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
             }
             else
             {

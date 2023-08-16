@@ -5,9 +5,9 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
 using System;
 using System.IO;
+using UnityGameFramework.Runtime;
 
 /// <summary>
 /// 对 BinaryReader 和 BinaryWriter 的扩展方法。
@@ -30,7 +30,7 @@ public static class BinaryExtension
         {
             if (shift >= 35)
             {
-                throw new GameFrameworkException("7 bit encoded int is invalid.");
+                throw new Exception("7 bit encoded int is invalid.");
             }
 
             b = binaryReader.ReadByte();

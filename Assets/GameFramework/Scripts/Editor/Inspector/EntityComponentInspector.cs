@@ -5,8 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
-using GameFramework.Entity;
 using UnityEditor;
 using UnityGameFramework.Runtime;
 

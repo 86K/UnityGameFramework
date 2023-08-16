@@ -5,8 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
-using GameFramework.Setting;
 using System;
 using System.Collections.Generic;
 using UnityEngine;

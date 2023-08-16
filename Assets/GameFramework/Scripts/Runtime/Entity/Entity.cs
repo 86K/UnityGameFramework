@@ -5,8 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
-using GameFramework.Entity;
 using System;
 using UnityEngine;
 
@@ -25,57 +23,27 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取实体编号。
         /// </summary>
-        public int Id
-        {
-            get
-            {
-                return m_Id;
-            }
-        }
+        public int Id => m_Id;
 
         /// <summary>
         /// 获取实体资源名称。
         /// </summary>
-        public string EntityAssetName
-        {
-            get
-            {
-                return m_EntityAssetName;
-            }
-        }
+        public string EntityAssetName => m_EntityAssetName;
 
         /// <summary>
         /// 获取实体实例。
         /// </summary>
-        public object Handle
-        {
-            get
-            {
-                return gameObject;
-            }
-        }
+        public object Handle => gameObject;
 
         /// <summary>
         /// 获取实体所属的实体组。
         /// </summary>
-        public IEntityGroup EntityGroup
-        {
-            get
-            {
-                return m_EntityGroup;
-            }
-        }
+        public IEntityGroup EntityGroup => m_EntityGroup;
 
         /// <summary>
         /// 获取实体逻辑。
         /// </summary>
-        public EntityLogic Logic
-        {
-            get
-            {
-                return m_EntityLogic;
-            }
-        }
+        public EntityLogic Logic => m_EntityLogic;
 
         /// <summary>
         /// 实体初始化。

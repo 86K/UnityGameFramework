@@ -5,13 +5,15 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
-using GameFramework.Config;
-using GameFramework.Resource;
 using UnityEngine;
 
 namespace UnityGameFramework.Runtime
 {
+    /*
+     * 1.字典存储，仅软件内部流通的全局配置数据，可跨场景使用
+     * 2.通过Helper实现的对txt文件的全局配置数据进行读和解析
+     */
+    
     /// <summary>
     /// 全局配置组件。
     /// </summary>
@@ -42,24 +44,12 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取全局配置项数量。
         /// </summary>
-        public int Count
-        {
-            get
-            {
-                return m_ConfigManager.Count;
-            }
-        }
+        public int Count => m_ConfigManager.Count;
 
         /// <summary>
         /// 获取缓冲二进制流的大小。
         /// </summary>
-        public int CachedBytesSize
-        {
-            get
-            {
-                return m_ConfigManager.CachedBytesSize;
-            }
-        }
+        public int CachedBytesSize => m_ConfigManager.CachedBytesSize;
 
         /// <summary>
         /// 游戏框架组件初始化。

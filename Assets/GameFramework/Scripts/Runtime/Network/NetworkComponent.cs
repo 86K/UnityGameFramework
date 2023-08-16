@@ -5,8 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
-using GameFramework.Network;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -124,27 +122,27 @@ namespace UnityGameFramework.Runtime
             return m_NetworkManager.DestroyNetworkChannel(name);
         }
 
-        private void OnNetworkConnected(object sender, GameFramework.Network.NetworkConnectedEventArgs e)
+        private void OnNetworkConnected(object sender, NetworkConnectedEventArgs e)
         {
             m_EventComponent.Fire(this, NetworkConnectedEventArgs.Create(e));
         }
 
-        private void OnNetworkClosed(object sender, GameFramework.Network.NetworkClosedEventArgs e)
+        private void OnNetworkClosed(object sender, NetworkClosedEventArgs e)
         {
             m_EventComponent.Fire(this, NetworkClosedEventArgs.Create(e));
         }
 
-        private void OnNetworkMissHeartBeat(object sender, GameFramework.Network.NetworkMissHeartBeatEventArgs e)
+        private void OnNetworkMissHeartBeat(object sender, NetworkMissHeartBeatEventArgs e)
         {
             m_EventComponent.Fire(this, NetworkMissHeartBeatEventArgs.Create(e));
         }
 
-        private void OnNetworkError(object sender, GameFramework.Network.NetworkErrorEventArgs e)
+        private void OnNetworkError(object sender, NetworkErrorEventArgs e)
         {
             m_EventComponent.Fire(this, NetworkErrorEventArgs.Create(e));
         }
 
-        private void OnNetworkCustomError(object sender, GameFramework.Network.NetworkCustomErrorEventArgs e)
+        private void OnNetworkCustomError(object sender, NetworkCustomErrorEventArgs e)
         {
             m_EventComponent.Fire(this, NetworkCustomErrorEventArgs.Create(e));
         }

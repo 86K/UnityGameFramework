@@ -5,13 +5,10 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
-using GameFramework.Event;
-using GameFramework.Resource;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityGameFramework.Runtime;
-using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
+using ProcedureOwner = UnityGameFramework.Runtime.IFsm<UnityGameFramework.Runtime.IProcedureManager>;
 
 namespace StarForce
 {
@@ -34,13 +31,7 @@ namespace StarForce
 
         private Dictionary<string, bool> m_LoadedFlag = new Dictionary<string, bool>();
 
-        public override bool UseNativeDialog
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool UseNativeDialog => true;
 
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
@@ -145,10 +136,10 @@ namespace StarForce
         private void OnLoadConfigSuccess(object sender, GameEventArgs e)
         {
             LoadConfigSuccessEventArgs ne = (LoadConfigSuccessEventArgs)e;
-            // if (ne.UserData != this)
-            // {
-            //     return;
-            // }
+            if (ne.UserData != this)
+            {
+                return;
+            }
 
             m_LoadedFlag[ne.ConfigAssetName] = true;
             Log.Info("Load config '{0}' OK.", ne.ConfigAssetName);

@@ -5,7 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEditor;
@@ -36,14 +35,14 @@ namespace UnityGameFramework.Editor
 
         public void Init(SerializedObject serializedObject)
         {
-            m_HelperTypeName = serializedObject.FindProperty(Utility.Text.Format("m_{0}HelperTypeName", m_Name));
-            m_CustomHelper = serializedObject.FindProperty(Utility.Text.Format("m_Custom{0}Helper", m_Name));
+            m_HelperTypeName = serializedObject.FindProperty($"m_{m_Name}HelperTypeName");
+            m_CustomHelper = serializedObject.FindProperty($"m_Custom{m_Name}Helper");
         }
 
         public void Draw()
         {
             string displayName = FieldNameForDisplay(m_Name);
-            int selectedIndex = EditorGUILayout.Popup(Utility.Text.Format("{0} Helper", displayName), m_HelperTypeNameIndex, m_HelperTypeNames);
+            int selectedIndex = EditorGUILayout.Popup($"{displayName} Helper", m_HelperTypeNameIndex, m_HelperTypeNames);
             if (selectedIndex != m_HelperTypeNameIndex)
             {
                 m_HelperTypeNameIndex = selectedIndex;
@@ -55,7 +54,7 @@ namespace UnityGameFramework.Editor
                 EditorGUILayout.PropertyField(m_CustomHelper);
                 if (m_CustomHelper.objectReferenceValue == null)
                 {
-                    EditorGUILayout.HelpBox(Utility.Text.Format("You must set Custom {0} Helper.", displayName), MessageType.Error);
+                    EditorGUILayout.HelpBox($"You must set Custom {displayName} Helper.", MessageType.Error);
                 }
             }
         }

@@ -5,10 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
-using GameFramework.Entity;
-using GameFramework.ObjectPool;
-using GameFramework.Resource;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -1117,28 +1113,28 @@ namespace UnityGameFramework.Runtime
             entityGroup.SetEntityInstancePriority(entity.gameObject, priority);
         }
 
-        private void OnShowEntitySuccess(object sender, GameFramework.Entity.ShowEntitySuccessEventArgs e)
+        private void OnShowEntitySuccess(object sender, ShowEntitySuccessEventArgs e)
         {
             m_EventComponent.Fire(this, ShowEntitySuccessEventArgs.Create(e));
         }
 
-        private void OnShowEntityFailure(object sender, GameFramework.Entity.ShowEntityFailureEventArgs e)
+        private void OnShowEntityFailure(object sender, ShowEntityFailureEventArgs e)
         {
             Log.Warning("Show entity failure, entity id '{0}', asset name '{1}', entity group name '{2}', error message '{3}'.", e.EntityId, e.EntityAssetName, e.EntityGroupName, e.ErrorMessage);
             m_EventComponent.Fire(this, ShowEntityFailureEventArgs.Create(e));
         }
 
-        private void OnShowEntityUpdate(object sender, GameFramework.Entity.ShowEntityUpdateEventArgs e)
+        private void OnShowEntityUpdate(object sender, ShowEntityUpdateEventArgs e)
         {
             m_EventComponent.Fire(this, ShowEntityUpdateEventArgs.Create(e));
         }
 
-        private void OnShowEntityDependencyAsset(object sender, GameFramework.Entity.ShowEntityDependencyAssetEventArgs e)
+        private void OnShowEntityDependencyAsset(object sender, ShowEntityDependencyAssetEventArgs e)
         {
             m_EventComponent.Fire(this, ShowEntityDependencyAssetEventArgs.Create(e));
         }
 
-        private void OnHideEntityComplete(object sender, GameFramework.Entity.HideEntityCompleteEventArgs e)
+        private void OnHideEntityComplete(object sender, HideEntityCompleteEventArgs e)
         {
             m_EventComponent.Fire(this, HideEntityCompleteEventArgs.Create(e));
         }

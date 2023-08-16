@@ -5,8 +5,8 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework.Network;
 using ProtoBuf;
+using UnityGameFramework.Runtime;
 
 namespace StarForce
 {

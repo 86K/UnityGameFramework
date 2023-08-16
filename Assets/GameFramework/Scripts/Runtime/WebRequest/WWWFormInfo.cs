@@ -5,7 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
 using UnityEngine;
 
 namespace UnityGameFramework.Runtime
@@ -21,21 +20,9 @@ namespace UnityGameFramework.Runtime
             m_UserData = null;
         }
 
-        public WWWForm WWWForm
-        {
-            get
-            {
-                return m_WWWForm;
-            }
-        }
+        public WWWForm WWWForm => m_WWWForm;
 
-        public object UserData
-        {
-            get
-            {
-                return m_UserData;
-            }
-        }
+        public object UserData => m_UserData;
 
         public static WWWFormInfo Create(WWWForm wwwForm, object userData)
         {

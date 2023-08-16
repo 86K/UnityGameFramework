@@ -19,10 +19,10 @@ namespace UnityGameFramework.Runtime
                 GUILayout.Label("<b>Scene Information</b>");
                 GUILayout.BeginVertical("box");
                 {
-                    DrawItem("Scene Count", SceneManager.sceneCount.ToString());
-                    DrawItem("Scene Count In Build Settings", SceneManager.sceneCountInBuildSettings.ToString());
+                    DrawItem("Scene Count", UnityEngine.SceneManagement.SceneManager.sceneCount.ToString());
+                    DrawItem("Scene Count In Build Settings", UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings.ToString());
 
-                    Scene activeScene = SceneManager.GetActiveScene();
+                    Scene activeScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
 #if UNITY_2018_3_OR_NEWER
                     DrawItem("Active Scene Handle", activeScene.handle.ToString());
 #endif

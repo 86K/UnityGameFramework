@@ -5,8 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
-using GameFramework.ObjectPool;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,13 +23,7 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取对象池数量。
         /// </summary>
-        public int Count
-        {
-            get
-            {
-                return m_ObjectPoolManager.Count;
-            }
-        }
+        public int Count => m_ObjectPoolManager.Count;
 
         /// <summary>
         /// 游戏框架组件初始化。
@@ -46,10 +38,6 @@ namespace UnityGameFramework.Runtime
                 Log.Fatal("Object pool manager is invalid.");
                 return;
             }
-        }
-
-        private void Start()
-        {
         }
 
         /// <summary>

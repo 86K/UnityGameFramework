@@ -5,9 +5,6 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-using GameFramework;
-using GameFramework.Resource;
-using GameFramework.Scene;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,13 +36,7 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取当前场景主摄像机。
         /// </summary>
-        public Camera MainCamera
-        {
-            get
-            {
-                return m_MainCamera;
-            }
-        }
+        public Camera MainCamera => m_MainCamera;
 
         /// <summary>
         /// 游戏框架组件初始化。
@@ -77,11 +68,10 @@ namespace UnityGameFramework.Runtime
             m_SceneManager.UnloadSceneSuccess += OnUnloadSceneSuccess;
             m_SceneManager.UnloadSceneFailure += OnUnloadSceneFailure;
 
-            m_GameFrameworkScene = SceneManager.GetSceneAt(GameEntry.GameFrameworkSceneId);
+            m_GameFrameworkScene = UnityEngine.SceneManagement.SceneManager.GetSceneAt(GameEntry.GameFrameworkSceneId);
             if (!m_GameFrameworkScene.IsValid())
             {
                 Log.Fatal("Game Framework scene is invalid.");
-                return;
             }
         }
 
@@ -407,7 +397,7 @@ namespace UnityGameFramework.Runtime
                     return;
                 }
 
-                Scene scene = SceneManager.GetSceneByName(GetSceneName(maxSceneName));
+                Scene scene = UnityEngine.SceneManagement.SceneManager.GetSceneByName(GetSceneName(maxSceneName));
                 if (!scene.IsValid())
                 {
                     Log.Error("Active scene '{0}' is invalid.", maxSceneName);
@@ -424,17 +414,17 @@ namespace UnityGameFramework.Runtime
 
         private void SetActiveScene(Scene activeScene)
         {
-            Scene lastActiveScene = SceneManager.GetActiveScene();
+            Scene lastActiveScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
             if (lastActiveScene != activeScene)
             {
-                SceneManager.SetActiveScene(activeScene);
+                UnityEngine.SceneManagement.SceneManager.SetActiveScene(activeScene);
                 m_EventComponent.Fire(this, ActiveSceneChangedEventArgs.Create(lastActiveScene, activeScene));
             }
 
             RefreshMainCamera();
         }
 
-        private void OnLoadSceneSuccess(object sender, GameFramework.Scene.LoadSceneSuccessEventArgs e)
+        private void OnLoadSceneSuccess(object sender, LoadSceneSuccessEventArgs e)
         {
             if (!m_SceneOrder.ContainsKey(e.SceneAssetName))
             {
@@ -445,30 +435,30 @@ namespace UnityGameFramework.Runtime
             RefreshSceneOrder();
         }
 
-        private void OnLoadSceneFailure(object sender, GameFramework.Scene.LoadSceneFailureEventArgs e)
+        private void OnLoadSceneFailure(object sender, LoadSceneFailureEventArgs e)
         {
             Log.Warning("Load scene failure, scene asset name '{0}', error message '{1}'.", e.SceneAssetName, e.ErrorMessage);
             m_EventComponent.Fire(this, LoadSceneFailureEventArgs.Create(e));
         }
 
-        private void OnLoadSceneUpdate(object sender, GameFramework.Scene.LoadSceneUpdateEventArgs e)
+        private void OnLoadSceneUpdate(object sender, LoadSceneUpdateEventArgs e)
         {
             m_EventComponent.Fire(this, LoadSceneUpdateEventArgs.Create(e));
         }
 
-        private void OnLoadSceneDependencyAsset(object sender, GameFramework.Scene.LoadSceneDependencyAssetEventArgs e)
+        private void OnLoadSceneDependencyAsset(object sender, LoadSceneDependencyAssetEventArgs e)
         {
             m_EventComponent.Fire(this, LoadSceneDependencyAssetEventArgs.Create(e));
         }
 
-        private void OnUnloadSceneSuccess(object sender, GameFramework.Scene.UnloadSceneSuccessEventArgs e)
+        private void OnUnloadSceneSuccess(object sender, UnloadSceneSuccessEventArgs e)
         {
             m_EventComponent.Fire(this, UnloadSceneSuccessEventArgs.Create(e));
             m_SceneOrder.Remove(e.SceneAssetName);
             RefreshSceneOrder();
         }
 
-        private void OnUnloadSceneFailure(object sender, GameFramework.Scene.UnloadSceneFailureEventArgs e)
+        private void OnUnloadSceneFailure(object sender, UnloadSceneFailureEventArgs e)
         {
             Log.Warning("Unload scene failure, scene asset name '{0}'.", e.SceneAssetName);
             m_EventComponent.Fire(this, UnloadSceneFailureEventArgs.Create(e));
