@@ -40,27 +40,15 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取网络频道数量。
         /// </summary>
-        public int NetworkChannelCount
-        {
-            get
-            {
-                return m_NetworkChannels.Count;
-            }
-        }
+        public int NetworkChannelCount => m_NetworkChannels.Count;
 
         /// <summary>
         /// 网络连接成功事件。
         /// </summary>
         public event EventHandler<NetworkConnectedEventArgs> NetworkConnected
         {
-            add
-            {
-                m_NetworkConnectedEventHandler += value;
-            }
-            remove
-            {
-                m_NetworkConnectedEventHandler -= value;
-            }
+            add => m_NetworkConnectedEventHandler += value;
+            remove => m_NetworkConnectedEventHandler -= value;
         }
 
         /// <summary>
@@ -68,14 +56,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<NetworkClosedEventArgs> NetworkClosed
         {
-            add
-            {
-                m_NetworkClosedEventHandler += value;
-            }
-            remove
-            {
-                m_NetworkClosedEventHandler -= value;
-            }
+            add => m_NetworkClosedEventHandler += value;
+            remove => m_NetworkClosedEventHandler -= value;
         }
 
         /// <summary>
@@ -83,14 +65,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<NetworkMissHeartBeatEventArgs> NetworkMissHeartBeat
         {
-            add
-            {
-                m_NetworkMissHeartBeatEventHandler += value;
-            }
-            remove
-            {
-                m_NetworkMissHeartBeatEventHandler -= value;
-            }
+            add => m_NetworkMissHeartBeatEventHandler += value;
+            remove => m_NetworkMissHeartBeatEventHandler -= value;
         }
 
         /// <summary>
@@ -98,14 +74,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<NetworkErrorEventArgs> NetworkError
         {
-            add
-            {
-                m_NetworkErrorEventHandler += value;
-            }
-            remove
-            {
-                m_NetworkErrorEventHandler -= value;
-            }
+            add => m_NetworkErrorEventHandler += value;
+            remove => m_NetworkErrorEventHandler -= value;
         }
 
         /// <summary>
@@ -113,14 +83,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<NetworkCustomErrorEventArgs> NetworkCustomError
         {
-            add
-            {
-                m_NetworkCustomErrorEventHandler += value;
-            }
-            remove
-            {
-                m_NetworkCustomErrorEventHandler -= value;
-            }
+            add => m_NetworkCustomErrorEventHandler += value;
+            remove => m_NetworkCustomErrorEventHandler -= value;
         }
 
         /// <summary>

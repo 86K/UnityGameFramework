@@ -13,21 +13,9 @@ namespace StarForce.Editor.DataTableTools
     {
         private sealed class SingleProcessor : GenericDataProcessor<float>
         {
-            public override bool IsSystem
-            {
-                get
-                {
-                    return true;
-                }
-            }
+            public override bool IsSystem => true;
 
-            public override string LanguageKeyword
-            {
-                get
-                {
-                    return "float";
-                }
-            }
+            public override string LanguageKeyword => "float";
 
             public override string[] GetTypeStrings()
             {

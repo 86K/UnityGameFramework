@@ -24,10 +24,7 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public bool EnableStrictCheck
         {
-            get
-            {
-                return ReferencePool.EnableStrictCheck;
-            }
+            get => ReferencePool.EnableStrictCheck;
             set
             {
                 ReferencePool.EnableStrictCheck = value;

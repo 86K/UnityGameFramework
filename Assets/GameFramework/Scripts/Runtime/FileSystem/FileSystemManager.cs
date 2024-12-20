@@ -38,13 +38,7 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取文件系统数量。
         /// </summary>
-        public int Count
-        {
-            get
-            {
-                return m_FileSystems.Count;
-            }
-        }
+        public int Count => m_FileSystems.Count;
 
         /// <summary>
         /// 文件系统管理器轮询。

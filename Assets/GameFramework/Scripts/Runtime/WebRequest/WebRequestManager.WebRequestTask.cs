@@ -14,7 +14,7 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         private sealed class WebRequestTask : TaskBase
         {
-            private static int s_Serial = 0;
+            private static int s_Serial;
 
             private WebRequestTaskStatus m_Status;
             private string m_WebRequestUri;
@@ -34,48 +34,24 @@ namespace UnityGameFramework.Runtime
             /// </summary>
             public WebRequestTaskStatus Status
             {
-                get
-                {
-                    return m_Status;
-                }
-                set
-                {
-                    m_Status = value;
-                }
+                get => m_Status;
+                set => m_Status = value;
             }
 
             /// <summary>
             /// 获取要发送的远程地址。
             /// </summary>
-            public string WebRequestUri
-            {
-                get
-                {
-                    return m_WebRequestUri;
-                }
-            }
+            public string WebRequestUri => m_WebRequestUri;
 
             /// <summary>
             /// 获取 Web 请求超时时长，以秒为单位。
             /// </summary>
-            public float Timeout
-            {
-                get
-                {
-                    return m_Timeout;
-                }
-            }
+            public float Timeout => m_Timeout;
 
             /// <summary>
             /// 获取 Web 请求任务的描述。
             /// </summary>
-            public override string Description
-            {
-                get
-                {
-                    return m_WebRequestUri;
-                }
-            }
+            public override string Description => m_WebRequestUri;
 
             /// <summary>
             /// 创建 Web 请求任务。

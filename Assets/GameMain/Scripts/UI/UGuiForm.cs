@@ -18,9 +18,9 @@ namespace StarForce
         public const int DepthFactor = 100;
         private const float FadeTime = 0.3f;
 
-        private static Font s_MainFont = null;
-        private Canvas m_CachedCanvas = null;
-        private CanvasGroup m_CanvasGroup = null;
+        private static Font s_MainFont;
+        private Canvas m_CachedCanvas;
+        private CanvasGroup m_CanvasGroup;
         private List<Canvas> m_CachedCanvasContainer = new List<Canvas>();
 
         public int OriginalDepth
@@ -29,13 +29,7 @@ namespace StarForce
             private set;
         }
 
-        public int Depth
-        {
-            get
-            {
-                return m_CachedCanvas.sortingOrder;
-            }
-        }
+        public int Depth => m_CachedCanvas.sortingOrder;
 
         public void Close()
         {

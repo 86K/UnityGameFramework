@@ -29,7 +29,7 @@ namespace StarForce
             protected set;
         }
 
-        private MyAircraft m_MyAircraft = null;
+        private MyAircraft m_MyAircraft;
 
         public virtual void Initialize()
         {
@@ -65,7 +65,6 @@ namespace StarForce
             if (m_MyAircraft != null && m_MyAircraft.IsDead)
             {
                 GameOver = true;
-                return;
             }
         }
 

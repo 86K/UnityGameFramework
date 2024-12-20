@@ -16,11 +16,11 @@ namespace UnityGameFramework.Editor
     [CustomEditor(typeof(ProcedureComponent))]
     internal sealed class ProcedureComponentInspector : GameFrameworkInspector
     {
-        private SerializedProperty m_AvailableProcedureTypeNames = null;
-        private SerializedProperty m_EntranceProcedureTypeName = null;
+        private SerializedProperty m_AvailableProcedureTypeNames;
+        private SerializedProperty m_EntranceProcedureTypeName;
 
-        private string[] m_ProcedureTypeNames = null;
-        private List<string> m_CurrentAvailableProcedureTypeNames = null;
+        private string[] m_ProcedureTypeNames;
+        private List<string> m_CurrentAvailableProcedureTypeNames;
         private int m_EntranceProcedureIndex = -1;
 
         public override void OnInspectorGUI()

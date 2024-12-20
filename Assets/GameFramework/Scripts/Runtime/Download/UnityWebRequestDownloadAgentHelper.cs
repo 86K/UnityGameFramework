@@ -22,27 +22,21 @@ namespace UnityGameFramework.Runtime
         private const int CachedBytesLength = 0x1000;
         private readonly byte[] m_CachedBytes = new byte[CachedBytesLength];
 
-        private UnityWebRequest m_UnityWebRequest = null;
-        private bool m_Disposed = false;
+        private UnityWebRequest m_UnityWebRequest;
+        private bool m_Disposed;
 
-        private EventHandler<DownloadAgentHelperUpdateBytesEventArgs> m_DownloadAgentHelperUpdateBytesEventHandler = null;
-        private EventHandler<DownloadAgentHelperUpdateLengthEventArgs> m_DownloadAgentHelperUpdateLengthEventHandler = null;
-        private EventHandler<DownloadAgentHelperCompleteEventArgs> m_DownloadAgentHelperCompleteEventHandler = null;
-        private EventHandler<DownloadAgentHelperErrorEventArgs> m_DownloadAgentHelperErrorEventHandler = null;
+        private EventHandler<DownloadAgentHelperUpdateBytesEventArgs> m_DownloadAgentHelperUpdateBytesEventHandler;
+        private EventHandler<DownloadAgentHelperUpdateLengthEventArgs> m_DownloadAgentHelperUpdateLengthEventHandler;
+        private EventHandler<DownloadAgentHelperCompleteEventArgs> m_DownloadAgentHelperCompleteEventHandler;
+        private EventHandler<DownloadAgentHelperErrorEventArgs> m_DownloadAgentHelperErrorEventHandler;
 
         /// <summary>
         /// 下载代理辅助器更新数据流事件。
         /// </summary>
         public override event EventHandler<DownloadAgentHelperUpdateBytesEventArgs> DownloadAgentHelperUpdateBytes
         {
-            add
-            {
-                m_DownloadAgentHelperUpdateBytesEventHandler += value;
-            }
-            remove
-            {
-                m_DownloadAgentHelperUpdateBytesEventHandler -= value;
-            }
+            add => m_DownloadAgentHelperUpdateBytesEventHandler += value;
+            remove => m_DownloadAgentHelperUpdateBytesEventHandler -= value;
         }
 
         /// <summary>
@@ -50,14 +44,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public override event EventHandler<DownloadAgentHelperUpdateLengthEventArgs> DownloadAgentHelperUpdateLength
         {
-            add
-            {
-                m_DownloadAgentHelperUpdateLengthEventHandler += value;
-            }
-            remove
-            {
-                m_DownloadAgentHelperUpdateLengthEventHandler -= value;
-            }
+            add => m_DownloadAgentHelperUpdateLengthEventHandler += value;
+            remove => m_DownloadAgentHelperUpdateLengthEventHandler -= value;
         }
 
         /// <summary>
@@ -65,14 +53,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public override event EventHandler<DownloadAgentHelperCompleteEventArgs> DownloadAgentHelperComplete
         {
-            add
-            {
-                m_DownloadAgentHelperCompleteEventHandler += value;
-            }
-            remove
-            {
-                m_DownloadAgentHelperCompleteEventHandler -= value;
-            }
+            add => m_DownloadAgentHelperCompleteEventHandler += value;
+            remove => m_DownloadAgentHelperCompleteEventHandler -= value;
         }
 
         /// <summary>
@@ -80,14 +62,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public override event EventHandler<DownloadAgentHelperErrorEventArgs> DownloadAgentHelperError
         {
-            add
-            {
-                m_DownloadAgentHelperErrorEventHandler += value;
-            }
-            remove
-            {
-                m_DownloadAgentHelperErrorEventHandler -= value;
-            }
+            add => m_DownloadAgentHelperErrorEventHandler += value;
+            remove => m_DownloadAgentHelperErrorEventHandler -= value;
         }
 
         /// <summary>

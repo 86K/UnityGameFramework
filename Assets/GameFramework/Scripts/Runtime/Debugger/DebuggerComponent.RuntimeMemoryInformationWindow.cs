@@ -23,9 +23,9 @@ namespace UnityGameFramework.Runtime
             private readonly List<Sample> m_Samples = new List<Sample>();
             private readonly Comparison<Sample> m_SampleComparer = SampleComparer;
             private DateTime m_SampleTime = DateTime.MinValue;
-            private long m_SampleSize = 0L;
-            private long m_DuplicateSampleSize = 0L;
-            private int m_DuplicateSimpleCount = 0;
+            private long m_SampleSize;
+            private long m_DuplicateSampleSize;
+            private int m_DuplicateSimpleCount;
 
             protected override void OnDrawScrollableWindow()
             {

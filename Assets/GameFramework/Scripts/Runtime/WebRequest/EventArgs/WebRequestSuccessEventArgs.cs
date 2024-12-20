@@ -12,7 +12,7 @@ namespace UnityGameFramework.Runtime
     /// </summary>
     public sealed class WebRequestSuccessEventArgs : GameEventArgs
     {
-        private byte[] m_WebResponseBytes = null;
+        private byte[] m_WebResponseBytes;
 
         /// <summary>
         /// Web 请求成功事件编号。

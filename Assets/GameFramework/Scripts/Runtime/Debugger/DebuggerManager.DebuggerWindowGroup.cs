@@ -30,27 +30,15 @@ namespace UnityGameFramework.Runtime
             /// <summary>
             /// 获取调试器窗口数量。
             /// </summary>
-            public int DebuggerWindowCount
-            {
-                get
-                {
-                    return m_DebuggerWindows.Count;
-                }
-            }
+            public int DebuggerWindowCount => m_DebuggerWindows.Count;
 
             /// <summary>
             /// 获取或设置当前选中的调试器窗口索引。
             /// </summary>
             public int SelectedIndex
             {
-                get
-                {
-                    return m_SelectedIndex;
-                }
-                set
-                {
-                    m_SelectedIndex = value;
-                }
+                get => m_SelectedIndex;
+                set => m_SelectedIndex = value;
             }
 
             /// <summary>

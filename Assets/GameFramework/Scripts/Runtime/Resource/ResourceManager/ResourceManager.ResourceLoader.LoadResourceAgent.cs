@@ -72,24 +72,12 @@ namespace UnityGameFramework.Runtime
                     m_Task = null;
                 }
 
-                public ILoadResourceAgentHelper Helper
-                {
-                    get
-                    {
-                        return m_Helper;
-                    }
-                }
+                public ILoadResourceAgentHelper Helper => m_Helper;
 
                 /// <summary>
                 /// 获取加载资源任务。
                 /// </summary>
-                public LoadResourceTaskBase Task
-                {
-                    get
-                    {
-                        return m_Task;
-                    }
-                }
+                public LoadResourceTaskBase Task => m_Task;
 
                 /// <summary>
                 /// 初始化加载资源代理。

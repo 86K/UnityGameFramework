@@ -51,35 +51,17 @@ namespace UnityGameFramework.Runtime
             /// <summary>
             /// 获取资源名称。
             /// </summary>
-            public string Name
-            {
-                get
-                {
-                    return m_Name;
-                }
-            }
+            public string Name => m_Name;
 
             /// <summary>
             /// 获取变体名称。
             /// </summary>
-            public string Variant
-            {
-                get
-                {
-                    return m_Variant;
-                }
-            }
+            public string Variant => m_Variant;
 
             /// <summary>
             /// 获取扩展名称。
             /// </summary>
-            public string Extension
-            {
-                get
-                {
-                    return m_Extension;
-                }
-            }
+            public string Extension => m_Extension;
 
             public string FullName
             {

@@ -75,7 +75,6 @@ namespace UnityGameFramework.Runtime
             if (assetBundle != null)
             {
                 assetBundle.Unload(true);
-                return;
             }
 
             /* Unity 当前 Resources.UnloadAsset 在 iOS 设备上会导致一些诡异问题，先不用这部分

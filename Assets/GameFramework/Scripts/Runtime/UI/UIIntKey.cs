@@ -15,21 +15,15 @@ namespace UnityGameFramework.Runtime
     public sealed class UIIntKey : MonoBehaviour
     {
         [SerializeField]
-        private int m_Key = 0;
+        private int m_Key;
 
         /// <summary>
         /// 获取或设置主键。
         /// </summary>
         public int Key
         {
-            get
-            {
-                return m_Key;
-            }
-            set
-            {
-                m_Key = value;
-            }
+            get => m_Key;
+            set => m_Key = value;
         }
     }
 }

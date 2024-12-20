@@ -12,7 +12,7 @@ namespace UnityGameFramework.Runtime
     /// </summary>
     public class DefaultSoundHelper : SoundHelperBase
     {
-        private ResourceComponent m_ResourceComponent = null;
+        private ResourceComponent m_ResourceComponent;
 
         /// <summary>
         /// 释放声音资源。
@@ -29,7 +29,6 @@ namespace UnityGameFramework.Runtime
             if (m_ResourceComponent == null)
             {
                 Log.Fatal("Resource component is invalid.");
-                return;
             }
         }
     }

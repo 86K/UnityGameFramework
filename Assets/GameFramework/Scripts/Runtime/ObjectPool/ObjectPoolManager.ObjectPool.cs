@@ -58,24 +58,12 @@ namespace UnityGameFramework.Runtime
             /// <summary>
             /// 获取对象池对象类型。
             /// </summary>
-            public override Type ObjectType
-            {
-                get
-                {
-                    return typeof(T);
-                }
-            }
+            public override Type ObjectType => typeof(T);
 
             /// <summary>
             /// 获取对象池中对象的数量。
             /// </summary>
-            public override int Count
-            {
-                get
-                {
-                    return m_ObjectMap.Count;
-                }
-            }
+            public override int Count => m_ObjectMap.Count;
 
             /// <summary>
             /// 获取对象池中能被释放的对象的数量。
@@ -92,27 +80,15 @@ namespace UnityGameFramework.Runtime
             /// <summary>
             /// 获取是否允许对象被多次获取。
             /// </summary>
-            public override bool AllowMultiSpawn
-            {
-                get
-                {
-                    return m_AllowMultiSpawn;
-                }
-            }
+            public override bool AllowMultiSpawn => m_AllowMultiSpawn;
 
             /// <summary>
             /// 获取或设置对象池自动释放可释放对象的间隔秒数。
             /// </summary>
             public override float AutoReleaseInterval
             {
-                get
-                {
-                    return m_AutoReleaseInterval;
-                }
-                set
-                {
-                    m_AutoReleaseInterval = value;
-                }
+                get => m_AutoReleaseInterval;
+                set => m_AutoReleaseInterval = value;
             }
 
             /// <summary>
@@ -120,10 +96,7 @@ namespace UnityGameFramework.Runtime
             /// </summary>
             public override int Capacity
             {
-                get
-                {
-                    return m_Capacity;
-                }
+                get => m_Capacity;
                 set
                 {
                     if (value < 0)
@@ -146,10 +119,7 @@ namespace UnityGameFramework.Runtime
             /// </summary>
             public override float ExpireTime
             {
-                get
-                {
-                    return m_ExpireTime;
-                }
+                get => m_ExpireTime;
 
                 set
                 {
@@ -173,14 +143,8 @@ namespace UnityGameFramework.Runtime
             /// </summary>
             public override int Priority
             {
-                get
-                {
-                    return m_Priority;
-                }
-                set
-                {
-                    m_Priority = value;
-                }
+                get => m_Priority;
+                set => m_Priority = value;
             }
 
             /// <summary>
@@ -606,7 +570,6 @@ namespace UnityGameFramework.Runtime
                         {
                             m_CachedToReleaseObjects.Add(candidateObjects[i]);
                             candidateObjects.RemoveAt(i);
-                            continue;
                         }
                     }
 

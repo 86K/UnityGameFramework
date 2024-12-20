@@ -12,16 +12,10 @@ namespace StarForce
 {
     public class ProcedureMenu : ProcedureBase
     {
-        private bool m_StartGame = false;
-        private MenuForm m_MenuForm = null;
+        private bool m_StartGame;
+        private MenuForm m_MenuForm;
 
-        public override bool UseNativeDialog
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public override bool UseNativeDialog => false;
 
         public void StartGame()
         {

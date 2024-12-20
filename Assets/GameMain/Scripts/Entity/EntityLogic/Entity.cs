@@ -13,15 +13,9 @@ namespace StarForce
     public abstract class Entity : EntityLogic
     {
         [SerializeField]
-        private EntityData m_EntityData = null;
+        private EntityData m_EntityData;
 
-        public int Id
-        {
-            get
-            {
-                return Entity.Id;
-            }
-        }
+        public int Id => Entity.Id;
 
         public Animation CachedAnimation
         {

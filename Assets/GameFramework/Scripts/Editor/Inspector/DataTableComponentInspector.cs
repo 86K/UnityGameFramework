@@ -13,9 +13,9 @@ namespace UnityGameFramework.Editor
     [CustomEditor(typeof(DataTableComponent))]
     internal sealed class DataTableComponentInspector : GameFrameworkInspector
     {
-        private SerializedProperty m_EnableLoadDataTableUpdateEvent = null;
-        private SerializedProperty m_EnableLoadDataTableDependencyAssetEvent = null;
-        private SerializedProperty m_CachedBytesSize = null;
+        private SerializedProperty m_EnableLoadDataTableUpdateEvent;
+        private SerializedProperty m_EnableLoadDataTableDependencyAssetEvent;
+        private SerializedProperty m_CachedBytesSize;
 
         private HelperInfo<DataTableHelperBase> m_DataTableHelperInfo = new HelperInfo<DataTableHelperBase>("DataTable");
 

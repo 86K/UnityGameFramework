@@ -55,38 +55,20 @@ namespace UnityGameFramework.Runtime
             /// <summary>
             /// 获取实体组名称。
             /// </summary>
-            public string Name
-            {
-                get
-                {
-                    return m_Name;
-                }
-            }
+            public string Name => m_Name;
 
             /// <summary>
             /// 获取实体组中实体数量。
             /// </summary>
-            public int EntityCount
-            {
-                get
-                {
-                    return m_Entities.Count;
-                }
-            }
+            public int EntityCount => m_Entities.Count;
 
             /// <summary>
             /// 获取或设置实体组实例对象池自动释放可释放对象的间隔秒数。
             /// </summary>
             public float InstanceAutoReleaseInterval
             {
-                get
-                {
-                    return m_InstancePool.AutoReleaseInterval;
-                }
-                set
-                {
-                    m_InstancePool.AutoReleaseInterval = value;
-                }
+                get => m_InstancePool.AutoReleaseInterval;
+                set => m_InstancePool.AutoReleaseInterval = value;
             }
 
             /// <summary>
@@ -94,14 +76,8 @@ namespace UnityGameFramework.Runtime
             /// </summary>
             public int InstanceCapacity
             {
-                get
-                {
-                    return m_InstancePool.Capacity;
-                }
-                set
-                {
-                    m_InstancePool.Capacity = value;
-                }
+                get => m_InstancePool.Capacity;
+                set => m_InstancePool.Capacity = value;
             }
 
             /// <summary>
@@ -109,14 +85,8 @@ namespace UnityGameFramework.Runtime
             /// </summary>
             public float InstanceExpireTime
             {
-                get
-                {
-                    return m_InstancePool.ExpireTime;
-                }
-                set
-                {
-                    m_InstancePool.ExpireTime = value;
-                }
+                get => m_InstancePool.ExpireTime;
+                set => m_InstancePool.ExpireTime = value;
             }
 
             /// <summary>
@@ -124,26 +94,14 @@ namespace UnityGameFramework.Runtime
             /// </summary>
             public int InstancePriority
             {
-                get
-                {
-                    return m_InstancePool.Priority;
-                }
-                set
-                {
-                    m_InstancePool.Priority = value;
-                }
+                get => m_InstancePool.Priority;
+                set => m_InstancePool.Priority = value;
             }
 
             /// <summary>
             /// 获取实体组辅助器。
             /// </summary>
-            public IEntityGroupHelper Helper
-            {
-                get
-                {
-                    return m_EntityGroupHelper;
-                }
-            }
+            public IEntityGroupHelper Helper => m_EntityGroupHelper;
 
             /// <summary>
             /// 实体组轮询。

@@ -18,7 +18,7 @@ namespace UnityGameFramework.Editor.ResourceTools
     {
         private const float ButtonHeight = 60f;
         private const float ButtonSpace = 5f;
-        private ResourceSyncToolsController m_Controller = null;
+        private ResourceSyncToolsController m_Controller;
 
         [MenuItem("Game Framework/Resource Tools/Resource Sync Tools", false, 44)]
         private static void Open()

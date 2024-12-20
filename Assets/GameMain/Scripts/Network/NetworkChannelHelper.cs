@@ -19,18 +19,12 @@ namespace StarForce
     {
         private readonly Dictionary<int, Type> m_ServerToClientPacketTypes = new Dictionary<int, Type>();
         private readonly MemoryStream m_CachedStream = new MemoryStream(1024 * 8);
-        private INetworkChannel m_NetworkChannel = null;
+        private INetworkChannel m_NetworkChannel;
 
         /// <summary>
         /// 获取消息包头长度。
         /// </summary>
-        public int PacketHeaderLength
-        {
-            get
-            {
-                return sizeof(int);
-            }
-        }
+        public int PacketHeaderLength => sizeof(int);
 
         /// <summary>
         /// 初始化网络频道辅助器。
@@ -270,7 +264,6 @@ namespace StarForce
             UnityGameFramework.Runtime.NetworkCustomErrorEventArgs ne = (UnityGameFramework.Runtime.NetworkCustomErrorEventArgs)e;
             if (ne.NetworkChannel != m_NetworkChannel)
             {
-                return;
             }
         }
     }

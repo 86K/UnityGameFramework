@@ -12,16 +12,10 @@ namespace StarForce
 {
     public class ProcedureUpdateVersion : ProcedureBase
     {
-        private bool m_UpdateVersionComplete = false;
-        private UpdateVersionListCallbacks m_UpdateVersionListCallbacks = null;
+        private bool m_UpdateVersionComplete;
+        private UpdateVersionListCallbacks m_UpdateVersionListCallbacks;
 
-        public override bool UseNativeDialog
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool UseNativeDialog => true;
 
         protected override void OnInit(ProcedureOwner procedureOwner)
         {

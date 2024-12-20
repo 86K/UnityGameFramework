@@ -52,23 +52,14 @@ namespace UnityGameFramework.Runtime
             /// <summary>
             /// 获取界面组名称。
             /// </summary>
-            public string Name
-            {
-                get
-                {
-                    return m_Name;
-                }
-            }
+            public string Name => m_Name;
 
             /// <summary>
             /// 获取或设置界面组深度。
             /// </summary>
             public int Depth
             {
-                get
-                {
-                    return m_Depth;
-                }
+                get => m_Depth;
                 set
                 {
                     if (m_Depth == value)
@@ -87,10 +78,7 @@ namespace UnityGameFramework.Runtime
             /// </summary>
             public bool Pause
             {
-                get
-                {
-                    return m_Pause;
-                }
+                get => m_Pause;
                 set
                 {
                     if (m_Pause == value)
@@ -106,35 +94,17 @@ namespace UnityGameFramework.Runtime
             /// <summary>
             /// 获取界面组中界面数量。
             /// </summary>
-            public int UIFormCount
-            {
-                get
-                {
-                    return m_UIFormInfos.Count;
-                }
-            }
+            public int UIFormCount => m_UIFormInfos.Count;
 
             /// <summary>
             /// 获取当前界面。
             /// </summary>
-            public IUIForm CurrentUIForm
-            {
-                get
-                {
-                    return m_UIFormInfos.First != null ? m_UIFormInfos.First.Value.UIForm : null;
-                }
-            }
+            public IUIForm CurrentUIForm => m_UIFormInfos.First != null ? m_UIFormInfos.First.Value.UIForm : null;
 
             /// <summary>
             /// 获取界面组辅助器。
             /// </summary>
-            public IUIGroupHelper Helper
-            {
-                get
-                {
-                    return m_UIGroupHelper;
-                }
-            }
+            public IUIGroupHelper Helper => m_UIGroupHelper;
 
             /// <summary>
             /// 界面组轮询。

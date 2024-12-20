@@ -13,31 +13,19 @@ namespace StarForce
     public class BuiltinDataComponent : GameFrameworkComponent
     {
         [SerializeField]
-        private TextAsset m_BuildInfoTextAsset = null;
+        private TextAsset m_BuildInfoTextAsset;
 
         [SerializeField]
-        private TextAsset m_DefaultDictionaryTextAsset = null;
+        private TextAsset m_DefaultDictionaryTextAsset;
 
         [SerializeField]
-        private UpdateResourceForm m_UpdateResourceFormTemplate = null;
+        private UpdateResourceForm m_UpdateResourceFormTemplate;
 
-        private BuildInfo m_BuildInfo = null;
+        private BuildInfo m_BuildInfo;
 
-        public BuildInfo BuildInfo
-        {
-            get
-            {
-                return m_BuildInfo;
-            }
-        }
+        public BuildInfo BuildInfo => m_BuildInfo;
 
-        public UpdateResourceForm UpdateResourceFormTemplate
-        {
-            get
-            {
-                return m_UpdateResourceFormTemplate;
-            }
-        }
+        public UpdateResourceForm UpdateResourceFormTemplate => m_UpdateResourceFormTemplate;
 
         public void InitBuildInfo()
         {
@@ -51,7 +39,6 @@ namespace StarForce
             if (m_BuildInfo == null)
             {
                 Log.Warning("Parse build info failure.");
-                return;
             }
         }
 
@@ -66,7 +53,6 @@ namespace StarForce
             if (!GameEntry.Localization.ParseData(m_DefaultDictionaryTextAsset.text))
             {
                 Log.Warning("Parse default dictionary failure.");
-                return;
             }
         }
     }

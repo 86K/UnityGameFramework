@@ -16,7 +16,7 @@ namespace UnityGameFramework.Runtime
     public sealed class DataProvider<T> : IDataProvider<T>
     {
         private const int BlockSize = 1024 * 4;
-        private static byte[] s_CachedBytes = null;
+        private static byte[] s_CachedBytes;
 
         private readonly T m_Owner;
         
@@ -50,27 +50,15 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取缓冲二进制流的大小。
         /// </summary>
-        public static int CachedBytesSize
-        {
-            get
-            {
-                return s_CachedBytes != null ? s_CachedBytes.Length : 0;
-            }
-        }
+        public static int CachedBytesSize => s_CachedBytes != null ? s_CachedBytes.Length : 0;
 
         /// <summary>
         /// 读取数据成功事件。
         /// </summary>
         public event EventHandler<ReadDataSuccessEventArgs> ReadDataSuccess
         {
-            add
-            {
-                m_ReadDataSuccessEventHandler += value;
-            }
-            remove
-            {
-                m_ReadDataSuccessEventHandler -= value;
-            }
+            add => m_ReadDataSuccessEventHandler += value;
+            remove => m_ReadDataSuccessEventHandler -= value;
         }
 
         /// <summary>
@@ -78,14 +66,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<ReadDataFailureEventArgs> ReadDataFailure
         {
-            add
-            {
-                m_ReadDataFailureEventHandler += value;
-            }
-            remove
-            {
-                m_ReadDataFailureEventHandler -= value;
-            }
+            add => m_ReadDataFailureEventHandler += value;
+            remove => m_ReadDataFailureEventHandler -= value;
         }
 
         /// <summary>
@@ -93,14 +75,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<ReadDataUpdateEventArgs> ReadDataUpdate
         {
-            add
-            {
-                m_ReadDataUpdateEventHandler += value;
-            }
-            remove
-            {
-                m_ReadDataUpdateEventHandler -= value;
-            }
+            add => m_ReadDataUpdateEventHandler += value;
+            remove => m_ReadDataUpdateEventHandler -= value;
         }
 
         /// <summary>
@@ -108,14 +84,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<ReadDataDependencyAssetEventArgs> ReadDataDependencyAsset
         {
-            add
-            {
-                m_ReadDataDependencyAssetEventHandler += value;
-            }
-            remove
-            {
-                m_ReadDataDependencyAssetEventHandler -= value;
-            }
+            add => m_ReadDataDependencyAssetEventHandler += value;
+            remove => m_ReadDataDependencyAssetEventHandler -= value;
         }
 
         /// <summary>

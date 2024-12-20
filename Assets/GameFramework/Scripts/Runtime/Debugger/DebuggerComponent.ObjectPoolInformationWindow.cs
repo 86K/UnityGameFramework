@@ -13,7 +13,7 @@ namespace UnityGameFramework.Runtime
     {
         private sealed class ObjectPoolInformationWindow : ScrollableDebuggerWindowBase
         {
-            private ObjectPoolComponent m_ObjectPoolComponent = null;
+            private ObjectPoolComponent m_ObjectPoolComponent;
 
             public override void Initialize(params object[] args)
             {
@@ -21,7 +21,6 @@ namespace UnityGameFramework.Runtime
                 if (m_ObjectPoolComponent == null)
                 {
                     Log.Fatal("Object pool component is invalid.");
-                    return;
                 }
             }
 

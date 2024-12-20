@@ -167,7 +167,6 @@ namespace StarForce
 
                 entity.ApplyDamage(bullet, entityDamageHP);
                 GameEntry.Entity.HideEntity(bullet);
-                return;
             }
         }
 
@@ -198,21 +197,9 @@ namespace StarForce
                 m_Second = second;
             }
 
-            public CampType First
-            {
-                get
-                {
-                    return m_First;
-                }
-            }
+            public CampType First => m_First;
 
-            public CampType Second
-            {
-                get
-                {
-                    return m_Second;
-                }
-            }
+            public CampType Second => m_Second;
         }
     }
 }

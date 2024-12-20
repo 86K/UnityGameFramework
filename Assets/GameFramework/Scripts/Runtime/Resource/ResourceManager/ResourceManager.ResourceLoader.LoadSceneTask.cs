@@ -20,13 +20,7 @@ namespace UnityGameFramework.Runtime
                     m_LoadSceneCallbacks = null;
                 }
 
-                public override bool IsScene
-                {
-                    get
-                    {
-                        return true;
-                    }
-                }
+                public override bool IsScene => true;
 
                 public static LoadSceneTask Create(string sceneAssetName, int priority, ResourceInfo resourceInfo, string[] dependencyAssetNames, LoadSceneCallbacks loadSceneCallbacks, object userData)
                 {

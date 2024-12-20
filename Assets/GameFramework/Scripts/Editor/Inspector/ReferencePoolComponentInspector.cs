@@ -23,9 +23,9 @@ namespace UnityGameFramework.Editor
 
         private readonly HashSet<string> m_OpenedItems = new HashSet<string>();
 
-        private SerializedProperty m_EnableStrictCheck = null;
+        private SerializedProperty m_EnableStrictCheck;
 
-        private bool m_ShowFullClassName = false;
+        private bool m_ShowFullClassName;
 
         public override void OnInspectorGUI()
         {

@@ -13,7 +13,7 @@ namespace StarForce
     public class MyAircraft : Aircraft
     {
         [SerializeField]
-        private MyAircraftData m_MyAircraftData = null;
+        private MyAircraftData m_MyAircraftData;
 
         private Rect m_PlayerMoveBoundary = default(Rect);
         private Vector3 m_TargetPosition = Vector3.zero;

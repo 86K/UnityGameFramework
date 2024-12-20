@@ -14,21 +14,9 @@ namespace StarForce.Editor.DataTableTools
     {
         private sealed class QuaternionProcessor : GenericDataProcessor<Quaternion>
         {
-            public override bool IsSystem
-            {
-                get
-                {
-                    return false;
-                }
-            }
+            public override bool IsSystem => false;
 
-            public override string LanguageKeyword
-            {
-                get
-                {
-                    return "Quaternion";
-                }
-            }
+            public override string LanguageKeyword => "Quaternion";
 
             public override string[] GetTypeStrings()
             {

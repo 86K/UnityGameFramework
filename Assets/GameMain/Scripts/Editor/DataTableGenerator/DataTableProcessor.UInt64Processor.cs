@@ -13,21 +13,9 @@ namespace StarForce.Editor.DataTableTools
     {
         private sealed class UInt64Processor : GenericDataProcessor<ulong>
         {
-            public override bool IsSystem
-            {
-                get
-                {
-                    return true;
-                }
-            }
+            public override bool IsSystem => true;
 
-            public override string LanguageKeyword
-            {
-                get
-                {
-                    return "ulong";
-                }
-            }
+            public override string LanguageKeyword => "ulong";
 
             public override string[] GetTypeStrings()
             {

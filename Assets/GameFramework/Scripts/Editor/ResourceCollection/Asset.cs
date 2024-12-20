@@ -27,13 +27,7 @@ namespace UnityGameFramework.Editor.ResourceTools
             private set;
         }
 
-        public string Name
-        {
-            get
-            {
-                return AssetDatabase.GUIDToAssetPath(Guid);
-            }
-        }
+        public string Name => AssetDatabase.GUIDToAssetPath(Guid);
 
         public Resource Resource
         {

@@ -19,18 +19,12 @@ namespace StarForce
     /// </summary>
     public class DRThruster : DataRowBase
     {
-        private int m_Id = 0;
+        private int m_Id;
 
         /// <summary>
         /// 获取推进器编号。
         /// </summary>
-        public override int Id
-        {
-            get
-            {
-                return m_Id;
-            }
-        }
+        public override int Id => m_Id;
 
         /// <summary>
         /// 获取。

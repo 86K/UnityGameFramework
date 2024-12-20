@@ -58,27 +58,15 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取界面组数量。
         /// </summary>
-        public int UIGroupCount
-        {
-            get
-            {
-                return m_UIGroups.Count;
-            }
-        }
+        public int UIGroupCount => m_UIGroups.Count;
 
         /// <summary>
         /// 获取或设置界面实例对象池自动释放可释放对象的间隔秒数。
         /// </summary>
         public float InstanceAutoReleaseInterval
         {
-            get
-            {
-                return m_InstancePool.AutoReleaseInterval;
-            }
-            set
-            {
-                m_InstancePool.AutoReleaseInterval = value;
-            }
+            get => m_InstancePool.AutoReleaseInterval;
+            set => m_InstancePool.AutoReleaseInterval = value;
         }
 
         /// <summary>
@@ -86,14 +74,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public int InstanceCapacity
         {
-            get
-            {
-                return m_InstancePool.Capacity;
-            }
-            set
-            {
-                m_InstancePool.Capacity = value;
-            }
+            get => m_InstancePool.Capacity;
+            set => m_InstancePool.Capacity = value;
         }
 
         /// <summary>
@@ -101,14 +83,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public float InstanceExpireTime
         {
-            get
-            {
-                return m_InstancePool.ExpireTime;
-            }
-            set
-            {
-                m_InstancePool.ExpireTime = value;
-            }
+            get => m_InstancePool.ExpireTime;
+            set => m_InstancePool.ExpireTime = value;
         }
 
         /// <summary>
@@ -116,14 +92,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public int InstancePriority
         {
-            get
-            {
-                return m_InstancePool.Priority;
-            }
-            set
-            {
-                m_InstancePool.Priority = value;
-            }
+            get => m_InstancePool.Priority;
+            set => m_InstancePool.Priority = value;
         }
 
         /// <summary>
@@ -131,14 +101,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<OpenUIFormSuccessEventArgs> OpenUIFormSuccess
         {
-            add
-            {
-                m_OpenUIFormSuccessEventHandler += value;
-            }
-            remove
-            {
-                m_OpenUIFormSuccessEventHandler -= value;
-            }
+            add => m_OpenUIFormSuccessEventHandler += value;
+            remove => m_OpenUIFormSuccessEventHandler -= value;
         }
 
         /// <summary>
@@ -146,14 +110,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<OpenUIFormFailureEventArgs> OpenUIFormFailure
         {
-            add
-            {
-                m_OpenUIFormFailureEventHandler += value;
-            }
-            remove
-            {
-                m_OpenUIFormFailureEventHandler -= value;
-            }
+            add => m_OpenUIFormFailureEventHandler += value;
+            remove => m_OpenUIFormFailureEventHandler -= value;
         }
 
         /// <summary>
@@ -161,14 +119,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<OpenUIFormUpdateEventArgs> OpenUIFormUpdate
         {
-            add
-            {
-                m_OpenUIFormUpdateEventHandler += value;
-            }
-            remove
-            {
-                m_OpenUIFormUpdateEventHandler -= value;
-            }
+            add => m_OpenUIFormUpdateEventHandler += value;
+            remove => m_OpenUIFormUpdateEventHandler -= value;
         }
 
         /// <summary>
@@ -176,14 +128,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<OpenUIFormDependencyAssetEventArgs> OpenUIFormDependencyAsset
         {
-            add
-            {
-                m_OpenUIFormDependencyAssetEventHandler += value;
-            }
-            remove
-            {
-                m_OpenUIFormDependencyAssetEventHandler -= value;
-            }
+            add => m_OpenUIFormDependencyAssetEventHandler += value;
+            remove => m_OpenUIFormDependencyAssetEventHandler -= value;
         }
 
         /// <summary>
@@ -191,14 +137,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<CloseUIFormCompleteEventArgs> CloseUIFormComplete
         {
-            add
-            {
-                m_CloseUIFormCompleteEventHandler += value;
-            }
-            remove
-            {
-                m_CloseUIFormCompleteEventHandler -= value;
-            }
+            add => m_CloseUIFormCompleteEventHandler += value;
+            remove => m_CloseUIFormCompleteEventHandler -= value;
         }
 
         /// <summary>

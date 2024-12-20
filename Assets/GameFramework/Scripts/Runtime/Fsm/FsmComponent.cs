@@ -18,18 +18,12 @@ namespace UnityGameFramework.Runtime
     [AddComponentMenu("Game Framework/FSM")]
     public sealed class FsmComponent : GameFrameworkComponent
     {
-        private IFsmManager m_FsmManager = null;
+        private IFsmManager m_FsmManager;
 
         /// <summary>
         /// 获取有限状态机数量。
         /// </summary>
-        public int Count
-        {
-            get
-            {
-                return m_FsmManager.Count;
-            }
-        }
+        public int Count => m_FsmManager.Count;
 
         /// <summary>
         /// 游戏框架组件初始化。
@@ -42,7 +36,6 @@ namespace UnityGameFramework.Runtime
             if (m_FsmManager == null)
             {
                 Log.Fatal("FSM manager is invalid.");
-                return;
             }
         }
 

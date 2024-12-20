@@ -16,17 +16,11 @@ namespace StarForce
         private const float GameOverDelayedSeconds = 2f;
 
         private readonly Dictionary<GameMode, GameBase> m_Games = new Dictionary<GameMode, GameBase>();
-        private GameBase m_CurrentGame = null;
-        private bool m_GotoMenu = false;
-        private float m_GotoMenuDelaySeconds = 0f;
+        private GameBase m_CurrentGame;
+        private bool m_GotoMenu;
+        private float m_GotoMenuDelaySeconds;
 
-        public override bool UseNativeDialog
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public override bool UseNativeDialog => false;
 
         public void GotoMenu()
         {

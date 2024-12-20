@@ -59,14 +59,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public bool EditorResourceMode
         {
-            get
-            {
-                return m_EditorResourceMode;
-            }
-            set
-            {
-                m_EditorResourceMode = value;
-            }
+            get => m_EditorResourceMode;
+            set => m_EditorResourceMode = value;
         }
 
         /// <summary>
@@ -74,14 +68,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public Language EditorLanguage
         {
-            get
-            {
-                return m_EditorLanguage;
-            }
-            set
-            {
-                m_EditorLanguage = value;
-            }
+            get => m_EditorLanguage;
+            set => m_EditorLanguage = value;
         }
 
         /// <summary>
@@ -98,14 +86,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public int FrameRate
         {
-            get
-            {
-                return m_FrameRate;
-            }
-            set
-            {
-                Application.targetFrameRate = m_FrameRate = value;
-            }
+            get => m_FrameRate;
+            set => Application.targetFrameRate = m_FrameRate = value;
         }
 
         /// <summary>
@@ -113,51 +95,27 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public float GameSpeed
         {
-            get
-            {
-                return m_GameSpeed;
-            }
-            set
-            {
-                Time.timeScale = m_GameSpeed = value >= 0f ? value : 0f;
-            }
+            get => m_GameSpeed;
+            set => Time.timeScale = m_GameSpeed = value >= 0f ? value : 0f;
         }
 
         /// <summary>
         /// 获取游戏是否暂停。
         /// </summary>
-        public bool IsGamePaused
-        {
-            get
-            {
-                return m_GameSpeed <= 0f;
-            }
-        }
+        public bool IsGamePaused => m_GameSpeed <= 0f;
 
         /// <summary>
         /// 获取是否正常游戏速度。
         /// </summary>
-        public bool IsNormalGameSpeed
-        {
-            get
-            {
-                return m_GameSpeed == 1f;
-            }
-        }
+        public bool IsNormalGameSpeed => m_GameSpeed == 1f;
 
         /// <summary>
         /// 获取或设置是否允许后台运行。
         /// </summary>
         public bool RunInBackground
         {
-            get
-            {
-                return m_RunInBackground;
-            }
-            set
-            {
-                Application.runInBackground = m_RunInBackground = value;
-            }
+            get => m_RunInBackground;
+            set => Application.runInBackground = m_RunInBackground = value;
         }
 
         /// <summary>
@@ -165,10 +123,7 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public bool NeverSleep
         {
-            get
-            {
-                return m_NeverSleep;
-            }
+            get => m_NeverSleep;
             set
             {
                 m_NeverSleep = value;

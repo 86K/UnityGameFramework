@@ -38,10 +38,7 @@ namespace UnityGameFramework.Runtime
 
             public float UpdateInterval
             {
-                get
-                {
-                    return m_UpdateInterval;
-                }
+                get => m_UpdateInterval;
                 set
                 {
                     if (value <= 0f)
@@ -56,10 +53,7 @@ namespace UnityGameFramework.Runtime
 
             public float RecordInterval
             {
-                get
-                {
-                    return m_RecordInterval;
-                }
+                get => m_RecordInterval;
                 set
                 {
                     if (value <= 0f)
@@ -72,13 +66,7 @@ namespace UnityGameFramework.Runtime
                 }
             }
 
-            public float CurrentSpeed
-            {
-                get
-                {
-                    return m_CurrentSpeed;
-                }
-            }
+            public float CurrentSpeed => m_CurrentSpeed;
 
             public void Shutdown()
             {

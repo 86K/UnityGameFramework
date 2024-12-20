@@ -25,36 +25,12 @@ namespace StarForce
             m_Defense = defense;
         }
 
-        public CampType Camp
-        {
-            get
-            {
-                return m_Camp;
-            }
-        }
+        public CampType Camp => m_Camp;
 
-        public int HP
-        {
-            get
-            {
-                return m_HP;
-            }
-        }
+        public int HP => m_HP;
 
-        public int Attack
-        {
-            get
-            {
-                return m_Attack;
-            }
-        }
+        public int Attack => m_Attack;
 
-        public int Defense
-        {
-            get
-            {
-                return m_Defense;
-            }
-        }
+        public int Defense => m_Defense;
     }
 }

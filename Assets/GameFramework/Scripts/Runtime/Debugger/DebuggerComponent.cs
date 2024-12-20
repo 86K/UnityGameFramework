@@ -33,20 +33,20 @@ namespace UnityGameFramework.Runtime
         internal static readonly float DefaultWindowScale = 1f;
 
         private static readonly TextEditor s_TextEditor = new TextEditor();
-        private IDebuggerManager m_DebuggerManager = null;
+        private IDebuggerManager m_DebuggerManager;
         private Rect m_DragRect = new Rect(0f, 0f, float.MaxValue, 25f);
         private Rect m_IconRect = DefaultIconRect;
         private Rect m_WindowRect = DefaultWindowRect;
         private float m_WindowScale = DefaultWindowScale;
 
         [SerializeField]
-        private GUISkin m_Skin = null;
+        private GUISkin m_Skin;
 
         [SerializeField]
         private DebuggerActiveWindowType m_ActiveWindow = DebuggerActiveWindowType.AlwaysOpen;
 
         [SerializeField]
-        private bool m_ShowFullWindow = false;
+        private bool m_ShowFullWindow;
 
         [SerializeField]
         private ConsoleWindow m_ConsoleWindow = new ConsoleWindow();
@@ -84,17 +84,14 @@ namespace UnityGameFramework.Runtime
         private SettingsWindow m_SettingsWindow = new SettingsWindow();
         private OperationsWindow m_OperationsWindow = new OperationsWindow();
 
-        private FpsCounter m_FpsCounter = null;
+        private FpsCounter m_FpsCounter;
 
         /// <summary>
         /// 获取或设置调试器窗口是否激活。
         /// </summary>
         public bool ActiveWindow
         {
-            get
-            {
-                return m_DebuggerManager.ActiveWindow;
-            }
+            get => m_DebuggerManager.ActiveWindow;
             set
             {
                 m_DebuggerManager.ActiveWindow = value;
@@ -107,14 +104,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public bool ShowFullWindow
         {
-            get
-            {
-                return m_ShowFullWindow;
-            }
-            set
-            {
-                m_ShowFullWindow = value;
-            }
+            get => m_ShowFullWindow;
+            set => m_ShowFullWindow = value;
         }
 
         /// <summary>
@@ -122,14 +113,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public Rect IconRect
         {
-            get
-            {
-                return m_IconRect;
-            }
-            set
-            {
-                m_IconRect = value;
-            }
+            get => m_IconRect;
+            set => m_IconRect = value;
         }
 
         /// <summary>
@@ -137,14 +122,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public Rect WindowRect
         {
-            get
-            {
-                return m_WindowRect;
-            }
-            set
-            {
-                m_WindowRect = value;
-            }
+            get => m_WindowRect;
+            set => m_WindowRect = value;
         }
 
         /// <summary>
@@ -152,14 +131,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public float WindowScale
         {
-            get
-            {
-                return m_WindowScale;
-            }
-            set
-            {
-                m_WindowScale = value;
-            }
+            get => m_WindowScale;
+            set => m_WindowScale = value;
         }
 
         /// <summary>

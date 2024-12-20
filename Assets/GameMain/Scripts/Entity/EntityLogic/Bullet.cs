@@ -16,7 +16,7 @@ namespace StarForce
     public class Bullet : Entity
     {
         [SerializeField]
-        private BulletData m_BulletData = null;
+        private BulletData m_BulletData;
 
         public ImpactData GetImpactData()
         {
@@ -44,7 +44,6 @@ namespace StarForce
             if (m_BulletData == null)
             {
                 Log.Error("Bullet data is invalid.");
-                return;
             }
         }
 

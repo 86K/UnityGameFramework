@@ -13,45 +13,15 @@ namespace StarForce.Editor.DataTableTools
     {
         private sealed class CommentProcessor : DataProcessor
         {
-            public override System.Type Type
-            {
-                get
-                {
-                    return null;
-                }
-            }
+            public override System.Type Type => null;
 
-            public override bool IsId
-            {
-                get
-                {
-                    return false;
-                }
-            }
+            public override bool IsId => false;
 
-            public override bool IsComment
-            {
-                get
-                {
-                    return true;
-                }
-            }
+            public override bool IsComment => true;
 
-            public override bool IsSystem
-            {
-                get
-                {
-                    return false;
-                }
-            }
+            public override bool IsSystem => false;
 
-            public override string LanguageKeyword
-            {
-                get
-                {
-                    return null;
-                }
-            }
+            public override string LanguageKeyword => null;
 
             public override string[] GetTypeStrings()
             {

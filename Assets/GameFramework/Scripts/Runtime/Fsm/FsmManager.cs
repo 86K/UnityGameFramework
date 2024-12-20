@@ -36,13 +36,7 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取有限状态机数量。
         /// </summary>
-        public int Count
-        {
-            get
-            {
-                return m_Fsms.Count;
-            }
-        }
+        public int Count => m_Fsms.Count;
 
         /// <summary>
         /// 有限状态机管理器轮询。

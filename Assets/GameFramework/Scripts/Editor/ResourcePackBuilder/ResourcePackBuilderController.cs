@@ -53,21 +53,9 @@ namespace UnityGameFramework.Editor.ResourceTools
             CompressionHelperTypeName = string.Empty;
         }
 
-        public string ProductName
-        {
-            get
-            {
-                return PlayerSettings.productName;
-            }
-        }
+        public string ProductName => PlayerSettings.productName;
 
-        public string CompanyName
-        {
-            get
-            {
-                return PlayerSettings.companyName;
-            }
-        }
+        public string CompanyName => PlayerSettings.companyName;
 
         public string GameIdentifier
         {
@@ -81,29 +69,11 @@ namespace UnityGameFramework.Editor.ResourceTools
             }
         }
 
-        public string GameFrameworkVersion
-        {
-            get
-            {
-                return Version.GameFrameworkVersion;
-            }
-        }
+        public string GameFrameworkVersion => Version.GameFrameworkVersion;
 
-        public string UnityVersion
-        {
-            get
-            {
-                return Application.unityVersion;
-            }
-        }
+        public string UnityVersion => Application.unityVersion;
 
-        public string ApplicableGameVersion
-        {
-            get
-            {
-                return Application.version;
-            }
-        }
+        public string ApplicableGameVersion => Application.version;
 
         public string WorkingDirectory
         {
@@ -198,13 +168,13 @@ namespace UnityGameFramework.Editor.ResourceTools
             }
         }
 
-        public event GameFrameworkAction<int> OnBuildResourcePacksStarted = null;
+        public event GameFrameworkAction<int> OnBuildResourcePacksStarted;
 
-        public event GameFrameworkAction<int, int> OnBuildResourcePacksCompleted = null;
+        public event GameFrameworkAction<int, int> OnBuildResourcePacksCompleted;
 
-        public event GameFrameworkAction<int, int, string, string> OnBuildResourcePackSuccess = null;
+        public event GameFrameworkAction<int, int, string, string> OnBuildResourcePackSuccess;
 
-        public event GameFrameworkAction<int, int, string, string> OnBuildResourcePackFailure = null;
+        public event GameFrameworkAction<int, int, string, string> OnBuildResourcePackFailure;
 
         public bool Load()
         {

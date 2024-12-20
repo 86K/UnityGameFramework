@@ -74,36 +74,15 @@ namespace UnityGameFramework.Editor.ResourceTools
             SourceAssetRootPath = DefaultSourceAssetRootPath;
         }
 
-        public int ResourceCount
-        {
-            get
-            {
-                return m_ResourceCollection.ResourceCount;
-            }
-        }
+        public int ResourceCount => m_ResourceCollection.ResourceCount;
 
-        public int AssetCount
-        {
-            get
-            {
-                return m_ResourceCollection.AssetCount;
-            }
-        }
+        public int AssetCount => m_ResourceCollection.AssetCount;
 
-        public SourceFolder SourceAssetRoot
-        {
-            get
-            {
-                return m_SourceAssetRoot;
-            }
-        }
+        public SourceFolder SourceAssetRoot => m_SourceAssetRoot;
 
         public string SourceAssetRootPath
         {
-            get
-            {
-                return m_SourceAssetRootPath;
-            }
+            get => m_SourceAssetRootPath;
             set
             {
                 if (m_SourceAssetRootPath == value)
@@ -119,10 +98,7 @@ namespace UnityGameFramework.Editor.ResourceTools
 
         public string SourceAssetUnionTypeFilter
         {
-            get
-            {
-                return m_SourceAssetUnionTypeFilter;
-            }
+            get => m_SourceAssetUnionTypeFilter;
             set
             {
                 if (m_SourceAssetUnionTypeFilter == value)
@@ -136,10 +112,7 @@ namespace UnityGameFramework.Editor.ResourceTools
 
         public string SourceAssetUnionLabelFilter
         {
-            get
-            {
-                return m_SourceAssetUnionLabelFilter;
-            }
+            get => m_SourceAssetUnionLabelFilter;
             set
             {
                 if (m_SourceAssetUnionLabelFilter == value)
@@ -153,10 +126,7 @@ namespace UnityGameFramework.Editor.ResourceTools
 
         public string SourceAssetExceptTypeFilter
         {
-            get
-            {
-                return m_SourceAssetExceptTypeFilter;
-            }
+            get => m_SourceAssetExceptTypeFilter;
             set
             {
                 if (m_SourceAssetExceptTypeFilter == value)
@@ -170,10 +140,7 @@ namespace UnityGameFramework.Editor.ResourceTools
 
         public string SourceAssetExceptLabelFilter
         {
-            get
-            {
-                return m_SourceAssetExceptLabelFilter;
-            }
+            get => m_SourceAssetExceptLabelFilter;
             set
             {
                 if (m_SourceAssetExceptLabelFilter == value)
@@ -187,10 +154,7 @@ namespace UnityGameFramework.Editor.ResourceTools
 
         public AssetSorterType AssetSorter
         {
-            get
-            {
-                return m_AssetSorter;
-            }
+            get => m_AssetSorter;
             set
             {
                 if (m_AssetSorter == value)
@@ -202,15 +166,15 @@ namespace UnityGameFramework.Editor.ResourceTools
             }
         }
 
-        public event GameFrameworkAction<int, int> OnLoadingResource = null;
+        public event GameFrameworkAction<int, int> OnLoadingResource;
 
-        public event GameFrameworkAction<int, int> OnLoadingAsset = null;
+        public event GameFrameworkAction<int, int> OnLoadingAsset;
 
-        public event GameFrameworkAction OnLoadCompleted = null;
+        public event GameFrameworkAction OnLoadCompleted;
 
-        public event GameFrameworkAction<SourceAsset[]> OnAssetAssigned = null;
+        public event GameFrameworkAction<SourceAsset[]> OnAssetAssigned;
 
-        public event GameFrameworkAction<SourceAsset[]> OnAssetUnassigned = null;
+        public event GameFrameworkAction<SourceAsset[]> OnAssetUnassigned;
 
         public bool Load()
         {

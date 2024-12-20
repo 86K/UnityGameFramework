@@ -51,13 +51,7 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取单机模式版本资源列表是否有效。
         /// </summary>
-        public bool IsValid
-        {
-            get
-            {
-                return m_IsValid;
-            }
-        }
+        public bool IsValid => m_IsValid;
 
         /// <summary>
         /// 获取适配的游戏版本号。

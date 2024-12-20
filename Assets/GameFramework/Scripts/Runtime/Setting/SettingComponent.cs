@@ -18,24 +18,18 @@ namespace UnityGameFramework.Runtime
     [AddComponentMenu("Game Framework/Setting")]
     public sealed class SettingComponent : GameFrameworkComponent
     {
-        private ISettingManager m_SettingManager = null;
+        private ISettingManager m_SettingManager;
 
         [SerializeField]
         private string m_SettingHelperTypeName = "UnityGameFramework.Runtime.DefaultSettingHelper";
 
         [SerializeField]
-        private SettingHelperBase m_CustomSettingHelper = null;
+        private SettingHelperBase m_CustomSettingHelper;
 
         /// <summary>
         /// 获取游戏配置项数量。
         /// </summary>
-        public int Count
-        {
-            get
-            {
-                return m_SettingManager.Count;
-            }
-        }
+        public int Count => m_SettingManager.Count;
 
         /// <summary>
         /// 游戏框架组件初始化。

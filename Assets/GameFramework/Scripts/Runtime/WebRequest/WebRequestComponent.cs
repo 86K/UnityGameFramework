@@ -21,17 +21,17 @@ namespace UnityGameFramework.Runtime
     {
         private const int DefaultPriority = 0;
 
-        private IWebRequestManager m_WebRequestManager = null;
-        private EventComponent m_EventComponent = null;
+        private IWebRequestManager m_WebRequestManager;
+        private EventComponent m_EventComponent;
 
         [SerializeField]
-        private Transform m_InstanceRoot = null;
+        private Transform m_InstanceRoot;
 
         [SerializeField]
         private string m_WebRequestAgentHelperTypeName = "UnityGameFramework.Runtime.UnityWebRequestAgentHelper";
 
         [SerializeField]
-        private WebRequestAgentHelperBase m_CustomWebRequestAgentHelper = null;
+        private WebRequestAgentHelperBase m_CustomWebRequestAgentHelper;
 
         [SerializeField]
         private int m_WebRequestAgentHelperCount = 1;
@@ -42,60 +42,30 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取 Web 请求代理总数量。
         /// </summary>
-        public int TotalAgentCount
-        {
-            get
-            {
-                return m_WebRequestManager.TotalAgentCount;
-            }
-        }
+        public int TotalAgentCount => m_WebRequestManager.TotalAgentCount;
 
         /// <summary>
         /// 获取可用 Web 请求代理数量。
         /// </summary>
-        public int FreeAgentCount
-        {
-            get
-            {
-                return m_WebRequestManager.FreeAgentCount;
-            }
-        }
+        public int FreeAgentCount => m_WebRequestManager.FreeAgentCount;
 
         /// <summary>
         /// 获取工作中 Web 请求代理数量。
         /// </summary>
-        public int WorkingAgentCount
-        {
-            get
-            {
-                return m_WebRequestManager.WorkingAgentCount;
-            }
-        }
+        public int WorkingAgentCount => m_WebRequestManager.WorkingAgentCount;
 
         /// <summary>
         /// 获取等待 Web 请求数量。
         /// </summary>
-        public int WaitingTaskCount
-        {
-            get
-            {
-                return m_WebRequestManager.WaitingTaskCount;
-            }
-        }
+        public int WaitingTaskCount => m_WebRequestManager.WaitingTaskCount;
 
         /// <summary>
         /// 获取或设置 Web 请求超时时长，以秒为单位。
         /// </summary>
         public float Timeout
         {
-            get
-            {
-                return m_WebRequestManager.Timeout;
-            }
-            set
-            {
-                m_WebRequestManager.Timeout = m_Timeout = value;
-            }
+            get => m_WebRequestManager.Timeout;
+            set => m_WebRequestManager.Timeout = m_Timeout = value;
         }
 
         /// <summary>

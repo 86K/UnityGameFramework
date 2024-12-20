@@ -369,29 +369,11 @@ namespace StarForce.Editor.DataTableTools
                 m_Items = new List<KeyValuePair<int, string>>();
             }
 
-            public string Name
-            {
-                get
-                {
-                    return m_Name;
-                }
-            }
+            public string Name => m_Name;
 
-            public string LanguageKeyword
-            {
-                get
-                {
-                    return m_LanguageKeyword;
-                }
-            }
+            public string LanguageKeyword => m_LanguageKeyword;
 
-            public int ItemCount
-            {
-                get
-                {
-                    return m_Items.Count;
-                }
-            }
+            public int ItemCount => m_Items.Count;
 
             public KeyValuePair<int, string> GetItem(int index)
             {

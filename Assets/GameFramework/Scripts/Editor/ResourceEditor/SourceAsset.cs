@@ -53,21 +53,9 @@ namespace UnityGameFramework.Editor.ResourceTools
             private set;
         }
 
-        public string FromRootPath
-        {
-            get
-            {
-                return Folder.Folder == null ? Name : Utility.Text.Format("{0}/{1}", Folder.FromRootPath, Name);
-            }
-        }
+        public string FromRootPath => Folder.Folder == null ? Name : Utility.Text.Format("{0}/{1}", Folder.FromRootPath, Name);
 
-        public int Depth
-        {
-            get
-            {
-                return Folder != null ? Folder.Depth + 1 : 0;
-            }
-        }
+        public int Depth => Folder != null ? Folder.Depth + 1 : 0;
 
         public Texture Icon
         {

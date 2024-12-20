@@ -14,7 +14,7 @@ namespace StarForce
     public abstract class AccessoryObjectData : EntityData
     {
         [SerializeField]
-        private int m_OwnerId = 0;
+        private int m_OwnerId;
 
         [SerializeField]
         private CampType m_OwnerCamp = CampType.Unknown;
@@ -29,23 +29,11 @@ namespace StarForce
         /// <summary>
         /// 拥有者编号。
         /// </summary>
-        public int OwnerId
-        {
-            get
-            {
-                return m_OwnerId;
-            }
-        }
+        public int OwnerId => m_OwnerId;
 
         /// <summary>
         /// 拥有者阵营。
         /// </summary>
-        public CampType OwnerCamp
-        {
-            get
-            {
-                return m_OwnerCamp;
-            }
-        }
+        public CampType OwnerCamp => m_OwnerCamp;
     }
 }

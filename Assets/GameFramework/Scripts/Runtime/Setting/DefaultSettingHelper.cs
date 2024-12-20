@@ -19,53 +19,29 @@ namespace UnityGameFramework.Runtime
     {
         private const string SettingFileName = "GameFrameworkSetting.dat";
 
-        private string m_FilePath = null;
-        private DefaultSetting m_Settings = null;
-        private DefaultSettingSerializer m_Serializer = null;
+        private string m_FilePath;
+        private DefaultSetting m_Settings;
+        private DefaultSettingSerializer m_Serializer;
 
         /// <summary>
         /// 获取游戏配置项数量。
         /// </summary>
-        public override int Count
-        {
-            get
-            {
-                return m_Settings != null ? m_Settings.Count : 0;
-            }
-        }
+        public override int Count => m_Settings != null ? m_Settings.Count : 0;
 
         /// <summary>
         /// 获取游戏配置存储文件路径。
         /// </summary>
-        public string FilePath
-        {
-            get
-            {
-                return m_FilePath;
-            }
-        }
+        public string FilePath => m_FilePath;
 
         /// <summary>
         /// 获取游戏配置。
         /// </summary>
-        public DefaultSetting Setting
-        {
-            get
-            {
-                return m_Settings;
-            }
-        }
+        public DefaultSetting Setting => m_Settings;
 
         /// <summary>
         /// 获取游戏配置序列化器。
         /// </summary>
-        public DefaultSettingSerializer Serializer
-        {
-            get
-            {
-                return m_Serializer;
-            }
-        }
+        public DefaultSettingSerializer Serializer => m_Serializer;
 
         /// <summary>
         /// 加载游戏配置。

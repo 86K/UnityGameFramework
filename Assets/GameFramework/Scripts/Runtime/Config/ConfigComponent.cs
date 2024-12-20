@@ -23,23 +23,23 @@ namespace UnityGameFramework.Runtime
     {
         private const int DefaultPriority = 0;
 
-        private IConfigManager m_ConfigManager = null;
-        private EventComponent m_EventComponent = null;
+        private IConfigManager m_ConfigManager;
+        private EventComponent m_EventComponent;
 
         [SerializeField]
-        private bool m_EnableLoadConfigUpdateEvent = false;
+        private bool m_EnableLoadConfigUpdateEvent;
 
         [SerializeField]
-        private bool m_EnableLoadConfigDependencyAssetEvent = false;
+        private bool m_EnableLoadConfigDependencyAssetEvent;
 
         [SerializeField]
         private string m_ConfigHelperTypeName = "UnityGameFramework.Runtime.DefaultConfigHelper";
 
         [SerializeField]
-        private ConfigHelperBase m_CustomConfigHelper = null;
+        private ConfigHelperBase m_CustomConfigHelper;
 
         [SerializeField]
-        private int m_CachedBytesSize = 0;
+        private int m_CachedBytesSize;
 
         /// <summary>
         /// 获取全局配置项数量。

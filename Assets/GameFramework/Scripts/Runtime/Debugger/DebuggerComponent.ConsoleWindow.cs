@@ -18,14 +18,14 @@ namespace UnityGameFramework.Runtime
         {
             private readonly Queue<LogNode> m_LogNodes = new Queue<LogNode>();
 
-            private SettingComponent m_SettingComponent = null;
+            private SettingComponent m_SettingComponent;
             private Vector2 m_LogScrollPosition = Vector2.zero;
             private Vector2 m_StackScrollPosition = Vector2.zero;
-            private int m_InfoCount = 0;
-            private int m_WarningCount = 0;
-            private int m_ErrorCount = 0;
-            private int m_FatalCount = 0;
-            private LogNode m_SelectedNode = null;
+            private int m_InfoCount;
+            private int m_WarningCount;
+            private int m_ErrorCount;
+            private int m_FatalCount;
+            private LogNode m_SelectedNode;
             private bool m_LastLockScroll = true;
             private bool m_LastInfoFilter = true;
             private bool m_LastWarningFilter = true;
@@ -64,154 +64,70 @@ namespace UnityGameFramework.Runtime
 
             public bool LockScroll
             {
-                get
-                {
-                    return m_LockScroll;
-                }
-                set
-                {
-                    m_LockScroll = value;
-                }
+                get => m_LockScroll;
+                set => m_LockScroll = value;
             }
 
             public int MaxLine
             {
-                get
-                {
-                    return m_MaxLine;
-                }
-                set
-                {
-                    m_MaxLine = value;
-                }
+                get => m_MaxLine;
+                set => m_MaxLine = value;
             }
 
             public bool InfoFilter
             {
-                get
-                {
-                    return m_InfoFilter;
-                }
-                set
-                {
-                    m_InfoFilter = value;
-                }
+                get => m_InfoFilter;
+                set => m_InfoFilter = value;
             }
 
             public bool WarningFilter
             {
-                get
-                {
-                    return m_WarningFilter;
-                }
-                set
-                {
-                    m_WarningFilter = value;
-                }
+                get => m_WarningFilter;
+                set => m_WarningFilter = value;
             }
 
             public bool ErrorFilter
             {
-                get
-                {
-                    return m_ErrorFilter;
-                }
-                set
-                {
-                    m_ErrorFilter = value;
-                }
+                get => m_ErrorFilter;
+                set => m_ErrorFilter = value;
             }
 
             public bool FatalFilter
             {
-                get
-                {
-                    return m_FatalFilter;
-                }
-                set
-                {
-                    m_FatalFilter = value;
-                }
+                get => m_FatalFilter;
+                set => m_FatalFilter = value;
             }
 
-            public int InfoCount
-            {
-                get
-                {
-                    return m_InfoCount;
-                }
-            }
+            public int InfoCount => m_InfoCount;
 
-            public int WarningCount
-            {
-                get
-                {
-                    return m_WarningCount;
-                }
-            }
+            public int WarningCount => m_WarningCount;
 
-            public int ErrorCount
-            {
-                get
-                {
-                    return m_ErrorCount;
-                }
-            }
+            public int ErrorCount => m_ErrorCount;
 
-            public int FatalCount
-            {
-                get
-                {
-                    return m_FatalCount;
-                }
-            }
+            public int FatalCount => m_FatalCount;
 
             public Color32 InfoColor
             {
-                get
-                {
-                    return m_InfoColor;
-                }
-                set
-                {
-                    m_InfoColor = value;
-                }
+                get => m_InfoColor;
+                set => m_InfoColor = value;
             }
 
             public Color32 WarningColor
             {
-                get
-                {
-                    return m_WarningColor;
-                }
-                set
-                {
-                    m_WarningColor = value;
-                }
+                get => m_WarningColor;
+                set => m_WarningColor = value;
             }
 
             public Color32 ErrorColor
             {
-                get
-                {
-                    return m_ErrorColor;
-                }
-                set
-                {
-                    m_ErrorColor = value;
-                }
+                get => m_ErrorColor;
+                set => m_ErrorColor = value;
             }
 
             public Color32 FatalColor
             {
-                get
-                {
-                    return m_FatalColor;
-                }
-                set
-                {
-                    m_FatalColor = value;
-                }
+                get => m_FatalColor;
+                set => m_FatalColor = value;
             }
 
             public void Initialize(params object[] args)

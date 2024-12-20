@@ -14,7 +14,7 @@ namespace StarForce
     public class EffectData : EntityData
     {
         [SerializeField]
-        private float m_KeepTime = 0f;
+        private float m_KeepTime;
 
         public EffectData(int entityId, int typeId)
             : base(entityId, typeId)
@@ -22,12 +22,6 @@ namespace StarForce
             m_KeepTime = 3f;
         }
 
-        public float KeepTime
-        {
-            get
-            {
-                return m_KeepTime;
-            }
-        }
+        public float KeepTime => m_KeepTime;
     }
 }

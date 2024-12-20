@@ -5,15 +5,9 @@ namespace StarForce
 {
     public class ProcedureVerifyResources : ProcedureBase
     {
-        private bool m_VerifyResourcesComplete = false;
+        private bool m_VerifyResourcesComplete;
 
-        public override bool UseNativeDialog
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool UseNativeDialog => true;
 
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {

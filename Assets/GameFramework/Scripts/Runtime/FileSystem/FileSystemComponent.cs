@@ -17,13 +17,13 @@ namespace UnityGameFramework.Runtime
     [AddComponentMenu("Game Framework/File System")]
     public sealed class FileSystemComponent : GameFrameworkComponent
     {
-        private IFileSystemManager m_FileSystemManager = null;
+        private IFileSystemManager m_FileSystemManager;
 
         [SerializeField]
         private string m_FileSystemHelperTypeName = "UnityGameFramework.Runtime.DefaultFileSystemHelper";
 
         [SerializeField]
-        private FileSystemHelperBase m_CustomFileSystemHelper = null;
+        private FileSystemHelperBase m_CustomFileSystemHelper;
 
         /// <summary>
         /// 获取文件系统数量。

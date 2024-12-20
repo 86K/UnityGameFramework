@@ -18,7 +18,7 @@ namespace UnityGameFramework.Runtime
             private readonly Dictionary<string, List<ReferencePoolInfo>> m_ReferencePoolInfos = new Dictionary<string, List<ReferencePoolInfo>>(StringComparer.Ordinal);
             private readonly Comparison<ReferencePoolInfo> m_NormalClassNameComparer = NormalClassNameComparer;
             private readonly Comparison<ReferencePoolInfo> m_FullClassNameComparer = FullClassNameComparer;
-            private bool m_ShowFullClassName = false;
+            private bool m_ShowFullClassName;
 
             public override void Initialize(params object[] args)
             {

@@ -14,8 +14,8 @@ namespace UnityGameFramework.Editor
     [CustomEditor(typeof(SceneComponent))]
     internal sealed class SceneComponentInspector : GameFrameworkInspector
     {
-        private SerializedProperty m_EnableLoadSceneUpdateEvent = null;
-        private SerializedProperty m_EnableLoadSceneDependencyAssetEvent = null;
+        private SerializedProperty m_EnableLoadSceneUpdateEvent;
+        private SerializedProperty m_EnableLoadSceneDependencyAssetEvent;
 
         public override void OnInspectorGUI()
         {

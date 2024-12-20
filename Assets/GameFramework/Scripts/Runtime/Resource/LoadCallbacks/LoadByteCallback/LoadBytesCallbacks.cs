@@ -43,23 +43,11 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取加载数据流成功回调函数。
         /// </summary>
-        public LoadBytesSuccessCallback LoadBytesSuccessCallback
-        {
-            get
-            {
-                return m_LoadBytesSuccessCallback;
-            }
-        }
+        public LoadBytesSuccessCallback LoadBytesSuccessCallback => m_LoadBytesSuccessCallback;
 
         /// <summary>
         /// 获取加载数据流失败回调函数。
         /// </summary>
-        public LoadBytesFailureCallback LoadBytesFailureCallback
-        {
-            get
-            {
-                return m_LoadBytesFailureCallback;
-            }
-        }
+        public LoadBytesFailureCallback LoadBytesFailureCallback => m_LoadBytesFailureCallback;
     }
 }

@@ -58,38 +58,20 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取实体数量。
         /// </summary>
-        public int EntityCount
-        {
-            get
-            {
-                return m_EntityInfos.Count;
-            }
-        }
+        public int EntityCount => m_EntityInfos.Count;
 
         /// <summary>
         /// 获取实体组数量。
         /// </summary>
-        public int EntityGroupCount
-        {
-            get
-            {
-                return m_EntityGroups.Count;
-            }
-        }
+        public int EntityGroupCount => m_EntityGroups.Count;
 
         /// <summary>
         /// 显示实体成功事件。
         /// </summary>
         public event EventHandler<ShowEntitySuccessEventArgs> ShowEntitySuccess
         {
-            add
-            {
-                m_ShowEntitySuccessEventHandler += value;
-            }
-            remove
-            {
-                m_ShowEntitySuccessEventHandler -= value;
-            }
+            add => m_ShowEntitySuccessEventHandler += value;
+            remove => m_ShowEntitySuccessEventHandler -= value;
         }
 
         /// <summary>
@@ -97,14 +79,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<ShowEntityFailureEventArgs> ShowEntityFailure
         {
-            add
-            {
-                m_ShowEntityFailureEventHandler += value;
-            }
-            remove
-            {
-                m_ShowEntityFailureEventHandler -= value;
-            }
+            add => m_ShowEntityFailureEventHandler += value;
+            remove => m_ShowEntityFailureEventHandler -= value;
         }
 
         /// <summary>
@@ -112,14 +88,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<ShowEntityUpdateEventArgs> ShowEntityUpdate
         {
-            add
-            {
-                m_ShowEntityUpdateEventHandler += value;
-            }
-            remove
-            {
-                m_ShowEntityUpdateEventHandler -= value;
-            }
+            add => m_ShowEntityUpdateEventHandler += value;
+            remove => m_ShowEntityUpdateEventHandler -= value;
         }
 
         /// <summary>
@@ -127,14 +97,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<ShowEntityDependencyAssetEventArgs> ShowEntityDependencyAsset
         {
-            add
-            {
-                m_ShowEntityDependencyAssetEventHandler += value;
-            }
-            remove
-            {
-                m_ShowEntityDependencyAssetEventHandler -= value;
-            }
+            add => m_ShowEntityDependencyAssetEventHandler += value;
+            remove => m_ShowEntityDependencyAssetEventHandler -= value;
         }
 
         /// <summary>
@@ -142,14 +106,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<HideEntityCompleteEventArgs> HideEntityComplete
         {
-            add
-            {
-                m_HideEntityCompleteEventHandler += value;
-            }
-            remove
-            {
-                m_HideEntityCompleteEventHandler -= value;
-            }
+            add => m_HideEntityCompleteEventHandler += value;
+            remove => m_HideEntityCompleteEventHandler -= value;
         }
 
         /// <summary>

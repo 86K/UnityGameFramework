@@ -13,9 +13,9 @@ namespace StarForce
     public class MenuForm : UGuiForm
     {
         [SerializeField]
-        private GameObject m_QuitButton = null;
+        private GameObject m_QuitButton;
 
-        private ProcedureMenu m_ProcedureMenu = null;
+        private ProcedureMenu m_ProcedureMenu;
 
         public void OnStartButtonClick()
         {

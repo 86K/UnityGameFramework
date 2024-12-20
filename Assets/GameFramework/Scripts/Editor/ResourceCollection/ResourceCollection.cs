@@ -37,27 +37,15 @@ namespace UnityGameFramework.Editor.ResourceTools
             m_Assets = new SortedDictionary<string, Asset>(StringComparer.Ordinal);
         }
 
-        public int ResourceCount
-        {
-            get
-            {
-                return m_Resources.Count;
-            }
-        }
+        public int ResourceCount => m_Resources.Count;
 
-        public int AssetCount
-        {
-            get
-            {
-                return m_Assets.Count;
-            }
-        }
+        public int AssetCount => m_Assets.Count;
 
-        public event GameFrameworkAction<int, int> OnLoadingResource = null;
+        public event GameFrameworkAction<int, int> OnLoadingResource;
 
-        public event GameFrameworkAction<int, int> OnLoadingAsset = null;
+        public event GameFrameworkAction<int, int> OnLoadingAsset;
 
-        public event GameFrameworkAction OnLoadCompleted = null;
+        public event GameFrameworkAction OnLoadCompleted;
 
         public void Clear()
         {
@@ -121,7 +109,6 @@ namespace UnityGameFramework.Editor.ResourceTools
                     if (!AddResource(name, variant, fileSystem, (LoadType)loadType, packed, resourceGroups))
                     {
                         Debug.LogWarning(Utility.Text.Format("Can not add resource '{0}'.", GetResourceFullName(name, variant)));
-                        continue;
                     }
                 }
 
@@ -146,7 +133,6 @@ namespace UnityGameFramework.Editor.ResourceTools
                     if (!AssignAsset(guid, name, variant))
                     {
                         Debug.LogWarning(Utility.Text.Format("Can not assign asset '{0}' to resource '{1}'.", guid, GetResourceFullName(name, variant)));
-                        continue;
                     }
                 }
 

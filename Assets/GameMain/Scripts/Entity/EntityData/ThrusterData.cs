@@ -15,7 +15,7 @@ namespace StarForce
     public class ThrusterData : AccessoryObjectData
     {
         [SerializeField]
-        private float m_Speed = 0f;
+        private float m_Speed;
 
         public ThrusterData(int entityId, int typeId, int ownerId, CampType ownerCamp)
             : base(entityId, typeId, ownerId, ownerCamp)
@@ -33,12 +33,6 @@ namespace StarForce
         /// <summary>
         /// 速度。
         /// </summary>
-        public float Speed
-        {
-            get
-            {
-                return m_Speed;
-            }
-        }
+        public float Speed => m_Speed;
     }
 }

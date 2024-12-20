@@ -17,10 +17,10 @@ namespace StarForce
     public abstract class Aircraft : TargetableObject
     {
         [SerializeField]
-        private AircraftData m_AircraftData = null;
+        private AircraftData m_AircraftData;
 
         [SerializeField]
-        protected Thruster m_Thruster = null;
+        protected Thruster m_Thruster;
 
         [SerializeField]
         protected List<Weapon> m_Weapons = new List<Weapon>();
@@ -92,7 +92,6 @@ namespace StarForce
             if (childEntity is Armor)
             {
                 m_Armors.Add((Armor)childEntity);
-                return;
             }
         }
 
@@ -119,7 +118,6 @@ namespace StarForce
             if (childEntity is Armor)
             {
                 m_Armors.Remove((Armor)childEntity);
-                return;
             }
         }
 

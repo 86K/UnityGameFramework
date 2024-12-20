@@ -18,7 +18,7 @@ namespace StarForce
         private const string AttachPoint = "Armor Point";
 
         [SerializeField]
-        private ArmorData m_ArmorData = null;
+        private ArmorData m_ArmorData;
 
 #if UNITY_2017_3_OR_NEWER
         protected override void OnInit(object userData)

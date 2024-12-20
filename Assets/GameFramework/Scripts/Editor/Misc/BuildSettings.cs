@@ -18,7 +18,7 @@ namespace UnityGameFramework.Editor
     /// </summary>
     internal static class BuildSettings
     {
-        private static readonly string s_ConfigurationPath = null;
+        private static readonly string s_ConfigurationPath;
         private static readonly List<string> s_DefaultSceneNames = new List<string>();
         private static readonly List<string> s_SearchScenePaths = new List<string>();
 

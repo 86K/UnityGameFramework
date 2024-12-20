@@ -13,21 +13,9 @@ namespace StarForce.Editor.DataTableTools
     {
         private sealed class BooleanProcessor : GenericDataProcessor<bool>
         {
-            public override bool IsSystem
-            {
-                get
-                {
-                    return true;
-                }
-            }
+            public override bool IsSystem => true;
 
-            public override string LanguageKeyword
-            {
-                get
-                {
-                    return "bool";
-                }
-            }
+            public override string LanguageKeyword => "bool";
 
             public override string[] GetTypeStrings()
             {

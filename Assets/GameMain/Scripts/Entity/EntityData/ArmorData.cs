@@ -15,10 +15,10 @@ namespace StarForce
     public class ArmorData : AccessoryObjectData
     {
         [SerializeField]
-        private int m_MaxHP = 0;
+        private int m_MaxHP;
 
         [SerializeField]
-        private int m_Defense = 0;
+        private int m_Defense;
 
         public ArmorData(int entityId, int typeId, int ownerId, CampType ownerCamp)
             : base(entityId, typeId, ownerId, ownerCamp)
@@ -37,23 +37,11 @@ namespace StarForce
         /// <summary>
         /// 最大生命。
         /// </summary>
-        public int MaxHP
-        {
-            get
-            {
-                return m_MaxHP;
-            }
-        }
+        public int MaxHP => m_MaxHP;
 
         /// <summary>
         /// 防御力。
         /// </summary>
-        public int Defense
-        {
-            get
-            {
-                return m_Defense;
-            }
-        }
+        public int Defense => m_Defense;
     }
 }

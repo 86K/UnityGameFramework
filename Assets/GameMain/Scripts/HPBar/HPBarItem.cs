@@ -19,21 +19,15 @@ namespace StarForce
         private const float FadeOutSeconds = 0.3f;
 
         [SerializeField]
-        private Slider m_HPBar = null;
+        private Slider m_HPBar;
 
-        private Canvas m_ParentCanvas = null;
-        private RectTransform m_CachedTransform = null;
-        private CanvasGroup m_CachedCanvasGroup = null;
-        private Entity m_Owner = null;
-        private int m_OwnerId = 0;
+        private Canvas m_ParentCanvas;
+        private RectTransform m_CachedTransform;
+        private CanvasGroup m_CachedCanvasGroup;
+        private Entity m_Owner;
+        private int m_OwnerId;
 
-        public Entity Owner
-        {
-            get
-            {
-                return m_Owner;
-            }
-        }
+        public Entity Owner => m_Owner;
 
         public void Init(Entity owner, Canvas parentCanvas, float fromHPRatio, float toHPRatio)
         {
@@ -106,7 +100,6 @@ namespace StarForce
             if (m_CachedCanvasGroup == null)
             {
                 Log.Error("CanvasGroup is invalid.");
-                return;
             }
         }
 

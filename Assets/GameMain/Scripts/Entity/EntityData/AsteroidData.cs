@@ -15,22 +15,22 @@ namespace StarForce
     public class AsteroidData : TargetableObjectData
     {
         [SerializeField]
-        private int m_MaxHP = 0;
+        private int m_MaxHP;
 
         [SerializeField]
-        private int m_Attack = 0;
+        private int m_Attack;
 
         [SerializeField]
-        private float m_Speed = 0f;
+        private float m_Speed;
 
         [SerializeField]
-        private float m_AngularSpeed = 0f;
+        private float m_AngularSpeed;
 
         [SerializeField]
-        private int m_DeadEffectId = 0;
+        private int m_DeadEffectId;
 
         [SerializeField]
-        private int m_DeadSoundId = 0;
+        private int m_DeadSoundId;
 
         public AsteroidData(int entityId, int typeId)
             : base(entityId, typeId, CampType.Neutral)
@@ -50,52 +50,16 @@ namespace StarForce
             m_DeadSoundId = drAsteroid.DeadSoundId;
         }
 
-        public override int MaxHP
-        {
-            get
-            {
-                return m_MaxHP;
-            }
-        }
+        public override int MaxHP => m_MaxHP;
 
-        public int Attack
-        {
-            get
-            {
-                return m_Attack;
-            }
-        }
+        public int Attack => m_Attack;
 
-        public float Speed
-        {
-            get
-            {
-                return m_Speed;
-            }
-        }
+        public float Speed => m_Speed;
 
-        public float AngularSpeed
-        {
-            get
-            {
-                return m_AngularSpeed;
-            }
-        }
+        public float AngularSpeed => m_AngularSpeed;
 
-        public int DeadEffectId
-        {
-            get
-            {
-                return m_DeadEffectId;
-            }
-        }
+        public int DeadEffectId => m_DeadEffectId;
 
-        public int DeadSoundId
-        {
-            get
-            {
-                return m_DeadSoundId;
-            }
-        }
+        public int DeadSoundId => m_DeadSoundId;
     }
 }

@@ -29,26 +29,14 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public string Name
         {
-            get
-            {
-                return m_Name;
-            }
-            protected set
-            {
-                m_Name = value ?? string.Empty;
-            }
+            get => m_Name;
+            protected set => m_Name = value ?? string.Empty;
         }
 
         /// <summary>
         /// 获取有限状态机完整名称。
         /// </summary>
-        public string FullName
-        {
-            get
-            {
-                return new TypeNamePair(OwnerType, m_Name).ToString();
-            }
-        }
+        public string FullName => new TypeNamePair(OwnerType, m_Name).ToString();
 
         /// <summary>
         /// 获取有限状态机持有者类型。

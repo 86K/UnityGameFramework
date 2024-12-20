@@ -13,21 +13,9 @@ namespace StarForce.Editor.DataTableTools
     {
         private sealed class CharProcessor : GenericDataProcessor<char>
         {
-            public override bool IsSystem
-            {
-                get
-                {
-                    return true;
-                }
-            }
+            public override bool IsSystem => true;
 
-            public override string LanguageKeyword
-            {
-                get
-                {
-                    return "char";
-                }
-            }
+            public override string LanguageKeyword => "char";
 
             public override string[] GetTypeStrings()
             {

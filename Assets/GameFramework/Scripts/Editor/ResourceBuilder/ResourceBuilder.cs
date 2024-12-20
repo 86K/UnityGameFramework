@@ -18,10 +18,10 @@ namespace UnityGameFramework.Editor.ResourceTools
     /// </summary>
     internal sealed class ResourceBuilder : EditorWindow
     {
-        private ResourceBuilderController m_Controller = null;
-        private bool m_OrderBuildResources = false;
-        private int m_CompressionHelperTypeNameIndex = 0;
-        private int m_BuildEventHandlerTypeNameIndex = 0;
+        private ResourceBuilderController m_Controller;
+        private bool m_OrderBuildResources;
+        private int m_CompressionHelperTypeNameIndex;
+        private int m_BuildEventHandlerTypeNameIndex;
 
         [MenuItem("Game Framework/Resource Tools/Resource Builder", false, 40)]
         private static void Open()

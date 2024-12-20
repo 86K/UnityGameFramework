@@ -54,14 +54,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public override long Position
         {
-            get
-            {
-                return m_FileStream.Position;
-            }
-            set
-            {
-                m_FileStream.Position = value;
-            }
+            get => m_FileStream.Position;
+            set => m_FileStream.Position = value;
         }
 
         /// <summary>

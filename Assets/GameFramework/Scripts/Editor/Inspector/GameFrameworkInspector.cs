@@ -14,7 +14,7 @@ namespace UnityGameFramework.Editor
     /// </summary>
     public abstract class GameFrameworkInspector : UnityEditor.Editor
     {
-        private bool m_IsCompiling = false;
+        private bool m_IsCompiling;
 
         /// <summary>
         /// 绘制事件。

@@ -49,18 +49,15 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取声音组数量。
         /// </summary>
-        public int SoundGroupCount
-        {
-            get { return m_SoundGroups.Count; }
-        }
+        public int SoundGroupCount => m_SoundGroups.Count;
 
         /// <summary>
         /// 播放声音成功事件。
         /// </summary>
         public event EventHandler<PlaySoundSuccessEventArgs> PlaySoundSuccess
         {
-            add { m_PlaySoundSuccessEventHandler += value; }
-            remove { m_PlaySoundSuccessEventHandler -= value; }
+            add => m_PlaySoundSuccessEventHandler += value;
+            remove => m_PlaySoundSuccessEventHandler -= value;
         }
 
         /// <summary>
@@ -68,8 +65,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<PlaySoundFailureEventArgs> PlaySoundFailure
         {
-            add { m_PlaySoundFailureEventHandler += value; }
-            remove { m_PlaySoundFailureEventHandler -= value; }
+            add => m_PlaySoundFailureEventHandler += value;
+            remove => m_PlaySoundFailureEventHandler -= value;
         }
 
         /// <summary>
@@ -77,8 +74,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<PlaySoundUpdateEventArgs> PlaySoundUpdate
         {
-            add { m_PlaySoundUpdateEventHandler += value; }
-            remove { m_PlaySoundUpdateEventHandler -= value; }
+            add => m_PlaySoundUpdateEventHandler += value;
+            remove => m_PlaySoundUpdateEventHandler -= value;
         }
 
         /// <summary>
@@ -86,8 +83,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<PlaySoundDependencyAssetEventArgs> PlaySoundDependencyAsset
         {
-            add { m_PlaySoundDependencyAssetEventHandler += value; }
-            remove { m_PlaySoundDependencyAssetEventHandler -= value; }
+            add => m_PlaySoundDependencyAssetEventHandler += value;
+            remove => m_PlaySoundDependencyAssetEventHandler -= value;
         }
 
         /// <summary>

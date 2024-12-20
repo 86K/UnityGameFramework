@@ -20,45 +20,33 @@ namespace UnityGameFramework.Runtime
     {
         private const int DefaultPriority = 0;
 
-        private IDataTableManager m_DataTableManager = null;
-        private EventComponent m_EventComponent = null;
+        private IDataTableManager m_DataTableManager;
+        private EventComponent m_EventComponent;
 
         [SerializeField]
-        private bool m_EnableLoadDataTableUpdateEvent = false;
+        private bool m_EnableLoadDataTableUpdateEvent;
 
         [SerializeField]
-        private bool m_EnableLoadDataTableDependencyAssetEvent = false;
+        private bool m_EnableLoadDataTableDependencyAssetEvent;
 
         [SerializeField]
         private string m_DataTableHelperTypeName = "UnityGameFramework.Runtime.DefaultDataTableHelper";
 
         [SerializeField]
-        private DataTableHelperBase m_CustomDataTableHelper = null;
+        private DataTableHelperBase m_CustomDataTableHelper;
 
         [SerializeField]
-        private int m_CachedBytesSize = 0;
+        private int m_CachedBytesSize;
 
         /// <summary>
         /// 获取数据表数量。
         /// </summary>
-        public int Count
-        {
-            get
-            {
-                return m_DataTableManager.Count;
-            }
-        }
+        public int Count => m_DataTableManager.Count;
 
         /// <summary>
         /// 获取缓冲二进制流的大小。
         /// </summary>
-        public int CachedBytesSize
-        {
-            get
-            {
-                return m_DataTableManager.CachedBytesSize;
-            }
-        }
+        public int CachedBytesSize => m_DataTableManager.CachedBytesSize;
 
         /// <summary>
         /// 游戏框架组件初始化。
@@ -71,7 +59,6 @@ namespace UnityGameFramework.Runtime
             if (m_DataTableManager == null)
             {
                 Log.Fatal("Data table manager is invalid.");
-                return;
             }
         }
 

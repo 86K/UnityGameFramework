@@ -18,9 +18,9 @@ namespace StarForce
         private const string AttachPoint = "Weapon Point";
 
         [SerializeField]
-        private WeaponData m_WeaponData = null;
+        private WeaponData m_WeaponData;
 
-        private float m_NextAttackTime = 0f;
+        private float m_NextAttackTime;
 
 #if UNITY_2017_3_OR_NEWER
         protected override void OnInit(object userData)

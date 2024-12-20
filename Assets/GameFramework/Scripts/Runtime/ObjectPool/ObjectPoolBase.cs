@@ -36,24 +36,12 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取对象池名称。
         /// </summary>
-        public string Name
-        {
-            get
-            {
-                return m_Name;
-            }
-        }
+        public string Name => m_Name;
 
         /// <summary>
         /// 获取对象池完整名称。
         /// </summary>
-        public string FullName
-        {
-            get
-            {
-                return new TypeNamePair(ObjectType, m_Name).ToString();
-            }
-        }
+        public string FullName => new TypeNamePair(ObjectType, m_Name).ToString();
 
         /// <summary>
         /// 获取对象池对象类型。

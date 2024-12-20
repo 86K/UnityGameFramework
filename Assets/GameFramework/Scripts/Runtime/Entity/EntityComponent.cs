@@ -20,56 +20,44 @@ namespace UnityGameFramework.Runtime
     {
         private const int DefaultPriority = 0;
 
-        private IEntityManager m_EntityManager = null;
-        private EventComponent m_EventComponent = null;
+        private IEntityManager m_EntityManager;
+        private EventComponent m_EventComponent;
 
         private readonly List<IEntity> m_InternalEntityResults = new List<IEntity>();
 
         [SerializeField]
-        private bool m_EnableShowEntityUpdateEvent = false;
+        private bool m_EnableShowEntityUpdateEvent;
 
         [SerializeField]
-        private bool m_EnableShowEntityDependencyAssetEvent = false;
+        private bool m_EnableShowEntityDependencyAssetEvent;
 
         [SerializeField]
-        private Transform m_InstanceRoot = null;
+        private Transform m_InstanceRoot;
 
         [SerializeField]
         private string m_EntityHelperTypeName = "UnityGameFramework.Runtime.DefaultEntityHelper";
 
         [SerializeField]
-        private EntityHelperBase m_CustomEntityHelper = null;
+        private EntityHelperBase m_CustomEntityHelper;
 
         [SerializeField]
         private string m_EntityGroupHelperTypeName = "UnityGameFramework.Runtime.DefaultEntityGroupHelper";
 
         [SerializeField]
-        private EntityGroupHelperBase m_CustomEntityGroupHelper = null;
+        private EntityGroupHelperBase m_CustomEntityGroupHelper;
 
         [SerializeField]
-        private EntityGroup[] m_EntityGroups = null;
+        private EntityGroup[] m_EntityGroups;
 
         /// <summary>
         /// 获取实体数量。
         /// </summary>
-        public int EntityCount
-        {
-            get
-            {
-                return m_EntityManager.EntityCount;
-            }
-        }
+        public int EntityCount => m_EntityManager.EntityCount;
 
         /// <summary>
         /// 获取实体组数量。
         /// </summary>
-        public int EntityGroupCount
-        {
-            get
-            {
-                return m_EntityManager.EntityGroupCount;
-            }
-        }
+        public int EntityGroupCount => m_EntityManager.EntityGroupCount;
 
         /// <summary>
         /// 游戏框架组件初始化。
@@ -154,7 +142,6 @@ namespace UnityGameFramework.Runtime
                 if (!AddEntityGroup(m_EntityGroups[i].Name, m_EntityGroups[i].InstanceAutoReleaseInterval, m_EntityGroups[i].InstanceCapacity, m_EntityGroups[i].InstanceExpireTime, m_EntityGroups[i].InstancePriority))
                 {
                     Log.Warning("Add entity group '{0}' failure.", m_EntityGroups[i].Name);
-                    continue;
                 }
             }
         }

@@ -17,32 +17,32 @@ namespace UnityGameFramework.Editor.ResourceTools
     /// </summary>
     internal sealed partial class ResourceEditor : EditorWindow
     {
-        private ResourceEditorController m_Controller = null;
+        private ResourceEditorController m_Controller;
         private MenuState m_MenuState = MenuState.Normal;
-        private Resource m_SelectedResource = null;
-        private ResourceFolder m_ResourceRoot = null;
-        private HashSet<string> m_ExpandedResourceFolderNames = null;
-        private HashSet<Asset> m_SelectedAssetsInSelectedResource = null;
-        private HashSet<SourceFolder> m_ExpandedSourceFolders = null;
-        private HashSet<SourceAsset> m_SelectedSourceAssets = null;
-        private Texture m_MissingSourceAssetIcon = null;
+        private Resource m_SelectedResource;
+        private ResourceFolder m_ResourceRoot;
+        private HashSet<string> m_ExpandedResourceFolderNames;
+        private HashSet<Asset> m_SelectedAssetsInSelectedResource;
+        private HashSet<SourceFolder> m_ExpandedSourceFolders;
+        private HashSet<SourceAsset> m_SelectedSourceAssets;
+        private Texture m_MissingSourceAssetIcon;
 
-        private HashSet<SourceFolder> m_CachedSelectedSourceFolders = null;
-        private HashSet<SourceFolder> m_CachedUnselectedSourceFolders = null;
-        private HashSet<SourceFolder> m_CachedAssignedSourceFolders = null;
-        private HashSet<SourceFolder> m_CachedUnassignedSourceFolders = null;
-        private HashSet<SourceAsset> m_CachedAssignedSourceAssets = null;
-        private HashSet<SourceAsset> m_CachedUnassignedSourceAssets = null;
+        private HashSet<SourceFolder> m_CachedSelectedSourceFolders;
+        private HashSet<SourceFolder> m_CachedUnselectedSourceFolders;
+        private HashSet<SourceFolder> m_CachedAssignedSourceFolders;
+        private HashSet<SourceFolder> m_CachedUnassignedSourceFolders;
+        private HashSet<SourceAsset> m_CachedAssignedSourceAssets;
+        private HashSet<SourceAsset> m_CachedUnassignedSourceAssets;
 
         private Vector2 m_ResourcesViewScroll = Vector2.zero;
         private Vector2 m_ResourceViewScroll = Vector2.zero;
         private Vector2 m_SourceAssetsViewScroll = Vector2.zero;
-        private string m_InputResourceName = null;
-        private string m_InputResourceVariant = null;
-        private bool m_HideAssignedSourceAssets = false;
-        private int m_CurrentResourceContentCount = 0;
-        private int m_CurrentResourceRowOnDraw = 0;
-        private int m_CurrentSourceRowOnDraw = 0;
+        private string m_InputResourceName;
+        private string m_InputResourceVariant;
+        private bool m_HideAssignedSourceAssets;
+        private int m_CurrentResourceContentCount;
+        private int m_CurrentResourceRowOnDraw;
+        private int m_CurrentSourceRowOnDraw;
 
         [MenuItem("Game Framework/Resource Tools/Resource Editor", false, 41)]
         private static void Open()

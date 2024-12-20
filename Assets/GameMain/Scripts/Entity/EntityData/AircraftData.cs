@@ -16,7 +16,7 @@ namespace StarForce
     public abstract class AircraftData : TargetableObjectData
     {
         [SerializeField]
-        private ThrusterData m_ThrusterData = null;
+        private ThrusterData m_ThrusterData;
 
         [SerializeField]
         private List<WeaponData> m_WeaponDatas = new List<WeaponData>();
@@ -25,16 +25,16 @@ namespace StarForce
         private List<ArmorData> m_ArmorDatas = new List<ArmorData>();
 
         [SerializeField]
-        private int m_MaxHP = 0;
+        private int m_MaxHP;
 
         [SerializeField]
-        private int m_Defense = 0;
+        private int m_Defense;
 
         [SerializeField]
-        private int m_DeadEffectId = 0;
+        private int m_DeadEffectId;
 
         [SerializeField]
-        private int m_DeadSoundId = 0;
+        private int m_DeadSoundId;
 
         public AircraftData(int entityId, int typeId, CampType camp)
             : base(entityId, typeId, camp)
@@ -67,51 +67,21 @@ namespace StarForce
         /// <summary>
         /// 最大生命。
         /// </summary>
-        public override int MaxHP
-        {
-            get
-            {
-                return m_MaxHP;
-            }
-        }
+        public override int MaxHP => m_MaxHP;
 
         /// <summary>
         /// 防御。
         /// </summary>
-        public int Defense
-        {
-            get
-            {
-                return m_Defense;
-            }
-        }
+        public int Defense => m_Defense;
 
         /// <summary>
         /// 速度。
         /// </summary>
-        public float Speed
-        {
-            get
-            {
-                return m_ThrusterData.Speed;
-            }
-        }
+        public float Speed => m_ThrusterData.Speed;
 
-        public int DeadEffectId
-        {
-            get
-            {
-                return m_DeadEffectId;
-            }
-        }
+        public int DeadEffectId => m_DeadEffectId;
 
-        public int DeadSoundId
-        {
-            get
-            {
-                return m_DeadSoundId;
-            }
-        }
+        public int DeadSoundId => m_DeadSoundId;
 
         public ThrusterData GetThrusterData()
         {

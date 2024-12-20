@@ -33,13 +33,7 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取多值字典中实际包含的主键数量。
         /// </summary>
-        public int Count
-        {
-            get
-            {
-                return m_Dictionary.Count;
-            }
-        }
+        public int Count => m_Dictionary.Count;
 
         /// <summary>
         /// 获取多值字典中指定主键的范围。
@@ -235,24 +229,12 @@ namespace UnityGameFramework.Runtime
             /// <summary>
             /// 获取当前结点。
             /// </summary>
-            public KeyValuePair<TKey, GameFrameworkLinkedListRange<TValue>> Current
-            {
-                get
-                {
-                    return m_Enumerator.Current;
-                }
-            }
+            public KeyValuePair<TKey, GameFrameworkLinkedListRange<TValue>> Current => m_Enumerator.Current;
 
             /// <summary>
             /// 获取当前的枚举数。
             /// </summary>
-            object IEnumerator.Current
-            {
-                get
-                {
-                    return m_Enumerator.Current;
-                }
-            }
+            object IEnumerator.Current => m_Enumerator.Current;
 
             /// <summary>
             /// 清理枚举数。

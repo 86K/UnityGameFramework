@@ -20,21 +20,9 @@ namespace UnityGameFramework.Runtime
             m_UserData = null;
         }
 
-        public Type EntityLogicType
-        {
-            get
-            {
-                return m_EntityLogicType;
-            }
-        }
+        public Type EntityLogicType => m_EntityLogicType;
 
-        public object UserData
-        {
-            get
-            {
-                return m_UserData;
-            }
-        }
+        public object UserData => m_UserData;
 
         public static ShowEntityInfo Create(Type entityLogicType, object userData)
         {

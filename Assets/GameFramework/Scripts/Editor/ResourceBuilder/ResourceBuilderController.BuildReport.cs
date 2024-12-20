@@ -22,25 +22,25 @@ namespace UnityGameFramework.Editor.ResourceTools
             private const string BuildReportName = "BuildReport.xml";
             private const string BuildLogName = "BuildLog.txt";
 
-            private string m_BuildReportName = null;
-            private string m_BuildLogName = null;
-            private string m_ProductName = null;
-            private string m_CompanyName = null;
-            private string m_GameIdentifier = null;
-            private string m_GameFrameworkVersion = null;
-            private string m_UnityVersion = null;
-            private string m_ApplicableGameVersion = null;
-            private int m_InternalResourceVersion = 0;
+            private string m_BuildReportName;
+            private string m_BuildLogName;
+            private string m_ProductName;
+            private string m_CompanyName;
+            private string m_GameIdentifier;
+            private string m_GameFrameworkVersion;
+            private string m_UnityVersion;
+            private string m_ApplicableGameVersion;
+            private int m_InternalResourceVersion;
             private Platform m_Platforms = Platform.Undefined;
             private AssetBundleCompressionType m_AssetBundleCompression;
             private string m_CompressionHelperTypeName;
-            private bool m_AdditionalCompressionSelected = false;
-            private bool m_ForceRebuildAssetBundleSelected = false;
+            private bool m_AdditionalCompressionSelected;
+            private bool m_ForceRebuildAssetBundleSelected;
             private string m_BuildEventHandlerTypeName;
             private string m_OutputDirectory;
             private BuildAssetBundleOptions m_BuildAssetBundleOptions = BuildAssetBundleOptions.None;
-            private StringBuilder m_LogBuilder = null;
-            private SortedDictionary<string, ResourceData> m_ResourceDatas = null;
+            private StringBuilder m_LogBuilder;
+            private SortedDictionary<string, ResourceData> m_ResourceDatas;
 
             public void Initialize(string buildReportPath, string productName, string companyName, string gameIdentifier, string gameFrameworkVersion, string unityVersion, string applicableGameVersion, int internalResourceVersion,
                 Platform platforms, AssetBundleCompressionType assetBundleCompression, string compressionHelperTypeName, bool additionalCompressionSelected, bool forceRebuildAssetBundleSelected, string buildEventHandlerTypeName, string outputDirectory, BuildAssetBundleOptions buildAssetBundleOptions, SortedDictionary<string, ResourceData> resourceDatas)

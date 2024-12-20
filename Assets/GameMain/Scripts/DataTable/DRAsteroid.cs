@@ -19,18 +19,12 @@ namespace StarForce
     /// </summary>
     public class DRAsteroid : DataRowBase
     {
-        private int m_Id = 0;
+        private int m_Id;
 
         /// <summary>
         /// 获取小行星编号。
         /// </summary>
-        public override int Id
-        {
-            get
-            {
-                return m_Id;
-            }
-        }
+        public override int Id => m_Id;
 
         /// <summary>
         /// 获取最大生命。

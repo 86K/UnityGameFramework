@@ -14,53 +14,35 @@ namespace StarForce
     public class DialogForm : UGuiForm
     {
         [SerializeField]
-        private Text m_TitleText = null;
+        private Text m_TitleText;
 
         [SerializeField]
-        private Text m_MessageText = null;
+        private Text m_MessageText;
 
         [SerializeField]
-        private GameObject[] m_ModeObjects = null;
+        private GameObject[] m_ModeObjects;
 
         [SerializeField]
-        private Text[] m_ConfirmTexts = null;
+        private Text[] m_ConfirmTexts;
 
         [SerializeField]
-        private Text[] m_CancelTexts = null;
+        private Text[] m_CancelTexts;
 
         [SerializeField]
-        private Text[] m_OtherTexts = null;
+        private Text[] m_OtherTexts;
 
         private int m_DialogMode = 1;
-        private bool m_PauseGame = false;
-        private object m_UserData = null;
-        private GameFrameworkAction<object> m_OnClickConfirm = null;
-        private GameFrameworkAction<object> m_OnClickCancel = null;
-        private GameFrameworkAction<object> m_OnClickOther = null;
+        private bool m_PauseGame;
+        private object m_UserData;
+        private GameFrameworkAction<object> m_OnClickConfirm;
+        private GameFrameworkAction<object> m_OnClickCancel;
+        private GameFrameworkAction<object> m_OnClickOther;
 
-        public int DialogMode
-        {
-            get
-            {
-                return m_DialogMode;
-            }
-        }
+        public int DialogMode => m_DialogMode;
 
-        public bool PauseGame
-        {
-            get
-            {
-                return m_PauseGame;
-            }
-        }
+        public bool PauseGame => m_PauseGame;
 
-        public object UserData
-        {
-            get
-            {
-                return m_UserData;
-            }
-        }
+        public object UserData => m_UserData;
 
         public void OnConfirmButtonClick()
         {

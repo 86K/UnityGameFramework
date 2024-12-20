@@ -17,9 +17,9 @@ namespace UnityGameFramework.Editor
     [CustomEditor(typeof(WebRequestComponent))]
     internal sealed class WebRequestComponentInspector : GameFrameworkInspector
     {
-        private SerializedProperty m_InstanceRoot = null;
-        private SerializedProperty m_WebRequestAgentHelperCount = null;
-        private SerializedProperty m_Timeout = null;
+        private SerializedProperty m_InstanceRoot;
+        private SerializedProperty m_WebRequestAgentHelperCount;
+        private SerializedProperty m_Timeout;
 
         private HelperInfo<WebRequestAgentHelperBase> m_WebRequestAgentHelperInfo = new HelperInfo<WebRequestAgentHelperBase>("WebRequestAgent");
 

@@ -35,14 +35,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public bool ActiveWindow
         {
-            get
-            {
-                return m_ActiveWindow;
-            }
-            set
-            {
-                m_ActiveWindow = value;
-            }
+            get => m_ActiveWindow;
+            set => m_ActiveWindow = value;
         }
 
         /// <summary>

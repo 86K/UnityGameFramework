@@ -13,9 +13,9 @@ namespace UnityGameFramework.Editor
     [CustomEditor(typeof(LocalizationComponent))]
     internal sealed class LocalizationComponentInspector : GameFrameworkInspector
     {
-        private SerializedProperty m_EnableLoadDictionaryUpdateEvent = null;
-        private SerializedProperty m_EnableLoadDictionaryDependencyAssetEvent = null;
-        private SerializedProperty m_CachedBytesSize = null;
+        private SerializedProperty m_EnableLoadDictionaryUpdateEvent;
+        private SerializedProperty m_EnableLoadDictionaryDependencyAssetEvent;
+        private SerializedProperty m_CachedBytesSize;
 
         private HelperInfo<LocalizationHelperBase> m_LocalizationHelperInfo = new HelperInfo<LocalizationHelperBase>("Localization");
 

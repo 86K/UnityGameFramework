@@ -13,17 +13,17 @@ namespace UnityGameFramework.Editor
     [CustomEditor(typeof(UIComponent))]
     internal sealed class UIComponentInspector : GameFrameworkInspector
     {
-        private SerializedProperty m_EnableOpenUIFormSuccessEvent = null;
-        private SerializedProperty m_EnableOpenUIFormFailureEvent = null;
-        private SerializedProperty m_EnableOpenUIFormUpdateEvent = null;
-        private SerializedProperty m_EnableOpenUIFormDependencyAssetEvent = null;
-        private SerializedProperty m_EnableCloseUIFormCompleteEvent = null;
-        private SerializedProperty m_InstanceAutoReleaseInterval = null;
-        private SerializedProperty m_InstanceCapacity = null;
-        private SerializedProperty m_InstanceExpireTime = null;
-        private SerializedProperty m_InstancePriority = null;
-        private SerializedProperty m_InstanceRoot = null;
-        private SerializedProperty m_UIGroups = null;
+        private SerializedProperty m_EnableOpenUIFormSuccessEvent;
+        private SerializedProperty m_EnableOpenUIFormFailureEvent;
+        private SerializedProperty m_EnableOpenUIFormUpdateEvent;
+        private SerializedProperty m_EnableOpenUIFormDependencyAssetEvent;
+        private SerializedProperty m_EnableCloseUIFormCompleteEvent;
+        private SerializedProperty m_InstanceAutoReleaseInterval;
+        private SerializedProperty m_InstanceCapacity;
+        private SerializedProperty m_InstanceExpireTime;
+        private SerializedProperty m_InstancePriority;
+        private SerializedProperty m_InstanceRoot;
+        private SerializedProperty m_UIGroups;
 
         private HelperInfo<UIFormHelperBase> m_UIFormHelperInfo = new HelperInfo<UIFormHelperBase>("UIForm");
         private HelperInfo<UIGroupHelperBase> m_UIGroupHelperInfo = new HelperInfo<UIGroupHelperBase>("UIGroup");

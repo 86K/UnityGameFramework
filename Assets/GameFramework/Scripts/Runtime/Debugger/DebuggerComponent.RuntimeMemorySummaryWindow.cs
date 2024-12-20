@@ -21,8 +21,8 @@ namespace UnityGameFramework.Runtime
             private readonly List<Record> m_Records = new List<Record>();
             private readonly Comparison<Record> m_RecordComparer = RecordComparer;
             private DateTime m_SampleTime = DateTime.MinValue;
-            private int m_SampleCount = 0;
-            private long m_SampleSize = 0L;
+            private int m_SampleCount;
+            private long m_SampleSize;
 
             protected override void OnDrawScrollableWindow()
             {

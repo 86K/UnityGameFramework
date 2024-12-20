@@ -62,68 +62,32 @@ namespace UnityGameFramework.Runtime
             /// <summary>
             /// 获取下载任务。
             /// </summary>
-            public DownloadTask Task
-            {
-                get
-                {
-                    return m_Task;
-                }
-            }
+            public DownloadTask Task => m_Task;
 
             /// <summary>
             /// 获取已经等待时间。
             /// </summary>
-            public float WaitTime
-            {
-                get
-                {
-                    return m_WaitTime;
-                }
-            }
+            public float WaitTime => m_WaitTime;
 
             /// <summary>
             /// 获取开始下载时已经存在的大小。
             /// </summary>
-            public long StartLength
-            {
-                get
-                {
-                    return m_StartLength;
-                }
-            }
+            public long StartLength => m_StartLength;
 
             /// <summary>
             /// 获取本次已经下载的大小。
             /// </summary>
-            public long DownloadedLength
-            {
-                get
-                {
-                    return m_DownloadedLength;
-                }
-            }
+            public long DownloadedLength => m_DownloadedLength;
 
             /// <summary>
             /// 获取当前的大小。
             /// </summary>
-            public long CurrentLength
-            {
-                get
-                {
-                    return m_StartLength + m_DownloadedLength;
-                }
-            }
+            public long CurrentLength => m_StartLength + m_DownloadedLength;
 
             /// <summary>
             /// 获取已经存盘的大小。
             /// </summary>
-            public long SavedLength
-            {
-                get
-                {
-                    return m_SavedLength;
-                }
-            }
+            public long SavedLength => m_SavedLength;
 
             /// <summary>
             /// 初始化下载代理。

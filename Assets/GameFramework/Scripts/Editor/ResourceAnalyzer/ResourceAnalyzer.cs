@@ -17,34 +17,34 @@ namespace UnityGameFramework.Editor.ResourceTools
     /// </summary>
     internal sealed class ResourceAnalyzer : EditorWindow
     {
-        private ResourceAnalyzerController m_Controller = null;
-        private bool m_Analyzed = false;
-        private int m_ToolbarIndex = 0;
+        private ResourceAnalyzerController m_Controller;
+        private bool m_Analyzed;
+        private int m_ToolbarIndex;
 
-        private int m_AssetCount = 0;
-        private string[] m_CachedAssetNames = null;
+        private int m_AssetCount;
+        private string[] m_CachedAssetNames;
         private int m_SelectedAssetIndex = -1;
-        private string m_SelectedAssetName = null;
-        private DependencyData m_SelectedDependencyData = null;
+        private string m_SelectedAssetName;
+        private DependencyData m_SelectedDependencyData;
         private AssetsOrder m_AssetsOrder = AssetsOrder.AssetNameAsc;
-        private string m_AssetsFilter = null;
+        private string m_AssetsFilter;
         private Vector2 m_AssetsScroll = Vector2.zero;
         private Vector2 m_DependencyResourcesScroll = Vector2.zero;
         private Vector2 m_DependencyAssetsScroll = Vector2.zero;
         private Vector2 m_ScatteredDependencyAssetsScroll = Vector2.zero;
 
-        private int m_ScatteredAssetCount = 0;
-        private string[] m_CachedScatteredAssetNames = null;
+        private int m_ScatteredAssetCount;
+        private string[] m_CachedScatteredAssetNames;
         private int m_SelectedScatteredAssetIndex = -1;
-        private string m_SelectedScatteredAssetName = null;
-        private Asset[] m_SelectedHostAssets = null;
+        private string m_SelectedScatteredAssetName;
+        private Asset[] m_SelectedHostAssets;
         private ScatteredAssetsOrder m_ScatteredAssetsOrder = ScatteredAssetsOrder.AssetNameAsc;
-        private string m_ScatteredAssetsFilter = null;
+        private string m_ScatteredAssetsFilter;
         private Vector2 m_ScatteredAssetsScroll = Vector2.zero;
         private Vector2 m_HostAssetsScroll = Vector2.zero;
 
-        private int m_CircularDependencyCount = 0;
-        private string[][] m_CachedCircularDependencyDatas = null;
+        private int m_CircularDependencyCount;
+        private string[][] m_CachedCircularDependencyDatas;
         private Vector2 m_CircularDependencyScroll = Vector2.zero;
 
         [MenuItem("Game Framework/Resource Tools/Resource Analyzer", false, 42)]

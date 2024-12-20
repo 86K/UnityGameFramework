@@ -46,145 +46,67 @@ namespace UnityGameFramework.Runtime
                 /// <summary>
                 /// 获取资源名称。
                 /// </summary>
-                public ResourceName ResourceName
-                {
-                    get
-                    {
-                        return m_ResourceName;
-                    }
-                }
+                public ResourceName ResourceName => m_ResourceName;
 
                 /// <summary>
                 /// 获取资源检查状态。
                 /// </summary>
-                public CheckStatus Status
-                {
-                    get
-                    {
-                        return m_Status;
-                    }
-                }
+                public CheckStatus Status => m_Status;
 
                 /// <summary>
                 /// 获取是否需要移除读写区的资源。
                 /// </summary>
-                public bool NeedRemove
-                {
-                    get
-                    {
-                        return m_NeedRemove;
-                    }
-                }
+                public bool NeedRemove => m_NeedRemove;
 
                 /// <summary>
                 /// 获取是否需要将读写区的资源移动到磁盘。
                 /// </summary>
-                public bool NeedMoveToDisk
-                {
-                    get
-                    {
-                        return m_NeedMoveToDisk;
-                    }
-                }
+                public bool NeedMoveToDisk => m_NeedMoveToDisk;
 
                 /// <summary>
                 /// 获取是否需要将读写区的资源移动到文件系统。
                 /// </summary>
-                public bool NeedMoveToFileSystem
-                {
-                    get
-                    {
-                        return m_NeedMoveToFileSystem;
-                    }
-                }
+                public bool NeedMoveToFileSystem => m_NeedMoveToFileSystem;
 
                 /// <summary>
                 /// 获取资源所在的文件系统名称。
                 /// </summary>
-                public string FileSystemName
-                {
-                    get
-                    {
-                        return m_VersionInfo.FileSystemName;
-                    }
-                }
+                public string FileSystemName => m_VersionInfo.FileSystemName;
 
                 /// <summary>
                 /// 获取资源是否使用文件系统。
                 /// </summary>
-                public bool ReadWriteUseFileSystem
-                {
-                    get
-                    {
-                        return m_ReadWriteInfo.UseFileSystem;
-                    }
-                }
+                public bool ReadWriteUseFileSystem => m_ReadWriteInfo.UseFileSystem;
 
                 /// <summary>
                 /// 获取读写资源所在的文件系统名称。
                 /// </summary>
-                public string ReadWriteFileSystemName
-                {
-                    get
-                    {
-                        return m_ReadWriteInfo.FileSystemName;
-                    }
-                }
+                public string ReadWriteFileSystemName => m_ReadWriteInfo.FileSystemName;
 
                 /// <summary>
                 /// 获取资源加载方式。
                 /// </summary>
-                public LoadType LoadType
-                {
-                    get
-                    {
-                        return m_VersionInfo.LoadType;
-                    }
-                }
+                public LoadType LoadType => m_VersionInfo.LoadType;
 
                 /// <summary>
                 /// 获取资源大小。
                 /// </summary>
-                public int Length
-                {
-                    get
-                    {
-                        return m_VersionInfo.Length;
-                    }
-                }
+                public int Length => m_VersionInfo.Length;
 
                 /// <summary>
                 /// 获取资源哈希值。
                 /// </summary>
-                public int HashCode
-                {
-                    get
-                    {
-                        return m_VersionInfo.HashCode;
-                    }
-                }
+                public int HashCode => m_VersionInfo.HashCode;
 
                 /// <summary>
                 /// 获取压缩后大小。
                 /// </summary>
-                public int CompressedLength
-                {
-                    get
-                    {
-                        return m_VersionInfo.CompressedLength;
-                    }
-                }
+                public int CompressedLength => m_VersionInfo.CompressedLength;
 
                 /// <summary>
                 /// 获取压缩后哈希值。
                 /// </summary>
-                public int CompressedHashCode
-                {
-                    get
-                    {
-                        return m_VersionInfo.CompressedHashCode;
-                    }
-                }
+                public int CompressedHashCode => m_VersionInfo.CompressedHashCode;
 
                 /// <summary>
                 /// 临时缓存资源所在的文件系统名称。

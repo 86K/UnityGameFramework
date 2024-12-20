@@ -14,21 +14,9 @@ namespace StarForce.Editor.DataTableTools
     {
         private sealed class DateTimeProcessor : GenericDataProcessor<DateTime>
         {
-            public override bool IsSystem
-            {
-                get
-                {
-                    return true;
-                }
-            }
+            public override bool IsSystem => true;
 
-            public override string LanguageKeyword
-            {
-                get
-                {
-                    return "DateTime";
-                }
-            }
+            public override string LanguageKeyword => "DateTime";
 
             public override string[] GetTypeStrings()
             {

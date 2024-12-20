@@ -58,14 +58,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<LoadSceneSuccessEventArgs> LoadSceneSuccess
         {
-            add
-            {
-                m_LoadSceneSuccessEventHandler += value;
-            }
-            remove
-            {
-                m_LoadSceneSuccessEventHandler -= value;
-            }
+            add => m_LoadSceneSuccessEventHandler += value;
+            remove => m_LoadSceneSuccessEventHandler -= value;
         }
 
         /// <summary>
@@ -73,14 +67,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<LoadSceneFailureEventArgs> LoadSceneFailure
         {
-            add
-            {
-                m_LoadSceneFailureEventHandler += value;
-            }
-            remove
-            {
-                m_LoadSceneFailureEventHandler -= value;
-            }
+            add => m_LoadSceneFailureEventHandler += value;
+            remove => m_LoadSceneFailureEventHandler -= value;
         }
 
         /// <summary>
@@ -88,14 +76,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<LoadSceneUpdateEventArgs> LoadSceneUpdate
         {
-            add
-            {
-                m_LoadSceneUpdateEventHandler += value;
-            }
-            remove
-            {
-                m_LoadSceneUpdateEventHandler -= value;
-            }
+            add => m_LoadSceneUpdateEventHandler += value;
+            remove => m_LoadSceneUpdateEventHandler -= value;
         }
 
         /// <summary>
@@ -103,14 +85,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<LoadSceneDependencyAssetEventArgs> LoadSceneDependencyAsset
         {
-            add
-            {
-                m_LoadSceneDependencyAssetEventHandler += value;
-            }
-            remove
-            {
-                m_LoadSceneDependencyAssetEventHandler -= value;
-            }
+            add => m_LoadSceneDependencyAssetEventHandler += value;
+            remove => m_LoadSceneDependencyAssetEventHandler -= value;
         }
 
         /// <summary>
@@ -118,14 +94,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<UnloadSceneSuccessEventArgs> UnloadSceneSuccess
         {
-            add
-            {
-                m_UnloadSceneSuccessEventHandler += value;
-            }
-            remove
-            {
-                m_UnloadSceneSuccessEventHandler -= value;
-            }
+            add => m_UnloadSceneSuccessEventHandler += value;
+            remove => m_UnloadSceneSuccessEventHandler -= value;
         }
 
         /// <summary>
@@ -133,14 +103,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<UnloadSceneFailureEventArgs> UnloadSceneFailure
         {
-            add
-            {
-                m_UnloadSceneFailureEventHandler += value;
-            }
-            remove
-            {
-                m_UnloadSceneFailureEventHandler -= value;
-            }
+            add => m_UnloadSceneFailureEventHandler += value;
+            remove => m_UnloadSceneFailureEventHandler -= value;
         }
 
         /// <summary>

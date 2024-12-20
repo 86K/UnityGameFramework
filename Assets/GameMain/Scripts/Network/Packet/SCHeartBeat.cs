@@ -17,13 +17,7 @@ namespace StarForce
         {
         }
 
-        public override int Id
-        {
-            get
-            {
-                return 2;
-            }
-        }
+        public override int Id => 2;
 
         public override void Clear()
         {

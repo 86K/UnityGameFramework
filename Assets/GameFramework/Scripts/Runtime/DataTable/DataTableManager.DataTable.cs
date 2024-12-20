@@ -38,59 +38,29 @@ namespace UnityGameFramework.Runtime
             /// <summary>
             /// 获取数据表行的类型。
             /// </summary>
-            public override Type Type
-            {
-                get
-                {
-                    return typeof(T);
-                }
-            }
+            public override Type Type => typeof(T);
 
             /// <summary>
             /// 获取数据表行数。
             /// </summary>
-            public override int Count
-            {
-                get
-                {
-                    return m_DataSet.Count;
-                }
-            }
+            public override int Count => m_DataSet.Count;
 
             /// <summary>
             /// 获取数据表行。
             /// </summary>
             /// <param name="id">数据表行的编号。</param>
             /// <returns>数据表行。</returns>
-            public T this[int id]
-            {
-                get
-                {
-                    return GetDataRow(id);
-                }
-            }
+            public T this[int id] => GetDataRow(id);
 
             /// <summary>
             /// 获取编号最小的数据表行。
             /// </summary>
-            public T MinIdDataRow
-            {
-                get
-                {
-                    return m_MinIdDataRow;
-                }
-            }
+            public T MinIdDataRow => m_MinIdDataRow;
 
             /// <summary>
             /// 获取编号最大的数据表行。
             /// </summary>
-            public T MaxIdDataRow
-            {
-                get
-                {
-                    return m_MaxIdDataRow;
-                }
-            }
+            public T MaxIdDataRow => m_MaxIdDataRow;
 
             /// <summary>
             /// 检查是否存在数据表行。

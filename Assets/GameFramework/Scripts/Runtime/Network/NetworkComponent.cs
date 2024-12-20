@@ -17,19 +17,13 @@ namespace UnityGameFramework.Runtime
     [AddComponentMenu("Game Framework/Network")]
     public sealed class NetworkComponent : GameFrameworkComponent
     {
-        private INetworkManager m_NetworkManager = null;
-        private EventComponent m_EventComponent = null;
+        private INetworkManager m_NetworkManager;
+        private EventComponent m_EventComponent;
 
         /// <summary>
         /// 获取网络频道数量。
         /// </summary>
-        public int NetworkChannelCount
-        {
-            get
-            {
-                return m_NetworkManager.NetworkChannelCount;
-            }
-        }
+        public int NetworkChannelCount => m_NetworkManager.NetworkChannelCount;
 
         /// <summary>
         /// 游戏框架组件初始化。
@@ -58,7 +52,6 @@ namespace UnityGameFramework.Runtime
             if (m_EventComponent == null)
             {
                 Log.Fatal("Event component is invalid.");
-                return;
             }
         }
 

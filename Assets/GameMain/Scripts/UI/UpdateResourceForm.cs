@@ -6,10 +6,10 @@ namespace StarForce
     public class UpdateResourceForm : MonoBehaviour
     {
         [SerializeField]
-        private Text m_DescriptionText = null;
+        private Text m_DescriptionText;
 
         [SerializeField]
-        private Slider m_ProgressSlider = null;
+        private Slider m_ProgressSlider;
 
         private void Start()
         {

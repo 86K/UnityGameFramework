@@ -48,78 +48,36 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取引用池类型。
         /// </summary>
-        public Type Type
-        {
-            get
-            {
-                return m_Type;
-            }
-        }
+        public Type Type => m_Type;
 
         /// <summary>
         /// 获取未使用引用数量。
         /// </summary>
-        public int UnusedReferenceCount
-        {
-            get
-            {
-                return m_UnusedReferenceCount;
-            }
-        }
+        public int UnusedReferenceCount => m_UnusedReferenceCount;
 
         /// <summary>
         /// 获取正在使用引用数量。
         /// </summary>
-        public int UsingReferenceCount
-        {
-            get
-            {
-                return m_UsingReferenceCount;
-            }
-        }
+        public int UsingReferenceCount => m_UsingReferenceCount;
 
         /// <summary>
         /// 获取获取引用数量。
         /// </summary>
-        public int AcquireReferenceCount
-        {
-            get
-            {
-                return m_AcquireReferenceCount;
-            }
-        }
+        public int AcquireReferenceCount => m_AcquireReferenceCount;
 
         /// <summary>
         /// 获取归还引用数量。
         /// </summary>
-        public int ReleaseReferenceCount
-        {
-            get
-            {
-                return m_ReleaseReferenceCount;
-            }
-        }
+        public int ReleaseReferenceCount => m_ReleaseReferenceCount;
 
         /// <summary>
         /// 获取增加引用数量。
         /// </summary>
-        public int AddReferenceCount
-        {
-            get
-            {
-                return m_AddReferenceCount;
-            }
-        }
+        public int AddReferenceCount => m_AddReferenceCount;
 
         /// <summary>
         /// 获取移除引用数量。
         /// </summary>
-        public int RemoveReferenceCount
-        {
-            get
-            {
-                return m_RemoveReferenceCount;
-            }
-        }
+        public int RemoveReferenceCount => m_RemoveReferenceCount;
     }
 }

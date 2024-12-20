@@ -18,7 +18,7 @@ namespace UnityGameFramework.Runtime
     [AddComponentMenu("Game Framework/Object Pool")]
     public sealed class ObjectPoolComponent : GameFrameworkComponent
     {
-        private IObjectPoolManager m_ObjectPoolManager = null;
+        private IObjectPoolManager m_ObjectPoolManager;
 
         /// <summary>
         /// 获取对象池数量。
@@ -36,7 +36,6 @@ namespace UnityGameFramework.Runtime
             if (m_ObjectPoolManager == null)
             {
                 Log.Fatal("Object pool manager is invalid.");
-                return;
             }
         }
 

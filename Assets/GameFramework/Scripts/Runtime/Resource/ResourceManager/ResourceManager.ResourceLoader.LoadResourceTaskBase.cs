@@ -16,7 +16,7 @@ namespace UnityGameFramework.Runtime
         {
             private abstract class LoadResourceTaskBase : TaskBase
             {
-                private static int s_Serial = 0;
+                private static int s_Serial;
 
                 private string m_AssetName;
                 private Type m_AssetType;
@@ -39,37 +39,13 @@ namespace UnityGameFramework.Runtime
                     m_TotalDependencyAssetCount = 0;
                 }
 
-                public string AssetName
-                {
-                    get
-                    {
-                        return m_AssetName;
-                    }
-                }
+                public string AssetName => m_AssetName;
 
-                public Type AssetType
-                {
-                    get
-                    {
-                        return m_AssetType;
-                    }
-                }
+                public Type AssetType => m_AssetType;
 
-                public ResourceInfo ResourceInfo
-                {
-                    get
-                    {
-                        return m_ResourceInfo;
-                    }
-                }
+                public ResourceInfo ResourceInfo => m_ResourceInfo;
 
-                public ResourceObject ResourceObject
-                {
-                    get
-                    {
-                        return m_ResourceObject;
-                    }
-                }
+                public ResourceObject ResourceObject => m_ResourceObject;
 
                 public abstract bool IsScene
                 {
@@ -78,43 +54,19 @@ namespace UnityGameFramework.Runtime
 
                 public DateTime StartTime
                 {
-                    get
-                    {
-                        return m_StartTime;
-                    }
-                    set
-                    {
-                        m_StartTime = value;
-                    }
+                    get => m_StartTime;
+                    set => m_StartTime = value;
                 }
 
-                public int LoadedDependencyAssetCount
-                {
-                    get
-                    {
-                        return m_DependencyAssets.Count;
-                    }
-                }
+                public int LoadedDependencyAssetCount => m_DependencyAssets.Count;
 
                 public int TotalDependencyAssetCount
                 {
-                    get
-                    {
-                        return m_TotalDependencyAssetCount;
-                    }
-                    set
-                    {
-                        m_TotalDependencyAssetCount = value;
-                    }
+                    get => m_TotalDependencyAssetCount;
+                    set => m_TotalDependencyAssetCount = value;
                 }
 
-                public override string Description
-                {
-                    get
-                    {
-                        return m_AssetName;
-                    }
-                }
+                public override string Description => m_AssetName;
 
                 public override void Clear()
                 {

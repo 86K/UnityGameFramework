@@ -18,14 +18,14 @@ namespace UnityGameFramework.Runtime
     [AddComponentMenu("Game Framework/Procedure")]
     public sealed class ProcedureComponent : GameFrameworkComponent
     {
-        private IProcedureManager m_ProcedureManager = null;
-        private ProcedureBase m_EntranceProcedure = null;
+        private IProcedureManager m_ProcedureManager;
+        private ProcedureBase m_EntranceProcedure;
 
         [SerializeField]
-        private string[] m_AvailableProcedureTypeNames = null;
+        private string[] m_AvailableProcedureTypeNames;
 
         [SerializeField]
-        private string m_EntranceProcedureTypeName = null;
+        private string m_EntranceProcedureTypeName;
 
         /// <summary>
         /// 获取当前流程。

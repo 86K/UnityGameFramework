@@ -18,15 +18,15 @@ namespace StarForce
         private float m_TileSize = 30f;
 
         [SerializeField]
-        private BoxCollider m_VisibleBoundary = null;
+        private BoxCollider m_VisibleBoundary;
 
         [SerializeField]
-        private BoxCollider m_PlayerMoveBoundary = null;
+        private BoxCollider m_PlayerMoveBoundary;
 
         [SerializeField]
-        private BoxCollider m_EnemySpawnBoundary = null;
+        private BoxCollider m_EnemySpawnBoundary;
 
-        private Transform m_CachedTransform = null;
+        private Transform m_CachedTransform;
         private Vector3 m_StartPosition = Vector3.zero;
 
         private void Start()
@@ -41,28 +41,10 @@ namespace StarForce
             m_CachedTransform.position = m_StartPosition + Vector3.forward * newPosition;
         }
 
-        public BoxCollider VisibleBoundary
-        {
-            get
-            {
-                return m_VisibleBoundary;
-            }
-        }
+        public BoxCollider VisibleBoundary => m_VisibleBoundary;
 
-        public BoxCollider PlayerMoveBoundary
-        {
-            get
-            {
-                return m_PlayerMoveBoundary;
-            }
-        }
+        public BoxCollider PlayerMoveBoundary => m_PlayerMoveBoundary;
 
-        public BoxCollider EnemySpawnBoundary
-        {
-            get
-            {
-                return m_EnemySpawnBoundary;
-            }
-        }
+        public BoxCollider EnemySpawnBoundary => m_EnemySpawnBoundary;
     }
 }

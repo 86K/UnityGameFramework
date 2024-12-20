@@ -13,21 +13,9 @@ namespace StarForce.Editor.DataTableTools
     {
         private sealed class UInt16Processor : GenericDataProcessor<ushort>
         {
-            public override bool IsSystem
-            {
-                get
-                {
-                    return true;
-                }
-            }
+            public override bool IsSystem => true;
 
-            public override string LanguageKeyword
-            {
-                get
-                {
-                    return "ushort";
-                }
-            }
+            public override string LanguageKeyword => "ushort";
 
             public override string[] GetTypeStrings()
             {

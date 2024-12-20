@@ -13,17 +13,11 @@ namespace StarForce
 {
     public class ProcedureCheckVersion : ProcedureBase
     {
-        private bool m_CheckVersionComplete = false;
-        private bool m_NeedUpdateVersion = false;
-        private VersionInfo m_VersionInfo = null;
+        private bool m_CheckVersionComplete;
+        private bool m_NeedUpdateVersion;
+        private VersionInfo m_VersionInfo;
 
-        public override bool UseNativeDialog
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool UseNativeDialog => true;
 
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {

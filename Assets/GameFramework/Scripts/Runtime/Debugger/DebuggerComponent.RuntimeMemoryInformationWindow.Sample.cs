@@ -26,40 +26,16 @@ namespace UnityGameFramework.Runtime
                     m_Highlight = false;
                 }
 
-                public string Name
-                {
-                    get
-                    {
-                        return m_Name;
-                    }
-                }
+                public string Name => m_Name;
 
-                public string Type
-                {
-                    get
-                    {
-                        return m_Type;
-                    }
-                }
+                public string Type => m_Type;
 
-                public long Size
-                {
-                    get
-                    {
-                        return m_Size;
-                    }
-                }
+                public long Size => m_Size;
 
                 public bool Highlight
                 {
-                    get
-                    {
-                        return m_Highlight;
-                    }
-                    set
-                    {
-                        m_Highlight = value;
-                    }
+                    get => m_Highlight;
+                    set => m_Highlight = value;
                 }
             }
         }

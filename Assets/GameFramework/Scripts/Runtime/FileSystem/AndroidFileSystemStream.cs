@@ -18,9 +18,9 @@ namespace UnityGameFramework.Runtime
     {
         private static readonly string SplitFlag = "!/assets/";
         private static readonly int SplitFlagLength = SplitFlag.Length;
-        private static readonly AndroidJavaObject s_AssetManager = null;
+        private static readonly AndroidJavaObject s_AssetManager;
         private static readonly IntPtr s_InternalReadMethodId = IntPtr.Zero;
-        private static readonly jvalue[] s_InternalReadArgs = null;
+        private static readonly jvalue[] s_InternalReadArgs;
 
         private readonly AndroidJavaObject m_FileStream;
         private readonly IntPtr m_FileStreamRawObject;
@@ -100,14 +100,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public override long Position
         {
-            get
-            {
-                throw new GameFrameworkException("Get position is not supported in AndroidFileSystemStream.");
-            }
-            set
-            {
-                Seek(value, SeekOrigin.Begin);
-            }
+            get => throw new GameFrameworkException("Get position is not supported in AndroidFileSystemStream.");
+            set => Seek(value, SeekOrigin.Begin);
         }
 
         /// <summary>

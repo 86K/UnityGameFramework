@@ -48,13 +48,7 @@ namespace UnityGameFramework.Editor.ResourceTools
             private set;
         }
 
-        public string FullName
-        {
-            get
-            {
-                return Variant != null ? Utility.Text.Format("{0}.{1}", Name, Variant) : Name;
-            }
-        }
+        public string FullName => Variant != null ? Utility.Text.Format("{0}.{1}", Name, Variant) : Name;
 
         public AssetType AssetType
         {
@@ -62,13 +56,7 @@ namespace UnityGameFramework.Editor.ResourceTools
             private set;
         }
 
-        public bool IsLoadFromBinary
-        {
-            get
-            {
-                return LoadType == LoadType.LoadFromBinary || LoadType == LoadType.LoadFromBinaryAndQuickDecrypt || LoadType == LoadType.LoadFromBinaryAndDecrypt;
-            }
-        }
+        public bool IsLoadFromBinary => LoadType == LoadType.LoadFromBinary || LoadType == LoadType.LoadFromBinaryAndQuickDecrypt || LoadType == LoadType.LoadFromBinaryAndDecrypt;
 
         public string FileSystem
         {

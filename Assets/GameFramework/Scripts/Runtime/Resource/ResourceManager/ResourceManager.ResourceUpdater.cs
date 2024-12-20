@@ -97,96 +97,48 @@ namespace UnityGameFramework.Runtime
             /// </summary>
             public int GenerateReadWriteVersionListLength
             {
-                get
-                {
-                    return m_GenerateReadWriteVersionListLength;
-                }
-                set
-                {
-                    m_GenerateReadWriteVersionListLength = value;
-                }
+                get => m_GenerateReadWriteVersionListLength;
+                set => m_GenerateReadWriteVersionListLength = value;
             }
 
             /// <summary>
             /// 获取正在应用的资源包路径。
             /// </summary>
-            public string ApplyingResourcePackPath
-            {
-                get
-                {
-                    return m_ApplyingResourcePackPath;
-                }
-            }
+            public string ApplyingResourcePackPath => m_ApplyingResourcePackPath;
 
             /// <summary>
             /// 获取等待应用资源数量。
             /// </summary>
-            public int ApplyWaitingCount
-            {
-                get
-                {
-                    return m_ApplyWaitingInfo.Count;
-                }
-            }
+            public int ApplyWaitingCount => m_ApplyWaitingInfo.Count;
 
             /// <summary>
             /// 获取或设置资源更新重试次数。
             /// </summary>
             public int UpdateRetryCount
             {
-                get
-                {
-                    return m_UpdateRetryCount;
-                }
-                set
-                {
-                    m_UpdateRetryCount = value;
-                }
+                get => m_UpdateRetryCount;
+                set => m_UpdateRetryCount = value;
             }
 
             /// <summary>
             /// 获取正在更新的资源组。
             /// </summary>
-            public IResourceGroup UpdatingResourceGroup
-            {
-                get
-                {
-                    return m_UpdatingResourceGroup;
-                }
-            }
+            public IResourceGroup UpdatingResourceGroup => m_UpdatingResourceGroup;
 
             /// <summary>
             /// 获取等待更新资源数量。
             /// </summary>
-            public int UpdateWaitingCount
-            {
-                get
-                {
-                    return m_UpdateWaitingInfo.Count;
-                }
-            }
+            public int UpdateWaitingCount => m_UpdateWaitingInfo.Count;
 
             /// <summary>
             /// 获取使用时下载的等待更新资源数量。
             /// </summary>
-            public int UpdateWaitingWhilePlayingCount
-            {
-                get
-                {
-                    return m_UpdateWaitingInfoWhilePlaying.Count;
-                }
-            }
+            public int UpdateWaitingWhilePlayingCount => m_UpdateWaitingInfoWhilePlaying.Count;
 
             /// <summary>
             /// 获取候选更新资源数量。
             /// </summary>
-            public int UpdateCandidateCount
-            {
-                get
-                {
-                    return m_UpdateCandidateInfo.Count;
-                }
-            }
+            public int UpdateCandidateCount => m_UpdateCandidateInfo.Count;
 
             /// <summary>
             /// 资源更新器轮询。
@@ -237,8 +189,6 @@ namespace UnityGameFramework.Runtime
                             }
                         }
                     }
-
-                    return;
                 }
             }
 

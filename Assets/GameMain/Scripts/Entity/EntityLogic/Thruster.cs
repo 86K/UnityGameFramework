@@ -18,7 +18,7 @@ namespace StarForce
         private const string AttachPoint = "Thruster Point";
 
         [SerializeField]
-        private ThrusterData m_ThrusterData = null;
+        private ThrusterData m_ThrusterData;
 
 #if UNITY_2017_3_OR_NEWER
         protected override void OnInit(object userData)

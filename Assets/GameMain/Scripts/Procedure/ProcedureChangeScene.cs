@@ -14,9 +14,9 @@ namespace StarForce
     {
         private const int MenuSceneId = 1;
 
-        private bool m_ChangeToMenu = false;
-        private bool m_IsChangeSceneComplete = false;
-        private int m_BackgroundMusicId = 0;
+        private bool m_ChangeToMenu;
+        private bool m_IsChangeSceneComplete;
+        private int m_BackgroundMusicId;
 
         public override bool UseNativeDialog => false;
 

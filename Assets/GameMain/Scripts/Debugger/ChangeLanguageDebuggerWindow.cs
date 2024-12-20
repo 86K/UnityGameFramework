@@ -13,7 +13,7 @@ namespace StarForce
     public class ChangeLanguageDebuggerWindow : IDebuggerWindow
     {
         private Vector2 m_ScrollPosition = Vector2.zero;
-        private bool m_NeedRestart = false;
+        private bool m_NeedRestart;
 
         public void Initialize(params object[] args)
         {

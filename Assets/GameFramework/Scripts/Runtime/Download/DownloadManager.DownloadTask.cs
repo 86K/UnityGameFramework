@@ -14,7 +14,7 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         private sealed class DownloadTask : TaskBase
         {
-            private static int s_Serial = 0;
+            private static int s_Serial;
 
             private DownloadTaskStatus m_Status;
             private string m_DownloadPath;
@@ -39,70 +39,34 @@ namespace UnityGameFramework.Runtime
             /// </summary>
             public DownloadTaskStatus Status
             {
-                get
-                {
-                    return m_Status;
-                }
-                set
-                {
-                    m_Status = value;
-                }
+                get => m_Status;
+                set => m_Status = value;
             }
 
             /// <summary>
             /// 获取下载后存放路径。
             /// </summary>
-            public string DownloadPath
-            {
-                get
-                {
-                    return m_DownloadPath;
-                }
-            }
+            public string DownloadPath => m_DownloadPath;
 
             /// <summary>
             /// 获取原始下载地址。
             /// </summary>
-            public string DownloadUri
-            {
-                get
-                {
-                    return m_DownloadUri;
-                }
-            }
+            public string DownloadUri => m_DownloadUri;
 
             /// <summary>
             /// 获取将缓冲区写入磁盘的临界大小。
             /// </summary>
-            public int FlushSize
-            {
-                get
-                {
-                    return m_FlushSize;
-                }
-            }
+            public int FlushSize => m_FlushSize;
 
             /// <summary>
             /// 获取下载超时时长，以秒为单位。
             /// </summary>
-            public float Timeout
-            {
-                get
-                {
-                    return m_Timeout;
-                }
-            }
+            public float Timeout => m_Timeout;
 
             /// <summary>
             /// 获取下载任务的描述。
             /// </summary>
-            public override string Description
-            {
-                get
-                {
-                    return m_DownloadPath;
-                }
-            }
+            public override string Description => m_DownloadPath;
 
             /// <summary>
             /// 创建下载任务。

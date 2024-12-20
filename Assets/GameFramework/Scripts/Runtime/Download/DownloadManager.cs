@@ -54,73 +54,37 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public bool Paused
         {
-            get
-            {
-                return m_TaskPool.Paused;
-            }
-            set
-            {
-                m_TaskPool.Paused = value;
-            }
+            get => m_TaskPool.Paused;
+            set => m_TaskPool.Paused = value;
         }
 
         /// <summary>
         /// 获取下载代理总数量。
         /// </summary>
-        public int TotalAgentCount
-        {
-            get
-            {
-                return m_TaskPool.TotalAgentCount;
-            }
-        }
+        public int TotalAgentCount => m_TaskPool.TotalAgentCount;
 
         /// <summary>
         /// 获取可用下载代理数量。
         /// </summary>
-        public int FreeAgentCount
-        {
-            get
-            {
-                return m_TaskPool.FreeAgentCount;
-            }
-        }
+        public int FreeAgentCount => m_TaskPool.FreeAgentCount;
 
         /// <summary>
         /// 获取工作中下载代理数量。
         /// </summary>
-        public int WorkingAgentCount
-        {
-            get
-            {
-                return m_TaskPool.WorkingAgentCount;
-            }
-        }
+        public int WorkingAgentCount => m_TaskPool.WorkingAgentCount;
 
         /// <summary>
         /// 获取等待下载任务数量。
         /// </summary>
-        public int WaitingTaskCount
-        {
-            get
-            {
-                return m_TaskPool.WaitingTaskCount;
-            }
-        }
+        public int WaitingTaskCount => m_TaskPool.WaitingTaskCount;
 
         /// <summary>
         /// 获取或设置将缓冲区写入磁盘的临界大小。
         /// </summary>
         public int FlushSize
         {
-            get
-            {
-                return m_FlushSize;
-            }
-            set
-            {
-                m_FlushSize = value;
-            }
+            get => m_FlushSize;
+            set => m_FlushSize = value;
         }
 
         /// <summary>
@@ -128,40 +92,22 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public float Timeout
         {
-            get
-            {
-                return m_Timeout;
-            }
-            set
-            {
-                m_Timeout = value;
-            }
+            get => m_Timeout;
+            set => m_Timeout = value;
         }
 
         /// <summary>
         /// 获取当前下载速度。
         /// </summary>
-        public float CurrentSpeed
-        {
-            get
-            {
-                return m_DownloadCounter.CurrentSpeed;
-            }
-        }
+        public float CurrentSpeed => m_DownloadCounter.CurrentSpeed;
 
         /// <summary>
         /// 下载开始事件。
         /// </summary>
         public event EventHandler<DownloadStartEventArgs> DownloadStart
         {
-            add
-            {
-                m_DownloadStartEventHandler += value;
-            }
-            remove
-            {
-                m_DownloadStartEventHandler -= value;
-            }
+            add => m_DownloadStartEventHandler += value;
+            remove => m_DownloadStartEventHandler -= value;
         }
 
         /// <summary>
@@ -169,14 +115,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<DownloadUpdateEventArgs> DownloadUpdate
         {
-            add
-            {
-                m_DownloadUpdateEventHandler += value;
-            }
-            remove
-            {
-                m_DownloadUpdateEventHandler -= value;
-            }
+            add => m_DownloadUpdateEventHandler += value;
+            remove => m_DownloadUpdateEventHandler -= value;
         }
 
         /// <summary>
@@ -184,14 +124,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<DownloadSuccessEventArgs> DownloadSuccess
         {
-            add
-            {
-                m_DownloadSuccessEventHandler += value;
-            }
-            remove
-            {
-                m_DownloadSuccessEventHandler -= value;
-            }
+            add => m_DownloadSuccessEventHandler += value;
+            remove => m_DownloadSuccessEventHandler -= value;
         }
 
         /// <summary>
@@ -199,14 +133,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<DownloadFailureEventArgs> DownloadFailure
         {
-            add
-            {
-                m_DownloadFailureEventHandler += value;
-            }
-            remove
-            {
-                m_DownloadFailureEventHandler -= value;
-            }
+            add => m_DownloadFailureEventHandler += value;
+            remove => m_DownloadFailureEventHandler -= value;
         }
 
         /// <summary>

@@ -14,12 +14,12 @@ namespace StarForce
     public class AboutForm : UGuiForm
     {
         [SerializeField]
-        private RectTransform m_Transform = null;
+        private RectTransform m_Transform;
 
         [SerializeField]
         private float m_ScrollSpeed = 1f;
 
-        private float m_InitPosition = 0f;
+        private float m_InitPosition;
 
 #if UNITY_2017_3_OR_NEWER
         protected override void OnInit(object userData)

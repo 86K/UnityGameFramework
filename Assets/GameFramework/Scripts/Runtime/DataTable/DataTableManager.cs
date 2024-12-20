@@ -34,13 +34,7 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取数据表数量。
         /// </summary>
-        public int Count
-        {
-            get
-            {
-                return m_DataTables.Count;
-            }
-        }
+        public int Count => m_DataTables.Count;
 
         /// <summary>
         /// 获取缓冲二进制流的大小。

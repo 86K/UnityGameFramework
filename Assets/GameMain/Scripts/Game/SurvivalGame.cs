@@ -12,15 +12,9 @@ namespace StarForce
 {
     public class SurvivalGame : GameBase
     {
-        private float m_ElapseSeconds = 0f;
+        private float m_ElapseSeconds;
 
-        public override GameMode GameMode
-        {
-            get
-            {
-                return GameMode.Survival;
-            }
-        }
+        public override GameMode GameMode => GameMode.Survival;
 
         public override void Update(float elapseSeconds, float realElapseSeconds)
         {

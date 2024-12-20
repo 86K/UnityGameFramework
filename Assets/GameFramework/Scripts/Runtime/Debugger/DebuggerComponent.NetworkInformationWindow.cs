@@ -13,7 +13,7 @@ namespace UnityGameFramework.Runtime
     {
         private sealed class NetworkInformationWindow : ScrollableDebuggerWindowBase
         {
-            private NetworkComponent m_NetworkComponent = null;
+            private NetworkComponent m_NetworkComponent;
 
             public override void Initialize(params object[] args)
             {
@@ -21,7 +21,6 @@ namespace UnityGameFramework.Runtime
                 if (m_NetworkComponent == null)
                 {
                     Log.Fatal("Network component is invalid.");
-                    return;
                 }
             }
 

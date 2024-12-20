@@ -42,13 +42,7 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取对象池数量。
         /// </summary>
-        public int Count
-        {
-            get
-            {
-                return m_ObjectPools.Count;
-            }
-        }
+        public int Count => m_ObjectPools.Count;
 
         /// <summary>
         /// 对象池管理器轮询。

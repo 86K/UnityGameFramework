@@ -40,24 +40,12 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取事件处理函数的数量。
         /// </summary>
-        public int EventHandlerCount
-        {
-            get
-            {
-                return m_EventHandlers.Count;
-            }
-        }
+        public int EventHandlerCount => m_EventHandlers.Count;
 
         /// <summary>
         /// 获取事件数量。
         /// </summary>
-        public int EventCount
-        {
-            get
-            {
-                return m_Events.Count;
-            }
-        }
+        public int EventCount => m_Events.Count;
 
         /// <summary>
         /// 事件池轮询。

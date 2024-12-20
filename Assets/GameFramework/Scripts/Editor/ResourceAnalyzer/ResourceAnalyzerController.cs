@@ -62,15 +62,15 @@ namespace UnityGameFramework.Editor.ResourceTools
             m_CircularDependencyDatas = new List<string[]>();
         }
 
-        public event GameFrameworkAction<int, int> OnLoadingResource = null;
+        public event GameFrameworkAction<int, int> OnLoadingResource;
 
-        public event GameFrameworkAction<int, int> OnLoadingAsset = null;
+        public event GameFrameworkAction<int, int> OnLoadingAsset;
 
-        public event GameFrameworkAction OnLoadCompleted = null;
+        public event GameFrameworkAction OnLoadCompleted;
 
-        public event GameFrameworkAction<int, int> OnAnalyzingAsset = null;
+        public event GameFrameworkAction<int, int> OnAnalyzingAsset;
 
-        public event GameFrameworkAction OnAnalyzeCompleted = null;
+        public event GameFrameworkAction OnAnalyzeCompleted;
 
         public void Clear()
         {

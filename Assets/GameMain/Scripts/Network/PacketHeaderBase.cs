@@ -28,13 +28,7 @@ namespace StarForce
             set;
         }
 
-        public bool IsValid
-        {
-            get
-            {
-                return PacketType != PacketType.Undefined && Id > 0 && PacketLength >= 0;
-            }
-        }
+        public bool IsValid => PacketType != PacketType.Undefined && Id > 0 && PacketLength >= 0;
 
         public void Clear()
         {

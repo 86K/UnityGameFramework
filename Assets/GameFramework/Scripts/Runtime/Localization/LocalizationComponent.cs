@@ -18,71 +18,47 @@ namespace UnityGameFramework.Runtime
     {
         private const int DefaultPriority = 0;
 
-        private ILocalizationManager m_LocalizationManager = null;
-        private EventComponent m_EventComponent = null;
+        private ILocalizationManager m_LocalizationManager;
+        private EventComponent m_EventComponent;
 
         [SerializeField]
-        private bool m_EnableLoadDictionaryUpdateEvent = false;
+        private bool m_EnableLoadDictionaryUpdateEvent;
 
         [SerializeField]
-        private bool m_EnableLoadDictionaryDependencyAssetEvent = false;
+        private bool m_EnableLoadDictionaryDependencyAssetEvent;
 
         [SerializeField]
         private string m_LocalizationHelperTypeName = "UnityGameFramework.Runtime.DefaultLocalizationHelper";
 
         [SerializeField]
-        private LocalizationHelperBase m_CustomLocalizationHelper = null;
+        private LocalizationHelperBase m_CustomLocalizationHelper;
 
         [SerializeField]
-        private int m_CachedBytesSize = 0;
+        private int m_CachedBytesSize;
 
         /// <summary>
         /// 获取或设置本地化语言。
         /// </summary>
         public Language Language
         {
-            get
-            {
-                return m_LocalizationManager.Language;
-            }
-            set
-            {
-                m_LocalizationManager.Language = value;
-            }
+            get => m_LocalizationManager.Language;
+            set => m_LocalizationManager.Language = value;
         }
 
         /// <summary>
         /// 获取系统语言。
         /// </summary>
-        public Language SystemLanguage
-        {
-            get
-            {
-                return m_LocalizationManager.SystemLanguage;
-            }
-        }
+        public Language SystemLanguage => m_LocalizationManager.SystemLanguage;
 
         /// <summary>
         /// 获取字典数量。
         /// </summary>
-        public int DictionaryCount
-        {
-            get
-            {
-                return m_LocalizationManager.DictionaryCount;
-            }
-        }
+        public int DictionaryCount => m_LocalizationManager.DictionaryCount;
 
         /// <summary>
         /// 获取缓冲二进制流的大小。
         /// </summary>
-        public int CachedBytesSize
-        {
-            get
-            {
-                return m_LocalizationManager.CachedBytesSize;
-            }
-        }
+        public int CachedBytesSize => m_LocalizationManager.CachedBytesSize;
 
         /// <summary>
         /// 游戏框架组件初始化。

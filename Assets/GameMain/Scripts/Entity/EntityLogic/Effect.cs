@@ -16,9 +16,9 @@ namespace StarForce
     public class Effect : Entity
     {
         [SerializeField]
-        private EffectData m_EffectData = null;
+        private EffectData m_EffectData;
 
-        private float m_ElapseSeconds = 0f;
+        private float m_ElapseSeconds;
 
 #if UNITY_2017_3_OR_NEWER
         protected override void OnShow(object userData)

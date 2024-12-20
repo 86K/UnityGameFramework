@@ -14,10 +14,10 @@ namespace UnityGameFramework.Editor
     [CustomEditor(typeof(DebuggerComponent))]
     internal sealed class DebuggerComponentInspector : GameFrameworkInspector
     {
-        private SerializedProperty m_Skin = null;
-        private SerializedProperty m_ActiveWindow = null;
-        private SerializedProperty m_ShowFullWindow = null;
-        private SerializedProperty m_ConsoleWindow = null;
+        private SerializedProperty m_Skin;
+        private SerializedProperty m_ActiveWindow;
+        private SerializedProperty m_ShowFullWindow;
+        private SerializedProperty m_ConsoleWindow;
 
         public override void OnInspectorGUI()
         {

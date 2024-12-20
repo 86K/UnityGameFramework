@@ -58,14 +58,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public float Timeout
         {
-            get
-            {
-                return m_Timeout;
-            }
-            set
-            {
-                m_Timeout = value;
-            }
+            get => m_Timeout;
+            set => m_Timeout = value;
         }
 
         /// <summary>
@@ -73,14 +67,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<WebRequestStartEventArgs> WebRequestStart
         {
-            add
-            {
-                m_WebRequestStartEventHandler += value;
-            }
-            remove
-            {
-                m_WebRequestStartEventHandler -= value;
-            }
+            add => m_WebRequestStartEventHandler += value;
+            remove => m_WebRequestStartEventHandler -= value;
         }
 
         /// <summary>
@@ -88,14 +76,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<WebRequestSuccessEventArgs> WebRequestSuccess
         {
-            add
-            {
-                m_WebRequestSuccessEventHandler += value;
-            }
-            remove
-            {
-                m_WebRequestSuccessEventHandler -= value;
-            }
+            add => m_WebRequestSuccessEventHandler += value;
+            remove => m_WebRequestSuccessEventHandler -= value;
         }
 
         /// <summary>
@@ -103,14 +85,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<WebRequestFailureEventArgs> WebRequestFailure
         {
-            add
-            {
-                m_WebRequestFailureEventHandler += value;
-            }
-            remove
-            {
-                m_WebRequestFailureEventHandler -= value;
-            }
+            add => m_WebRequestFailureEventHandler += value;
+            remove => m_WebRequestFailureEventHandler -= value;
         }
 
         /// <summary>

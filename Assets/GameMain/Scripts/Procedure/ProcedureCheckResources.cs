@@ -5,18 +5,12 @@ namespace StarForce
 {
     public class ProcedureCheckResources : ProcedureBase
     {
-        private bool m_CheckResourcesComplete = false;
-        private bool m_NeedUpdateResources = false;
-        private int m_UpdateResourceCount = 0;
-        private long m_UpdateResourceTotalCompressedLength = 0L;
+        private bool m_CheckResourcesComplete;
+        private bool m_NeedUpdateResources;
+        private int m_UpdateResourceCount;
+        private long m_UpdateResourceTotalCompressedLength;
 
-        public override bool UseNativeDialog
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool UseNativeDialog => true;
 
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {

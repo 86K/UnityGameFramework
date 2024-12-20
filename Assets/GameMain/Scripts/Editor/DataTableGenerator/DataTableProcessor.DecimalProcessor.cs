@@ -13,21 +13,9 @@ namespace StarForce.Editor.DataTableTools
     {
         private sealed class DecimalProcessor : GenericDataProcessor<decimal>
         {
-            public override bool IsSystem
-            {
-                get
-                {
-                    return true;
-                }
-            }
+            public override bool IsSystem => true;
 
-            public override string LanguageKeyword
-            {
-                get
-                {
-                    return "decimal";
-                }
-            }
+            public override string LanguageKeyword => "decimal";
 
             public override string[] GetTypeStrings()
             {

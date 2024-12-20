@@ -21,10 +21,10 @@ namespace UnityGameFramework.Runtime
     {
         private const int DefaultPriority = 0;
 
-        private ISceneManager m_SceneManager = null;
-        private EventComponent m_EventComponent = null;
+        private ISceneManager m_SceneManager;
+        private EventComponent m_EventComponent;
         private readonly SortedDictionary<string, int> m_SceneOrder = new SortedDictionary<string, int>(StringComparer.Ordinal);
-        private Camera m_MainCamera = null;
+        private Camera m_MainCamera;
         private Scene m_GameFrameworkScene = default(Scene);
 
         [SerializeField]

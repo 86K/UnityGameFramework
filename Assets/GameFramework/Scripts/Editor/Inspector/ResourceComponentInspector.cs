@@ -20,27 +20,27 @@ namespace UnityGameFramework.Editor
     {
         private static readonly string[] ResourceModeNames = new string[] { "Package", "Updatable", "Updatable While Playing" };
 
-        private SerializedProperty m_ResourceMode = null;
-        private SerializedProperty m_ReadWritePathType = null;
-        private SerializedProperty m_MinUnloadUnusedAssetsInterval = null;
-        private SerializedProperty m_MaxUnloadUnusedAssetsInterval = null;
-        private SerializedProperty m_AssetAutoReleaseInterval = null;
-        private SerializedProperty m_AssetCapacity = null;
-        private SerializedProperty m_AssetExpireTime = null;
-        private SerializedProperty m_AssetPriority = null;
-        private SerializedProperty m_ResourceAutoReleaseInterval = null;
-        private SerializedProperty m_ResourceCapacity = null;
-        private SerializedProperty m_ResourceExpireTime = null;
-        private SerializedProperty m_ResourcePriority = null;
-        private SerializedProperty m_UpdatePrefixUri = null;
-        private SerializedProperty m_GenerateReadWriteVersionListLength = null;
-        private SerializedProperty m_UpdateRetryCount = null;
-        private SerializedProperty m_InstanceRoot = null;
-        private SerializedProperty m_LoadResourceAgentHelperCount = null;
+        private SerializedProperty m_ResourceMode;
+        private SerializedProperty m_ReadWritePathType;
+        private SerializedProperty m_MinUnloadUnusedAssetsInterval;
+        private SerializedProperty m_MaxUnloadUnusedAssetsInterval;
+        private SerializedProperty m_AssetAutoReleaseInterval;
+        private SerializedProperty m_AssetCapacity;
+        private SerializedProperty m_AssetExpireTime;
+        private SerializedProperty m_AssetPriority;
+        private SerializedProperty m_ResourceAutoReleaseInterval;
+        private SerializedProperty m_ResourceCapacity;
+        private SerializedProperty m_ResourceExpireTime;
+        private SerializedProperty m_ResourcePriority;
+        private SerializedProperty m_UpdatePrefixUri;
+        private SerializedProperty m_GenerateReadWriteVersionListLength;
+        private SerializedProperty m_UpdateRetryCount;
+        private SerializedProperty m_InstanceRoot;
+        private SerializedProperty m_LoadResourceAgentHelperCount;
 
-        private FieldInfo m_EditorResourceModeFieldInfo = null;
+        private FieldInfo m_EditorResourceModeFieldInfo;
 
-        private int m_ResourceModeIndex = 0;
+        private int m_ResourceModeIndex;
         private HelperInfo<ResourceHelperBase> m_ResourceHelperInfo = new HelperInfo<ResourceHelperBase>("Resource");
         private HelperInfo<LoadResourceAgentHelperBase> m_LoadResourceAgentHelperInfo = new HelperInfo<LoadResourceAgentHelperBase>("LoadResourceAgent");
 

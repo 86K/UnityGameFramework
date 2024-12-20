@@ -9,12 +9,6 @@ namespace StarForce
 {
     public sealed class CSPacketHeader : PacketHeaderBase
     {
-        public override PacketType PacketType
-        {
-            get
-            {
-                return PacketType.ClientToServer;
-            }
-        }
+        public override PacketType PacketType => PacketType.ClientToServer;
     }
 }

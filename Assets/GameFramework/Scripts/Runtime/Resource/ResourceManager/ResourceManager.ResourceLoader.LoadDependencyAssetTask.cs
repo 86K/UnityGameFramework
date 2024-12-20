@@ -20,13 +20,7 @@ namespace UnityGameFramework.Runtime
                     m_MainTask = null;
                 }
 
-                public override bool IsScene
-                {
-                    get
-                    {
-                        return false;
-                    }
-                }
+                public override bool IsScene => false;
 
                 public static LoadDependencyAssetTask Create(string assetName, int priority, ResourceInfo resourceInfo, string[] dependencyAssetNames, LoadResourceTaskBase mainTask, object userData)
                 {

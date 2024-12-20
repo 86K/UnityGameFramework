@@ -114,21 +114,9 @@ namespace UnityGameFramework.Editor.ResourceTools
             OutputPackageSelected = OutputFullSelected = OutputPackedSelected = true;
         }
 
-        public string ProductName
-        {
-            get
-            {
-                return PlayerSettings.productName;
-            }
-        }
+        public string ProductName => PlayerSettings.productName;
 
-        public string CompanyName
-        {
-            get
-            {
-                return PlayerSettings.companyName;
-            }
-        }
+        public string CompanyName => PlayerSettings.companyName;
 
         public string GameIdentifier
         {
@@ -142,29 +130,11 @@ namespace UnityGameFramework.Editor.ResourceTools
             }
         }
 
-        public string GameFrameworkVersion
-        {
-            get
-            {
-                return Version.GameFrameworkVersion;
-            }
-        }
+        public string GameFrameworkVersion => Version.GameFrameworkVersion;
 
-        public string UnityVersion
-        {
-            get
-            {
-                return Application.unityVersion;
-            }
-        }
+        public string UnityVersion => Application.unityVersion;
 
-        public string ApplicableGameVersion
-        {
-            get
-            {
-                return Application.version;
-            }
-        }
+        public string ApplicableGameVersion => Application.version;
 
         public int InternalResourceVersion
         {
@@ -315,23 +285,23 @@ namespace UnityGameFramework.Editor.ResourceTools
             }
         }
 
-        public event GameFrameworkAction<int, int> OnLoadingResource = null;
+        public event GameFrameworkAction<int, int> OnLoadingResource;
 
-        public event GameFrameworkAction<int, int> OnLoadingAsset = null;
+        public event GameFrameworkAction<int, int> OnLoadingAsset;
 
-        public event GameFrameworkAction OnLoadCompleted = null;
+        public event GameFrameworkAction OnLoadCompleted;
 
-        public event GameFrameworkAction<int, int> OnAnalyzingAsset = null;
+        public event GameFrameworkAction<int, int> OnAnalyzingAsset;
 
-        public event GameFrameworkAction OnAnalyzeCompleted = null;
+        public event GameFrameworkAction OnAnalyzeCompleted;
 
-        public event GameFrameworkFunc<string, float, bool> ProcessingAssetBundle = null;
+        public event GameFrameworkFunc<string, float, bool> ProcessingAssetBundle;
 
-        public event GameFrameworkFunc<string, float, bool> ProcessingBinary = null;
+        public event GameFrameworkFunc<string, float, bool> ProcessingBinary;
 
-        public event GameFrameworkAction<Platform> ProcessResourceComplete = null;
+        public event GameFrameworkAction<Platform> ProcessResourceComplete;
 
-        public event GameFrameworkAction<string> BuildResourceError = null;
+        public event GameFrameworkAction<string> BuildResourceError;
 
         public bool Load()
         {

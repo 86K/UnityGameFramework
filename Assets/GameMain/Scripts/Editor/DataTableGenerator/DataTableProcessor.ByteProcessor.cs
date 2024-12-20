@@ -13,21 +13,9 @@ namespace StarForce.Editor.DataTableTools
     {
         private sealed class ByteProcessor : GenericDataProcessor<byte>
         {
-            public override bool IsSystem
-            {
-                get
-                {
-                    return true;
-                }
-            }
+            public override bool IsSystem => true;
 
-            public override string LanguageKeyword
-            {
-                get
-                {
-                    return "byte";
-                }
-            }
+            public override string LanguageKeyword => "byte";
 
             public override string[] GetTypeStrings()
             {

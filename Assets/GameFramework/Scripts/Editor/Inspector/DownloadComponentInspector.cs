@@ -17,10 +17,10 @@ namespace UnityGameFramework.Editor
     [CustomEditor(typeof(DownloadComponent))]
     internal sealed class DownloadComponentInspector : GameFrameworkInspector
     {
-        private SerializedProperty m_InstanceRoot = null;
-        private SerializedProperty m_DownloadAgentHelperCount = null;
-        private SerializedProperty m_Timeout = null;
-        private SerializedProperty m_FlushSize = null;
+        private SerializedProperty m_InstanceRoot;
+        private SerializedProperty m_DownloadAgentHelperCount;
+        private SerializedProperty m_Timeout;
+        private SerializedProperty m_FlushSize;
 
         private HelperInfo<DownloadAgentHelperBase> m_DownloadAgentHelperInfo = new HelperInfo<DownloadAgentHelperBase>("DownloadAgent");
 

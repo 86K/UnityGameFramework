@@ -16,7 +16,7 @@ namespace StarForce
     public class Asteroid : TargetableObject
     {
         [SerializeField]
-        private AsteroidData m_AsteroidData = null;
+        private AsteroidData m_AsteroidData;
 
         private Vector3 m_RotateSphere = Vector3.zero;
 

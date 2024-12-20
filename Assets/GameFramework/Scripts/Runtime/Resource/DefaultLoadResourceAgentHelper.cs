@@ -19,42 +19,36 @@ namespace UnityGameFramework.Runtime
     /// </summary>
     public class DefaultLoadResourceAgentHelper : LoadResourceAgentHelperBase, IDisposable
     {
-        private string m_FileFullPath = null;
-        private string m_FileName = null;
-        private string m_BytesFullPath = null;
-        private string m_AssetName = null;
-        private float m_LastProgress = 0f;
-        private bool m_Disposed = false;
+        private string m_FileFullPath;
+        private string m_FileName;
+        private string m_BytesFullPath;
+        private string m_AssetName;
+        private float m_LastProgress;
+        private bool m_Disposed;
 #if UNITY_5_4_OR_NEWER
-        private UnityWebRequest m_UnityWebRequest = null;
+        private UnityWebRequest m_UnityWebRequest;
 #else
         private WWW m_WWW = null;
 #endif
-        private AssetBundleCreateRequest m_FileAssetBundleCreateRequest = null;
-        private AssetBundleCreateRequest m_BytesAssetBundleCreateRequest = null;
-        private AssetBundleRequest m_AssetBundleRequest = null;
-        private AsyncOperation m_AsyncOperation = null;
+        private AssetBundleCreateRequest m_FileAssetBundleCreateRequest;
+        private AssetBundleCreateRequest m_BytesAssetBundleCreateRequest;
+        private AssetBundleRequest m_AssetBundleRequest;
+        private AsyncOperation m_AsyncOperation;
 
-        private EventHandler<LoadResourceAgentHelperUpdateEventArgs> m_LoadResourceAgentHelperUpdateEventHandler = null;
-        private EventHandler<LoadResourceAgentHelperReadFileCompleteEventArgs> m_LoadResourceAgentHelperReadFileCompleteEventHandler = null;
-        private EventHandler<LoadResourceAgentHelperReadBytesCompleteEventArgs> m_LoadResourceAgentHelperReadBytesCompleteEventHandler = null;
-        private EventHandler<LoadResourceAgentHelperParseBytesCompleteEventArgs> m_LoadResourceAgentHelperParseBytesCompleteEventHandler = null;
-        private EventHandler<LoadResourceAgentHelperLoadCompleteEventArgs> m_LoadResourceAgentHelperLoadCompleteEventHandler = null;
-        private EventHandler<LoadResourceAgentHelperErrorEventArgs> m_LoadResourceAgentHelperErrorEventHandler = null;
+        private EventHandler<LoadResourceAgentHelperUpdateEventArgs> m_LoadResourceAgentHelperUpdateEventHandler;
+        private EventHandler<LoadResourceAgentHelperReadFileCompleteEventArgs> m_LoadResourceAgentHelperReadFileCompleteEventHandler;
+        private EventHandler<LoadResourceAgentHelperReadBytesCompleteEventArgs> m_LoadResourceAgentHelperReadBytesCompleteEventHandler;
+        private EventHandler<LoadResourceAgentHelperParseBytesCompleteEventArgs> m_LoadResourceAgentHelperParseBytesCompleteEventHandler;
+        private EventHandler<LoadResourceAgentHelperLoadCompleteEventArgs> m_LoadResourceAgentHelperLoadCompleteEventHandler;
+        private EventHandler<LoadResourceAgentHelperErrorEventArgs> m_LoadResourceAgentHelperErrorEventHandler;
 
         /// <summary>
         /// 加载资源代理辅助器异步加载资源更新事件。
         /// </summary>
         public override event EventHandler<LoadResourceAgentHelperUpdateEventArgs> LoadResourceAgentHelperUpdate
         {
-            add
-            {
-                m_LoadResourceAgentHelperUpdateEventHandler += value;
-            }
-            remove
-            {
-                m_LoadResourceAgentHelperUpdateEventHandler -= value;
-            }
+            add => m_LoadResourceAgentHelperUpdateEventHandler += value;
+            remove => m_LoadResourceAgentHelperUpdateEventHandler -= value;
         }
 
         /// <summary>
@@ -62,14 +56,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public override event EventHandler<LoadResourceAgentHelperReadFileCompleteEventArgs> LoadResourceAgentHelperReadFileComplete
         {
-            add
-            {
-                m_LoadResourceAgentHelperReadFileCompleteEventHandler += value;
-            }
-            remove
-            {
-                m_LoadResourceAgentHelperReadFileCompleteEventHandler -= value;
-            }
+            add => m_LoadResourceAgentHelperReadFileCompleteEventHandler += value;
+            remove => m_LoadResourceAgentHelperReadFileCompleteEventHandler -= value;
         }
 
         /// <summary>
@@ -77,14 +65,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public override event EventHandler<LoadResourceAgentHelperReadBytesCompleteEventArgs> LoadResourceAgentHelperReadBytesComplete
         {
-            add
-            {
-                m_LoadResourceAgentHelperReadBytesCompleteEventHandler += value;
-            }
-            remove
-            {
-                m_LoadResourceAgentHelperReadBytesCompleteEventHandler -= value;
-            }
+            add => m_LoadResourceAgentHelperReadBytesCompleteEventHandler += value;
+            remove => m_LoadResourceAgentHelperReadBytesCompleteEventHandler -= value;
         }
 
         /// <summary>
@@ -92,14 +74,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public override event EventHandler<LoadResourceAgentHelperParseBytesCompleteEventArgs> LoadResourceAgentHelperParseBytesComplete
         {
-            add
-            {
-                m_LoadResourceAgentHelperParseBytesCompleteEventHandler += value;
-            }
-            remove
-            {
-                m_LoadResourceAgentHelperParseBytesCompleteEventHandler -= value;
-            }
+            add => m_LoadResourceAgentHelperParseBytesCompleteEventHandler += value;
+            remove => m_LoadResourceAgentHelperParseBytesCompleteEventHandler -= value;
         }
 
         /// <summary>
@@ -107,14 +83,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public override event EventHandler<LoadResourceAgentHelperLoadCompleteEventArgs> LoadResourceAgentHelperLoadComplete
         {
-            add
-            {
-                m_LoadResourceAgentHelperLoadCompleteEventHandler += value;
-            }
-            remove
-            {
-                m_LoadResourceAgentHelperLoadCompleteEventHandler -= value;
-            }
+            add => m_LoadResourceAgentHelperLoadCompleteEventHandler += value;
+            remove => m_LoadResourceAgentHelperLoadCompleteEventHandler -= value;
         }
 
         /// <summary>
@@ -122,14 +92,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public override event EventHandler<LoadResourceAgentHelperErrorEventArgs> LoadResourceAgentHelperError
         {
-            add
-            {
-                m_LoadResourceAgentHelperErrorEventHandler += value;
-            }
-            remove
-            {
-                m_LoadResourceAgentHelperErrorEventHandler -= value;
-            }
+            add => m_LoadResourceAgentHelperErrorEventHandler += value;
+            remove => m_LoadResourceAgentHelperErrorEventHandler -= value;
         }
 
         /// <summary>

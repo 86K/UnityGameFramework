@@ -14,17 +14,17 @@ namespace StarForce
     public class HPBarComponent : GameFrameworkComponent
     {
         [SerializeField]
-        private HPBarItem m_HPBarItemTemplate = null;
+        private HPBarItem m_HPBarItemTemplate;
 
         [SerializeField]
-        private Transform m_HPBarInstanceRoot = null;
+        private Transform m_HPBarInstanceRoot;
 
         [SerializeField]
         private int m_InstancePoolCapacity = 16;
 
-        private IObjectPool<HPBarItemObject> m_HPBarItemObjectPool = null;
-        private List<HPBarItem> m_ActiveHPBarItems = null;
-        private Canvas m_CachedCanvas = null;
+        private IObjectPool<HPBarItemObject> m_HPBarItemObjectPool;
+        private List<HPBarItem> m_ActiveHPBarItems;
+        private Canvas m_CachedCanvas;
 
         private void Start()
         {

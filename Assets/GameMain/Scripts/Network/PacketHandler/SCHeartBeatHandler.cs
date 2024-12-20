@@ -11,13 +11,7 @@ namespace StarForce
 {
     public class SCHeartBeatHandler : PacketHandlerBase
     {
-        public override int Id
-        {
-            get
-            {
-                return 2;
-            }
-        }
+        public override int Id => 2;
 
         public override void Handle(object sender, Packet packet)
         {

@@ -7,20 +7,14 @@ namespace StarForce
 {
     public class ProcedureUpdateResources : ProcedureBase
     {
-        private bool m_UpdateResourcesComplete = false;
-        private int m_UpdateCount = 0;
-        private long m_UpdateTotalCompressedLength = 0L;
-        private int m_UpdateSuccessCount = 0;
+        private bool m_UpdateResourcesComplete;
+        private int m_UpdateCount;
+        private long m_UpdateTotalCompressedLength;
+        private int m_UpdateSuccessCount;
         private List<UpdateLengthData> m_UpdateLengthData = new List<UpdateLengthData>();
-        private UpdateResourceForm m_UpdateResourceForm = null;
+        private UpdateResourceForm m_UpdateResourceForm;
 
-        public override bool UseNativeDialog
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool UseNativeDialog => true;
 
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
@@ -248,13 +242,7 @@ namespace StarForce
                 m_Name = name;
             }
 
-            public string Name
-            {
-                get
-                {
-                    return m_Name;
-                }
-            }
+            public string Name => m_Name;
 
             public int Length
             {

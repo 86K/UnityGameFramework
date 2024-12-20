@@ -43,23 +43,11 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取加载二进制资源成功回调函数。
         /// </summary>
-        public LoadBinarySuccessCallback LoadBinarySuccessCallback
-        {
-            get
-            {
-                return m_LoadBinarySuccessCallback;
-            }
-        }
+        public LoadBinarySuccessCallback LoadBinarySuccessCallback => m_LoadBinarySuccessCallback;
 
         /// <summary>
         /// 获取加载二进制资源失败回调函数。
         /// </summary>
-        public LoadBinaryFailureCallback LoadBinaryFailureCallback
-        {
-            get
-            {
-                return m_LoadBinaryFailureCallback;
-            }
-        }
+        public LoadBinaryFailureCallback LoadBinaryFailureCallback => m_LoadBinaryFailureCallback;
     }
 }

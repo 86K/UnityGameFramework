@@ -52,60 +52,30 @@ namespace UnityGameFramework.Runtime
             /// <summary>
             /// 获取加载资源代理总数量。
             /// </summary>
-            public int TotalAgentCount
-            {
-                get
-                {
-                    return m_TaskPool.TotalAgentCount;
-                }
-            }
+            public int TotalAgentCount => m_TaskPool.TotalAgentCount;
 
             /// <summary>
             /// 获取可用加载资源代理数量。
             /// </summary>
-            public int FreeAgentCount
-            {
-                get
-                {
-                    return m_TaskPool.FreeAgentCount;
-                }
-            }
+            public int FreeAgentCount => m_TaskPool.FreeAgentCount;
 
             /// <summary>
             /// 获取工作中加载资源代理数量。
             /// </summary>
-            public int WorkingAgentCount
-            {
-                get
-                {
-                    return m_TaskPool.WorkingAgentCount;
-                }
-            }
+            public int WorkingAgentCount => m_TaskPool.WorkingAgentCount;
 
             /// <summary>
             /// 获取等待加载资源任务数量。
             /// </summary>
-            public int WaitingTaskCount
-            {
-                get
-                {
-                    return m_TaskPool.WaitingTaskCount;
-                }
-            }
+            public int WaitingTaskCount => m_TaskPool.WaitingTaskCount;
 
             /// <summary>
             /// 获取或设置资源对象池自动释放可释放对象的间隔秒数。
             /// </summary>
             public float AssetAutoReleaseInterval
             {
-                get
-                {
-                    return m_AssetPool.AutoReleaseInterval;
-                }
-                set
-                {
-                    m_AssetPool.AutoReleaseInterval = value;
-                }
+                get => m_AssetPool.AutoReleaseInterval;
+                set => m_AssetPool.AutoReleaseInterval = value;
             }
 
             /// <summary>
@@ -113,14 +83,8 @@ namespace UnityGameFramework.Runtime
             /// </summary>
             public int AssetCapacity
             {
-                get
-                {
-                    return m_AssetPool.Capacity;
-                }
-                set
-                {
-                    m_AssetPool.Capacity = value;
-                }
+                get => m_AssetPool.Capacity;
+                set => m_AssetPool.Capacity = value;
             }
 
             /// <summary>
@@ -128,14 +92,8 @@ namespace UnityGameFramework.Runtime
             /// </summary>
             public float AssetExpireTime
             {
-                get
-                {
-                    return m_AssetPool.ExpireTime;
-                }
-                set
-                {
-                    m_AssetPool.ExpireTime = value;
-                }
+                get => m_AssetPool.ExpireTime;
+                set => m_AssetPool.ExpireTime = value;
             }
 
             /// <summary>
@@ -143,14 +101,8 @@ namespace UnityGameFramework.Runtime
             /// </summary>
             public int AssetPriority
             {
-                get
-                {
-                    return m_AssetPool.Priority;
-                }
-                set
-                {
-                    m_AssetPool.Priority = value;
-                }
+                get => m_AssetPool.Priority;
+                set => m_AssetPool.Priority = value;
             }
 
             /// <summary>
@@ -158,14 +110,8 @@ namespace UnityGameFramework.Runtime
             /// </summary>
             public float ResourceAutoReleaseInterval
             {
-                get
-                {
-                    return m_ResourcePool.AutoReleaseInterval;
-                }
-                set
-                {
-                    m_ResourcePool.AutoReleaseInterval = value;
-                }
+                get => m_ResourcePool.AutoReleaseInterval;
+                set => m_ResourcePool.AutoReleaseInterval = value;
             }
 
             /// <summary>
@@ -173,14 +119,8 @@ namespace UnityGameFramework.Runtime
             /// </summary>
             public int ResourceCapacity
             {
-                get
-                {
-                    return m_ResourcePool.Capacity;
-                }
-                set
-                {
-                    m_ResourcePool.Capacity = value;
-                }
+                get => m_ResourcePool.Capacity;
+                set => m_ResourcePool.Capacity = value;
             }
 
             /// <summary>
@@ -188,14 +128,8 @@ namespace UnityGameFramework.Runtime
             /// </summary>
             public float ResourceExpireTime
             {
-                get
-                {
-                    return m_ResourcePool.ExpireTime;
-                }
-                set
-                {
-                    m_ResourcePool.ExpireTime = value;
-                }
+                get => m_ResourcePool.ExpireTime;
+                set => m_ResourcePool.ExpireTime = value;
             }
 
             /// <summary>
@@ -203,14 +137,8 @@ namespace UnityGameFramework.Runtime
             /// </summary>
             public int ResourcePriority
             {
-                get
-                {
-                    return m_ResourcePool.Priority;
-                }
-                set
-                {
-                    m_ResourcePool.Priority = value;
-                }
+                get => m_ResourcePool.Priority;
+                set => m_ResourcePool.Priority = value;
             }
 
             /// <summary>

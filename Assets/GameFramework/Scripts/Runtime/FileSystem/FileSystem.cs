@@ -86,46 +86,22 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取文件系统完整路径。
         /// </summary>
-        public string FullPath
-        {
-            get
-            {
-                return m_FullPath;
-            }
-        }
+        public string FullPath => m_FullPath;
 
         /// <summary>
         /// 获取文件系统访问方式。
         /// </summary>
-        public FileSystemAccess Access
-        {
-            get
-            {
-                return m_Access;
-            }
-        }
+        public FileSystemAccess Access => m_Access;
 
         /// <summary>
         /// 获取文件数量。
         /// </summary>
-        public int FileCount
-        {
-            get
-            {
-                return m_FileDatas.Count;
-            }
-        }
+        public int FileCount => m_FileDatas.Count;
 
         /// <summary>
         /// 获取最大文件数量。
         /// </summary>
-        public int MaxFileCount
-        {
-            get
-            {
-                return m_HeaderData.MaxFileCount;
-            }
-        }
+        public int MaxFileCount => m_HeaderData.MaxFileCount;
 
         /// <summary>
         /// 创建文件系统。

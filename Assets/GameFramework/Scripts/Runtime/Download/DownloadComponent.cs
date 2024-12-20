@@ -20,17 +20,17 @@ namespace UnityGameFramework.Runtime
         private const int DefaultPriority = 0;
         private const int OneMegaBytes = 1024 * 1024;
 
-        private IDownloadManager m_DownloadManager = null;
-        private EventComponent m_EventComponent = null;
+        private IDownloadManager m_DownloadManager;
+        private EventComponent m_EventComponent;
 
         [SerializeField]
-        private Transform m_InstanceRoot = null;
+        private Transform m_InstanceRoot;
 
         [SerializeField]
         private string m_DownloadAgentHelperTypeName = "UnityGameFramework.Runtime.UnityWebRequestDownloadAgentHelper";
 
         [SerializeField]
-        private DownloadAgentHelperBase m_CustomDownloadAgentHelper = null;
+        private DownloadAgentHelperBase m_CustomDownloadAgentHelper;
 
         [SerializeField]
         private int m_DownloadAgentHelperCount = 3;
@@ -46,73 +46,37 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public bool Paused
         {
-            get
-            {
-                return m_DownloadManager.Paused;
-            }
-            set
-            {
-                m_DownloadManager.Paused = value;
-            }
+            get => m_DownloadManager.Paused;
+            set => m_DownloadManager.Paused = value;
         }
 
         /// <summary>
         /// 获取下载代理总数量。
         /// </summary>
-        public int TotalAgentCount
-        {
-            get
-            {
-                return m_DownloadManager.TotalAgentCount;
-            }
-        }
+        public int TotalAgentCount => m_DownloadManager.TotalAgentCount;
 
         /// <summary>
         /// 获取可用下载代理数量。
         /// </summary>
-        public int FreeAgentCount
-        {
-            get
-            {
-                return m_DownloadManager.FreeAgentCount;
-            }
-        }
+        public int FreeAgentCount => m_DownloadManager.FreeAgentCount;
 
         /// <summary>
         /// 获取工作中下载代理数量。
         /// </summary>
-        public int WorkingAgentCount
-        {
-            get
-            {
-                return m_DownloadManager.WorkingAgentCount;
-            }
-        }
+        public int WorkingAgentCount => m_DownloadManager.WorkingAgentCount;
 
         /// <summary>
         /// 获取等待下载任务数量。
         /// </summary>
-        public int WaitingTaskCount
-        {
-            get
-            {
-                return m_DownloadManager.WaitingTaskCount;
-            }
-        }
+        public int WaitingTaskCount => m_DownloadManager.WaitingTaskCount;
 
         /// <summary>
         /// 获取或设置下载超时时长，以秒为单位。
         /// </summary>
         public float Timeout
         {
-            get
-            {
-                return m_DownloadManager.Timeout;
-            }
-            set
-            {
-                m_DownloadManager.Timeout = m_Timeout = value;
-            }
+            get => m_DownloadManager.Timeout;
+            set => m_DownloadManager.Timeout = m_Timeout = value;
         }
 
         /// <summary>
@@ -120,26 +84,14 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public int FlushSize
         {
-            get
-            {
-                return m_DownloadManager.FlushSize;
-            }
-            set
-            {
-                m_DownloadManager.FlushSize = m_FlushSize = value;
-            }
+            get => m_DownloadManager.FlushSize;
+            set => m_DownloadManager.FlushSize = m_FlushSize = value;
         }
 
         /// <summary>
         /// 获取当前下载速度。
         /// </summary>
-        public float CurrentSpeed
-        {
-            get
-            {
-                return m_DownloadManager.CurrentSpeed;
-            }
-        }
+        public float CurrentSpeed => m_DownloadManager.CurrentSpeed;
 
         /// <summary>
         /// 游戏框架组件初始化。

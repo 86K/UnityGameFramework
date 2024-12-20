@@ -16,13 +16,7 @@ namespace StarForce.Editor
 {
     public sealed class StarForceBuildEventHandler : IBuildEventHandler
     {
-        public bool ContinueOnFailure
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public bool ContinueOnFailure => false;
 
         public void OnPreprocessAllPlatforms(string productName, string companyName, string gameIdentifier, string gameFrameworkVersion, string unityVersion, string applicableGameVersion, int internalResourceVersion,
             Platform platforms, AssetBundleCompressionType assetBundleCompression, string compressionHelperTypeName, bool additionalCompressionSelected, bool forceRebuildAssetBundleSelected, string buildEventHandlerTypeName, string outputDirectory, BuildAssetBundleOptions buildAssetBundleOptions,

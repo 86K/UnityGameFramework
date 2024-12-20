@@ -45,24 +45,12 @@ namespace UnityGameFramework.Runtime
             /// <summary>
             /// 获取 Web 请求任务。
             /// </summary>
-            public WebRequestTask Task
-            {
-                get
-                {
-                    return m_Task;
-                }
-            }
+            public WebRequestTask Task => m_Task;
 
             /// <summary>
             /// 获取已经等待时间。
             /// </summary>
-            public float WaitTime
-            {
-                get
-                {
-                    return m_WaitTime;
-                }
-            }
+            public float WaitTime => m_WaitTime;
 
             /// <summary>
             /// 初始化 Web 请求代理。

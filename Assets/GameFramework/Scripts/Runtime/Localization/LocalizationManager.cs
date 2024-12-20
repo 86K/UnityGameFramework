@@ -36,10 +36,7 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public Language Language
         {
-            get
-            {
-                return m_Language;
-            }
+            get => m_Language;
             set
             {
                 if (value == Language.Unspecified)
@@ -70,38 +67,20 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取字典数量。
         /// </summary>
-        public int DictionaryCount
-        {
-            get
-            {
-                return m_Dictionary.Count;
-            }
-        }
+        public int DictionaryCount => m_Dictionary.Count;
 
         /// <summary>
         /// 获取缓冲二进制流的大小。
         /// </summary>
-        public int CachedBytesSize
-        {
-            get
-            {
-                return DataProvider<ILocalizationManager>.CachedBytesSize;
-            }
-        }
+        public int CachedBytesSize => DataProvider<ILocalizationManager>.CachedBytesSize;
 
         /// <summary>
         /// 读取字典成功事件。
         /// </summary>
         public event EventHandler<ReadDataSuccessEventArgs> ReadDataSuccess
         {
-            add
-            {
-                m_DataProvider.ReadDataSuccess += value;
-            }
-            remove
-            {
-                m_DataProvider.ReadDataSuccess -= value;
-            }
+            add => m_DataProvider.ReadDataSuccess += value;
+            remove => m_DataProvider.ReadDataSuccess -= value;
         }
 
         /// <summary>
@@ -109,14 +88,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<ReadDataFailureEventArgs> ReadDataFailure
         {
-            add
-            {
-                m_DataProvider.ReadDataFailure += value;
-            }
-            remove
-            {
-                m_DataProvider.ReadDataFailure -= value;
-            }
+            add => m_DataProvider.ReadDataFailure += value;
+            remove => m_DataProvider.ReadDataFailure -= value;
         }
 
         /// <summary>
@@ -124,14 +97,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<ReadDataUpdateEventArgs> ReadDataUpdate
         {
-            add
-            {
-                m_DataProvider.ReadDataUpdate += value;
-            }
-            remove
-            {
-                m_DataProvider.ReadDataUpdate -= value;
-            }
+            add => m_DataProvider.ReadDataUpdate += value;
+            remove => m_DataProvider.ReadDataUpdate -= value;
         }
 
         /// <summary>
@@ -139,14 +106,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<ReadDataDependencyAssetEventArgs> ReadDataDependencyAsset
         {
-            add
-            {
-                m_DataProvider.ReadDataDependencyAsset += value;
-            }
-            remove
-            {
-                m_DataProvider.ReadDataDependencyAsset -= value;
-            }
+            add => m_DataProvider.ReadDataDependencyAsset += value;
+            remove => m_DataProvider.ReadDataDependencyAsset -= value;
         }
 
         /// <summary>

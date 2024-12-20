@@ -21,16 +21,16 @@ namespace UnityGameFramework.Editor.ResourceTools
         private static readonly int[] LengthLimit = new int[] { 0, 128, 256, 512, 1024, 2048, 4096 };
         private static readonly string[] LengthLimitForDisplay = new string[] { "<Unlimited>", "128 MB", "256 MB", "512 MB", "1 GB", "2 GB", "4 GB", "<Custom>" };
 
-        private ResourcePackBuilderController m_Controller = null;
-        private string[] m_VersionNames = null;
-        private string[] m_VersionNamesForTargetDisplay = null;
-        private string[] m_VersionNamesForSourceDisplay = null;
-        private int m_PlatformIndex = 0;
-        private int m_CompressionHelperTypeNameIndex = 0;
-        private int m_LengthLimitIndex = 0;
-        private int m_TargetVersionIndex = 0;
-        private bool[] m_SourceVersionIndexes = null;
-        private int m_SourceVersionCount = 0;
+        private ResourcePackBuilderController m_Controller;
+        private string[] m_VersionNames;
+        private string[] m_VersionNamesForTargetDisplay;
+        private string[] m_VersionNamesForSourceDisplay;
+        private int m_PlatformIndex;
+        private int m_CompressionHelperTypeNameIndex;
+        private int m_LengthLimitIndex;
+        private int m_TargetVersionIndex;
+        private bool[] m_SourceVersionIndexes;
+        private int m_SourceVersionCount;
 
         [MenuItem("Game Framework/Resource Tools/Resource Pack Builder", false, 43)]
         private static void Open()

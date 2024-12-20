@@ -13,21 +13,9 @@ namespace StarForce.Editor.DataTableTools
     {
         private sealed class DoubleProcessor : GenericDataProcessor<double>
         {
-            public override bool IsSystem
-            {
-                get
-                {
-                    return true;
-                }
-            }
+            public override bool IsSystem => true;
 
-            public override string LanguageKeyword
-            {
-                get
-                {
-                    return "double";
-                }
-            }
+            public override string LanguageKeyword => "double";
 
             public override string[] GetTypeStrings()
             {

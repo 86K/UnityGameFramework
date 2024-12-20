@@ -18,13 +18,13 @@ namespace UnityGameFramework.Editor.ResourceTools
         {
         }
 
-        public event GameFrameworkAction<int, int> OnLoadingResource = null;
+        public event GameFrameworkAction<int, int> OnLoadingResource;
 
-        public event GameFrameworkAction<int, int> OnLoadingAsset = null;
+        public event GameFrameworkAction<int, int> OnLoadingAsset;
 
-        public event GameFrameworkAction OnCompleted = null;
+        public event GameFrameworkAction OnCompleted;
 
-        public event GameFrameworkAction<int, int, string> OnResourceDataChanged = null;
+        public event GameFrameworkAction<int, int, string> OnResourceDataChanged;
 
         public string[] GetAllAssetBundleNames()
         {

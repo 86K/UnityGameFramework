@@ -13,7 +13,7 @@ namespace UnityGameFramework.Runtime
     {
         private sealed class QualityInformationWindow : ScrollableDebuggerWindowBase
         {
-            private bool m_ApplyExpensiveChanges = false;
+            private bool m_ApplyExpensiveChanges;
 
             protected override void OnDrawScrollableWindow()
             {

@@ -14,37 +14,37 @@ namespace StarForce
     public class SettingForm : UGuiForm
     {
         [SerializeField]
-        private Toggle m_MusicMuteToggle = null;
+        private Toggle m_MusicMuteToggle;
 
         [SerializeField]
-        private Slider m_MusicVolumeSlider = null;
+        private Slider m_MusicVolumeSlider;
 
         [SerializeField]
-        private Toggle m_SoundMuteToggle = null;
+        private Toggle m_SoundMuteToggle;
 
         [SerializeField]
-        private Slider m_SoundVolumeSlider = null;
+        private Slider m_SoundVolumeSlider;
 
         [SerializeField]
-        private Toggle m_UISoundMuteToggle = null;
+        private Toggle m_UISoundMuteToggle;
 
         [SerializeField]
-        private Slider m_UISoundVolumeSlider = null;
+        private Slider m_UISoundVolumeSlider;
 
         [SerializeField]
-        private CanvasGroup m_LanguageTipsCanvasGroup = null;
+        private CanvasGroup m_LanguageTipsCanvasGroup;
 
         [SerializeField]
-        private Toggle m_EnglishToggle = null;
+        private Toggle m_EnglishToggle;
 
         [SerializeField]
-        private Toggle m_ChineseSimplifiedToggle = null;
+        private Toggle m_ChineseSimplifiedToggle;
 
         [SerializeField]
-        private Toggle m_ChineseTraditionalToggle = null;
+        private Toggle m_ChineseTraditionalToggle;
 
         [SerializeField]
-        private Toggle m_KoreanToggle = null;
+        private Toggle m_KoreanToggle;
 
         private Language m_SelectedLanguage = Language.Unspecified;
 

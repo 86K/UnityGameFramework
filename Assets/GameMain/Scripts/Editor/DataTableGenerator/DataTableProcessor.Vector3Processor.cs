@@ -14,21 +14,9 @@ namespace StarForce.Editor.DataTableTools
     {
         private sealed class Vector3Processor : GenericDataProcessor<Vector3>
         {
-            public override bool IsSystem
-            {
-                get
-                {
-                    return false;
-                }
-            }
+            public override bool IsSystem => false;
 
-            public override string LanguageKeyword
-            {
-                get
-                {
-                    return "Vector3";
-                }
-            }
+            public override string LanguageKeyword => "Vector3";
 
             public override string[] GetTypeStrings()
             {

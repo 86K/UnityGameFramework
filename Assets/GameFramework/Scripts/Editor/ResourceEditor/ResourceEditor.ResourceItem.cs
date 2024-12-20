@@ -15,9 +15,9 @@ namespace UnityGameFramework.Editor.ResourceTools
     {
         private sealed class ResourceItem
         {
-            private static Texture s_CachedUnknownIcon = null;
-            private static Texture s_CachedAssetIcon = null;
-            private static Texture s_CachedSceneIcon = null;
+            private static Texture s_CachedUnknownIcon;
+            private static Texture s_CachedAssetIcon;
+            private static Texture s_CachedSceneIcon;
 
             public ResourceItem(string name, Resource resource, ResourceFolder folder)
             {
@@ -54,21 +54,9 @@ namespace UnityGameFramework.Editor.ResourceTools
                 private set;
             }
 
-            public string FromRootPath
-            {
-                get
-                {
-                    return Folder.Folder == null ? Name : Utility.Text.Format("{0}/{1}", Folder.FromRootPath, Name);
-                }
-            }
+            public string FromRootPath => Folder.Folder == null ? Name : Utility.Text.Format("{0}/{1}", Folder.FromRootPath, Name);
 
-            public int Depth
-            {
-                get
-                {
-                    return Folder != null ? Folder.Depth + 1 : 0;
-                }
-            }
+            public int Depth => Folder != null ? Folder.Depth + 1 : 0;
 
             public Texture Icon
             {

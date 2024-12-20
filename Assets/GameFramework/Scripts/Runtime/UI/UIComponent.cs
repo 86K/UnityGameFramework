@@ -19,8 +19,8 @@ namespace UnityGameFramework.Runtime
     {
         private const int DefaultPriority = 0;
 
-        private IUIManager m_UIManager = null;
-        private EventComponent m_EventComponent = null;
+        private IUIManager m_UIManager;
+        private EventComponent m_EventComponent;
 
         private readonly List<IUIForm> m_InternalUIFormResults = new List<IUIForm>();
 
@@ -31,10 +31,10 @@ namespace UnityGameFramework.Runtime
         private bool m_EnableOpenUIFormFailureEvent = true;
 
         [SerializeField]
-        private bool m_EnableOpenUIFormUpdateEvent = false;
+        private bool m_EnableOpenUIFormUpdateEvent;
 
         [SerializeField]
-        private bool m_EnableOpenUIFormDependencyAssetEvent = false;
+        private bool m_EnableOpenUIFormDependencyAssetEvent;
 
         [SerializeField]
         private bool m_EnableCloseUIFormCompleteEvent = true;
@@ -49,50 +49,38 @@ namespace UnityGameFramework.Runtime
         private float m_InstanceExpireTime = 60f;
 
         [SerializeField]
-        private int m_InstancePriority = 0;
+        private int m_InstancePriority;
 
         [SerializeField]
-        private Transform m_InstanceRoot = null;
+        private Transform m_InstanceRoot;
 
         [SerializeField]
         private string m_UIFormHelperTypeName = "UnityGameFramework.Runtime.DefaultUIFormHelper";
 
         [SerializeField]
-        private UIFormHelperBase m_CustomUIFormHelper = null;
+        private UIFormHelperBase m_CustomUIFormHelper;
 
         [SerializeField]
         private string m_UIGroupHelperTypeName = "UnityGameFramework.Runtime.DefaultUIGroupHelper";
 
         [SerializeField]
-        private UIGroupHelperBase m_CustomUIGroupHelper = null;
+        private UIGroupHelperBase m_CustomUIGroupHelper;
 
         [SerializeField]
-        private UIGroup[] m_UIGroups = null;
+        private UIGroup[] m_UIGroups;
 
         /// <summary>
         /// 获取界面组数量。
         /// </summary>
-        public int UIGroupCount
-        {
-            get
-            {
-                return m_UIManager.UIGroupCount;
-            }
-        }
+        public int UIGroupCount => m_UIManager.UIGroupCount;
 
         /// <summary>
         /// 获取或设置界面实例对象池自动释放可释放对象的间隔秒数。
         /// </summary>
         public float InstanceAutoReleaseInterval
         {
-            get
-            {
-                return m_UIManager.InstanceAutoReleaseInterval;
-            }
-            set
-            {
-                m_UIManager.InstanceAutoReleaseInterval = m_InstanceAutoReleaseInterval = value;
-            }
+            get => m_UIManager.InstanceAutoReleaseInterval;
+            set => m_UIManager.InstanceAutoReleaseInterval = m_InstanceAutoReleaseInterval = value;
         }
 
         /// <summary>
@@ -100,14 +88,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public int InstanceCapacity
         {
-            get
-            {
-                return m_UIManager.InstanceCapacity;
-            }
-            set
-            {
-                m_UIManager.InstanceCapacity = m_InstanceCapacity = value;
-            }
+            get => m_UIManager.InstanceCapacity;
+            set => m_UIManager.InstanceCapacity = m_InstanceCapacity = value;
         }
 
         /// <summary>
@@ -115,14 +97,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public float InstanceExpireTime
         {
-            get
-            {
-                return m_UIManager.InstanceExpireTime;
-            }
-            set
-            {
-                m_UIManager.InstanceExpireTime = m_InstanceExpireTime = value;
-            }
+            get => m_UIManager.InstanceExpireTime;
+            set => m_UIManager.InstanceExpireTime = m_InstanceExpireTime = value;
         }
 
         /// <summary>
@@ -130,14 +106,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public int InstancePriority
         {
-            get
-            {
-                return m_UIManager.InstancePriority;
-            }
-            set
-            {
-                m_UIManager.InstancePriority = m_InstancePriority = value;
-            }
+            get => m_UIManager.InstancePriority;
+            set => m_UIManager.InstancePriority = m_InstancePriority = value;
         }
 
         /// <summary>
@@ -236,7 +206,6 @@ namespace UnityGameFramework.Runtime
                 if (!AddUIGroup(m_UIGroups[i].Name, m_UIGroups[i].Depth))
                 {
                     Log.Warning("Add UI group '{0}' failure.", m_UIGroups[i].Name);
-                    continue;
                 }
             }
         }

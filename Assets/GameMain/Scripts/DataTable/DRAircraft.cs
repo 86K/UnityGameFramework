@@ -20,18 +20,12 @@ namespace StarForce
     /// </summary>
     public class DRAircraft : DataRowBase
     {
-        private int m_Id = 0;
+        private int m_Id;
 
         /// <summary>
         /// 获取战机编号。
         /// </summary>
-        public override int Id
-        {
-            get
-            {
-                return m_Id;
-            }
-        }
+        public override int Id => m_Id;
 
         /// <summary>
         /// 获取推进器编号。
@@ -163,15 +157,9 @@ namespace StarForce
             return true;
         }
 
-        private KeyValuePair<int, int>[] m_WeaponId = null;
+        private KeyValuePair<int, int>[] m_WeaponId;
 
-        public int WeaponIdCount
-        {
-            get
-            {
-                return m_WeaponId.Length;
-            }
-        }
+        public int WeaponIdCount => m_WeaponId.Length;
 
         public int GetWeaponId(int id)
         {
@@ -196,15 +184,9 @@ namespace StarForce
             return m_WeaponId[index].Value;
         }
 
-        private KeyValuePair<int, int>[] m_ArmorId = null;
+        private KeyValuePair<int, int>[] m_ArmorId;
 
-        public int ArmorIdCount
-        {
-            get
-            {
-                return m_ArmorId.Length;
-            }
-        }
+        public int ArmorIdCount => m_ArmorId.Length;
 
         public int GetArmorId(int id)
         {

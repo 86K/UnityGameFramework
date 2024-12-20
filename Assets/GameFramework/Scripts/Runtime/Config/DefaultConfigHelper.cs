@@ -21,7 +21,7 @@ namespace UnityGameFramework.Runtime
         private static readonly string BytesAssetExtension = ".bytes";
         private const int ColumnCount = 4;
 
-        private ResourceComponent m_ResourceComponent = null;
+        private ResourceComponent m_ResourceComponent;
 
         /// <summary>
         /// 读取全局配置。

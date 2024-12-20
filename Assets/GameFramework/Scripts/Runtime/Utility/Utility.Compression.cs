@@ -17,7 +17,7 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public static partial class Compression
         {
-            private static ICompressionHelper s_CompressionHelper = null;
+            private static ICompressionHelper s_CompressionHelper;
 
             /// <summary>
             /// 设置压缩解压缩辅助器。

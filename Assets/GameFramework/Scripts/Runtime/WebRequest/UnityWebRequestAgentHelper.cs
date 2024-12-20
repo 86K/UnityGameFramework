@@ -19,25 +19,19 @@ namespace UnityGameFramework.Runtime
     /// </summary>
     public class UnityWebRequestAgentHelper : WebRequestAgentHelperBase, IDisposable
     {
-        private UnityWebRequest m_UnityWebRequest = null;
-        private bool m_Disposed = false;
+        private UnityWebRequest m_UnityWebRequest;
+        private bool m_Disposed;
 
-        private EventHandler<WebRequestAgentHelperCompleteEventArgs> m_WebRequestAgentHelperCompleteEventHandler = null;
-        private EventHandler<WebRequestAgentHelperErrorEventArgs> m_WebRequestAgentHelperErrorEventHandler = null;
+        private EventHandler<WebRequestAgentHelperCompleteEventArgs> m_WebRequestAgentHelperCompleteEventHandler;
+        private EventHandler<WebRequestAgentHelperErrorEventArgs> m_WebRequestAgentHelperErrorEventHandler;
 
         /// <summary>
         /// Web 请求代理辅助器完成事件。
         /// </summary>
         public override event EventHandler<WebRequestAgentHelperCompleteEventArgs> WebRequestAgentHelperComplete
         {
-            add
-            {
-                m_WebRequestAgentHelperCompleteEventHandler += value;
-            }
-            remove
-            {
-                m_WebRequestAgentHelperCompleteEventHandler -= value;
-            }
+            add => m_WebRequestAgentHelperCompleteEventHandler += value;
+            remove => m_WebRequestAgentHelperCompleteEventHandler -= value;
         }
 
         /// <summary>
@@ -45,14 +39,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public override event EventHandler<WebRequestAgentHelperErrorEventArgs> WebRequestAgentHelperError
         {
-            add
-            {
-                m_WebRequestAgentHelperErrorEventHandler += value;
-            }
-            remove
-            {
-                m_WebRequestAgentHelperErrorEventHandler -= value;
-            }
+            add => m_WebRequestAgentHelperErrorEventHandler += value;
+            remove => m_WebRequestAgentHelperErrorEventHandler -= value;
         }
 
         /// <summary>

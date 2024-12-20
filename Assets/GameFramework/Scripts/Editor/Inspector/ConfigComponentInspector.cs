@@ -13,9 +13,9 @@ namespace UnityGameFramework.Editor
     [CustomEditor(typeof(ConfigComponent))]
     internal sealed class ConfigComponentInspector : GameFrameworkInspector
     {
-        private SerializedProperty m_EnableLoadConfigUpdateEvent = null;
-        private SerializedProperty m_EnableLoadConfigDependencyAssetEvent = null;
-        private SerializedProperty m_CachedBytesSize = null;
+        private SerializedProperty m_EnableLoadConfigUpdateEvent;
+        private SerializedProperty m_EnableLoadConfigDependencyAssetEvent;
+        private SerializedProperty m_CachedBytesSize;
 
         private HelperInfo<ConfigHelperBase> m_ConfigHelperInfo = new HelperInfo<ConfigHelperBase>("Config");
 

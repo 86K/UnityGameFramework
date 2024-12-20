@@ -36,13 +36,7 @@ namespace UnityGameFramework.Runtime
             /// <summary>
             /// 获取网络服务类型。
             /// </summary>
-            public override ServiceType ServiceType
-            {
-                get
-                {
-                    return ServiceType.TcpWithSyncReceive;
-                }
-            }
+            public override ServiceType ServiceType => ServiceType.TcpWithSyncReceive;
 
             /// <summary>
             /// 连接到远程主机。

@@ -13,10 +13,10 @@ namespace UnityGameFramework.Editor
     [CustomEditor(typeof(EditorResourceComponent))]
     internal sealed class EditorResourceComponentInspector : GameFrameworkInspector
     {
-        private SerializedProperty m_EnableCachedAssets = null;
-        private SerializedProperty m_LoadAssetCountPerFrame = null;
-        private SerializedProperty m_MinLoadAssetRandomDelaySeconds = null;
-        private SerializedProperty m_MaxLoadAssetRandomDelaySeconds = null;
+        private SerializedProperty m_EnableCachedAssets;
+        private SerializedProperty m_LoadAssetCountPerFrame;
+        private SerializedProperty m_MinLoadAssetRandomDelaySeconds;
+        private SerializedProperty m_MaxLoadAssetRandomDelaySeconds;
 
         public override void OnInspectorGUI()
         {

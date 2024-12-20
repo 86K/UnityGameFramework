@@ -101,45 +101,21 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取加载场景成功回调函数。
         /// </summary>
-        public LoadSceneSuccessCallback LoadSceneSuccessCallback
-        {
-            get
-            {
-                return m_LoadSceneSuccessCallback;
-            }
-        }
+        public LoadSceneSuccessCallback LoadSceneSuccessCallback => m_LoadSceneSuccessCallback;
 
         /// <summary>
         /// 获取加载场景失败回调函数。
         /// </summary>
-        public LoadSceneFailureCallback LoadSceneFailureCallback
-        {
-            get
-            {
-                return m_LoadSceneFailureCallback;
-            }
-        }
+        public LoadSceneFailureCallback LoadSceneFailureCallback => m_LoadSceneFailureCallback;
 
         /// <summary>
         /// 获取加载场景更新回调函数。
         /// </summary>
-        public LoadSceneUpdateCallback LoadSceneUpdateCallback
-        {
-            get
-            {
-                return m_LoadSceneUpdateCallback;
-            }
-        }
+        public LoadSceneUpdateCallback LoadSceneUpdateCallback => m_LoadSceneUpdateCallback;
 
         /// <summary>
         /// 获取加载场景时加载依赖资源回调函数。
         /// </summary>
-        public LoadSceneDependencyAssetCallback LoadSceneDependencyAssetCallback
-        {
-            get
-            {
-                return m_LoadSceneDependencyAssetCallback;
-            }
-        }
+        public LoadSceneDependencyAssetCallback LoadSceneDependencyAssetCallback => m_LoadSceneDependencyAssetCallback;
     }
 }

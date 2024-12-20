@@ -14,7 +14,7 @@ namespace UnityGameFramework.Runtime
     /// </summary>
     public class DefaultEntityHelper : EntityHelperBase
     {
-        private ResourceComponent m_ResourceComponent = null;
+        private ResourceComponent m_ResourceComponent;
 
         /// <summary>
         /// 实例化实体。
@@ -65,7 +65,6 @@ namespace UnityGameFramework.Runtime
             if (m_ResourceComponent == null)
             {
                 Log.Fatal("Resource component is invalid.");
-                return;
             }
         }
     }

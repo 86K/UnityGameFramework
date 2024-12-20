@@ -13,15 +13,15 @@ namespace UnityGameFramework.Runtime
     {
         private sealed class SettingsWindow : ScrollableDebuggerWindowBase
         {
-            private DebuggerComponent m_DebuggerComponent = null;
-            private SettingComponent m_SettingComponent = null;
-            private float m_LastIconX = 0f;
-            private float m_LastIconY = 0f;
-            private float m_LastWindowX = 0f;
-            private float m_LastWindowY = 0f;
-            private float m_LastWindowWidth = 0f;
-            private float m_LastWindowHeight = 0f;
-            private float m_LastWindowScale = 0f;
+            private DebuggerComponent m_DebuggerComponent;
+            private SettingComponent m_SettingComponent;
+            private float m_LastIconX;
+            private float m_LastIconY;
+            private float m_LastWindowX;
+            private float m_LastWindowY;
+            private float m_LastWindowWidth;
+            private float m_LastWindowHeight;
+            private float m_LastWindowScale;
 
             public override void Initialize(params object[] args)
             {

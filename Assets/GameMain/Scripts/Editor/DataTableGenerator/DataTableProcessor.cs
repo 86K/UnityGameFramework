@@ -182,45 +182,15 @@ namespace StarForce.Editor.DataTableTools
             m_CodeGenerator = null;
         }
 
-        public int RawRowCount
-        {
-            get
-            {
-                return m_RawValues.Length;
-            }
-        }
+        public int RawRowCount => m_RawValues.Length;
 
-        public int RawColumnCount
-        {
-            get
-            {
-                return m_RawValues.Length > 0 ? m_RawValues[0].Length : 0;
-            }
-        }
+        public int RawColumnCount => m_RawValues.Length > 0 ? m_RawValues[0].Length : 0;
 
-        public int StringCount
-        {
-            get
-            {
-                return m_Strings.Length;
-            }
-        }
+        public int StringCount => m_Strings.Length;
 
-        public int ContentStartRow
-        {
-            get
-            {
-                return m_ContentStartRow;
-            }
-        }
+        public int ContentStartRow => m_ContentStartRow;
 
-        public int IdColumn
-        {
-            get
-            {
-                return m_IdColumn;
-            }
-        }
+        public int IdColumn => m_IdColumn;
 
         public bool IsIdColumn(int rawColumn)
         {

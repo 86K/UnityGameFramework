@@ -21,64 +21,52 @@ namespace UnityGameFramework.Runtime
     {
         private const int DefaultPriority = 0;
 
-        private ISoundManager m_SoundManager = null;
-        private EventComponent m_EventComponent = null;
-        private AudioListener m_AudioListener = null;
+        private ISoundManager m_SoundManager;
+        private EventComponent m_EventComponent;
+        private AudioListener m_AudioListener;
 
         [SerializeField]
-        private bool m_EnablePlaySoundUpdateEvent = false;
+        private bool m_EnablePlaySoundUpdateEvent;
 
         [SerializeField]
-        private bool m_EnablePlaySoundDependencyAssetEvent = false;
+        private bool m_EnablePlaySoundDependencyAssetEvent;
 
         [SerializeField]
-        private Transform m_InstanceRoot = null;
+        private Transform m_InstanceRoot;
 
         [SerializeField]
-        private AudioMixer m_AudioMixer = null;
+        private AudioMixer m_AudioMixer;
 
         [SerializeField]
         private string m_SoundHelperTypeName = "UnityGameFramework.Runtime.DefaultSoundHelper";
 
         [SerializeField]
-        private SoundHelperBase m_CustomSoundHelper = null;
+        private SoundHelperBase m_CustomSoundHelper;
 
         [SerializeField]
         private string m_SoundGroupHelperTypeName = "UnityGameFramework.Runtime.DefaultSoundGroupHelper";
 
         [SerializeField]
-        private SoundGroupHelperBase m_CustomSoundGroupHelper = null;
+        private SoundGroupHelperBase m_CustomSoundGroupHelper;
 
         [SerializeField]
         private string m_SoundAgentHelperTypeName = "UnityGameFramework.Runtime.DefaultSoundAgentHelper";
 
         [SerializeField]
-        private SoundAgentHelperBase m_CustomSoundAgentHelper = null;
+        private SoundAgentHelperBase m_CustomSoundAgentHelper;
 
         [SerializeField]
-        private SoundGroup[] m_SoundGroups = null;
+        private SoundGroup[] m_SoundGroups;
 
         /// <summary>
         /// 获取声音组数量。
         /// </summary>
-        public int SoundGroupCount
-        {
-            get
-            {
-                return m_SoundManager.SoundGroupCount;
-            }
-        }
+        public int SoundGroupCount => m_SoundManager.SoundGroupCount;
 
         /// <summary>
         /// 获取声音混响器。
         /// </summary>
-        public AudioMixer AudioMixer
-        {
-            get
-            {
-                return m_AudioMixer;
-            }
-        }
+        public AudioMixer AudioMixer => m_AudioMixer;
 
         /// <summary>
         /// 游戏框架组件初始化。
@@ -178,7 +166,6 @@ namespace UnityGameFramework.Runtime
                 if (!AddSoundGroup(m_SoundGroups[i].Name, m_SoundGroups[i].AvoidBeingReplacedBySamePriority, m_SoundGroups[i].Mute, m_SoundGroups[i].Volume, m_SoundGroups[i].AgentHelperCount))
                 {
                     Log.Warning("Add sound group '{0}' failure.", m_SoundGroups[i].Name);
-                    continue;
                 }
             }
         }

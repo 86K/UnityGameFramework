@@ -135,170 +135,80 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取资源只读区路径。
         /// </summary>
-        public string ReadOnlyPath
-        {
-            get
-            {
-                return m_ReadOnlyPath;
-            }
-        }
+        public string ReadOnlyPath => m_ReadOnlyPath;
 
         /// <summary>
         /// 获取资源读写区路径。
         /// </summary>
-        public string ReadWritePath
-        {
-            get
-            {
-                return m_ReadWritePath;
-            }
-        }
+        public string ReadWritePath => m_ReadWritePath;
 
         /// <summary>
         /// 获取资源模式。
         /// </summary>
-        public ResourceMode ResourceMode
-        {
-            get
-            {
-                return m_ResourceMode;
-            }
-        }
+        public ResourceMode ResourceMode => m_ResourceMode;
 
         /// <summary>
         /// 获取当前变体。
         /// </summary>
-        public string CurrentVariant
-        {
-            get
-            {
-                return m_CurrentVariant;
-            }
-        }
+        public string CurrentVariant => m_CurrentVariant;
 
         /// <summary>
         /// 获取单机模式版本资源列表序列化器。
         /// </summary>
-        public PackageVersionListSerializer PackageVersionListSerializer
-        {
-            get
-            {
-                return m_PackageVersionListSerializer;
-            }
-        }
+        public PackageVersionListSerializer PackageVersionListSerializer => m_PackageVersionListSerializer;
 
         /// <summary>
         /// 获取可更新模式版本资源列表序列化器。
         /// </summary>
-        public UpdatableVersionListSerializer UpdatableVersionListSerializer
-        {
-            get
-            {
-                return m_UpdatableVersionListSerializer;
-            }
-        }
+        public UpdatableVersionListSerializer UpdatableVersionListSerializer => m_UpdatableVersionListSerializer;
 
         /// <summary>
         /// 获取本地只读区版本资源列表序列化器。
         /// </summary>
-        public ReadOnlyVersionListSerializer ReadOnlyVersionListSerializer
-        {
-            get
-            {
-                return m_ReadOnlyVersionListSerializer;
-            }
-        }
+        public ReadOnlyVersionListSerializer ReadOnlyVersionListSerializer => m_ReadOnlyVersionListSerializer;
 
         /// <summary>
         /// 获取本地读写区版本资源列表序列化器。
         /// </summary>
-        public ReadWriteVersionListSerializer ReadWriteVersionListSerializer
-        {
-            get
-            {
-                return m_ReadWriteVersionListSerializer;
-            }
-        }
+        public ReadWriteVersionListSerializer ReadWriteVersionListSerializer => m_ReadWriteVersionListSerializer;
 
         /// <summary>
         /// 获取资源包版本资源列表序列化器。
         /// </summary>
-        public ResourcePackVersionListSerializer ResourcePackVersionListSerializer
-        {
-            get
-            {
-                return m_ResourcePackVersionListSerializer;
-            }
-        }
+        public ResourcePackVersionListSerializer ResourcePackVersionListSerializer => m_ResourcePackVersionListSerializer;
 
         /// <summary>
         /// 获取当前资源适用的游戏版本号。
         /// </summary>
-        public string ApplicableGameVersion
-        {
-            get
-            {
-                return m_ApplicableGameVersion;
-            }
-        }
+        public string ApplicableGameVersion => m_ApplicableGameVersion;
 
         /// <summary>
         /// 获取当前内部资源版本号。
         /// </summary>
-        public int InternalResourceVersion
-        {
-            get
-            {
-                return m_InternalResourceVersion;
-            }
-        }
+        public int InternalResourceVersion => m_InternalResourceVersion;
 
         /// <summary>
         /// 获取资源数量。
         /// </summary>
-        public int AssetCount
-        {
-            get
-            {
-                return m_AssetInfos != null ? m_AssetInfos.Count : 0;
-            }
-        }
+        public int AssetCount => m_AssetInfos != null ? m_AssetInfos.Count : 0;
 
         /// <summary>
         /// 获取资源数量。
         /// </summary>
-        public int ResourceCount
-        {
-            get
-            {
-                return m_ResourceInfos != null ? m_ResourceInfos.Count : 0;
-            }
-        }
+        public int ResourceCount => m_ResourceInfos != null ? m_ResourceInfos.Count : 0;
 
         /// <summary>
         /// 获取资源组数量。
         /// </summary>
-        public int ResourceGroupCount
-        {
-            get
-            {
-                return m_ResourceGroups.Count;
-            }
-        }
+        public int ResourceGroupCount => m_ResourceGroups.Count;
 
         /// <summary>
         /// 获取或设置资源更新下载地址前缀。
         /// </summary>
         public string UpdatePrefixUri
         {
-            get
-            {
-                return m_UpdatePrefixUri;
-            }
-            set
-            {
-                m_UpdatePrefixUri = value;
-            }
+            get => m_UpdatePrefixUri;
+            set => m_UpdatePrefixUri = value;
         }
 
         /// <summary>
@@ -306,10 +216,7 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public int GenerateReadWriteVersionListLength
         {
-            get
-            {
-                return m_ResourceUpdater != null ? m_ResourceUpdater.GenerateReadWriteVersionListLength : 0;
-            }
+            get => m_ResourceUpdater != null ? m_ResourceUpdater.GenerateReadWriteVersionListLength : 0;
             set
             {
                 if (m_ResourceUpdater == null)
@@ -324,34 +231,19 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取正在应用的资源包路径。
         /// </summary>
-        public string ApplyingResourcePackPath
-        {
-            get
-            {
-                return m_ResourceUpdater != null ? m_ResourceUpdater.ApplyingResourcePackPath : null;
-            }
-        }
+        public string ApplyingResourcePackPath => m_ResourceUpdater != null ? m_ResourceUpdater.ApplyingResourcePackPath : null;
 
         /// <summary>
         /// 获取等待应用资源数量。
         /// </summary>
-        public int ApplyWaitingCount
-        {
-            get
-            {
-                return m_ResourceUpdater != null ? m_ResourceUpdater.ApplyWaitingCount : 0;
-            }
-        }
+        public int ApplyWaitingCount => m_ResourceUpdater != null ? m_ResourceUpdater.ApplyWaitingCount : 0;
 
         /// <summary>
         /// 获取或设置资源更新重试次数。
         /// </summary>
         public int UpdateRetryCount
         {
-            get
-            {
-                return m_ResourceUpdater != null ? m_ResourceUpdater.UpdateRetryCount : 0;
-            }
+            get => m_ResourceUpdater != null ? m_ResourceUpdater.UpdateRetryCount : 0;
             set
             {
                 if (m_ResourceUpdater == null)
@@ -366,104 +258,50 @@ namespace UnityGameFramework.Runtime
         /// <summary>
         /// 获取正在更新的资源组。
         /// </summary>
-        public IResourceGroup UpdatingResourceGroup
-        {
-            get
-            {
-                return m_ResourceUpdater != null ? m_ResourceUpdater.UpdatingResourceGroup : null;
-            }
-        }
+        public IResourceGroup UpdatingResourceGroup => m_ResourceUpdater != null ? m_ResourceUpdater.UpdatingResourceGroup : null;
 
         /// <summary>
         /// 获取等待更新资源数量。
         /// </summary>
-        public int UpdateWaitingCount
-        {
-            get
-            {
-                return m_ResourceUpdater != null ? m_ResourceUpdater.UpdateWaitingCount : 0;
-            }
-        }
+        public int UpdateWaitingCount => m_ResourceUpdater != null ? m_ResourceUpdater.UpdateWaitingCount : 0;
 
         /// <summary>
         /// 获取使用时下载的等待更新资源数量。
         /// </summary>
-        public int UpdateWaitingWhilePlayingCount
-        {
-            get
-            {
-                return m_ResourceUpdater != null ? m_ResourceUpdater.UpdateWaitingWhilePlayingCount : 0;
-            }
-        }
+        public int UpdateWaitingWhilePlayingCount => m_ResourceUpdater != null ? m_ResourceUpdater.UpdateWaitingWhilePlayingCount : 0;
 
         /// <summary>
         /// 获取候选更新资源数量。
         /// </summary>
-        public int UpdateCandidateCount
-        {
-            get
-            {
-                return m_ResourceUpdater != null ? m_ResourceUpdater.UpdateCandidateCount : 0;
-            }
-        }
+        public int UpdateCandidateCount => m_ResourceUpdater != null ? m_ResourceUpdater.UpdateCandidateCount : 0;
 
         /// <summary>
         /// 获取加载资源代理总数量。
         /// </summary>
-        public int LoadTotalAgentCount
-        {
-            get
-            {
-                return m_ResourceLoader.TotalAgentCount;
-            }
-        }
+        public int LoadTotalAgentCount => m_ResourceLoader.TotalAgentCount;
 
         /// <summary>
         /// 获取可用加载资源代理数量。
         /// </summary>
-        public int LoadFreeAgentCount
-        {
-            get
-            {
-                return m_ResourceLoader.FreeAgentCount;
-            }
-        }
+        public int LoadFreeAgentCount => m_ResourceLoader.FreeAgentCount;
 
         /// <summary>
         /// 获取工作中加载资源代理数量。
         /// </summary>
-        public int LoadWorkingAgentCount
-        {
-            get
-            {
-                return m_ResourceLoader.WorkingAgentCount;
-            }
-        }
+        public int LoadWorkingAgentCount => m_ResourceLoader.WorkingAgentCount;
 
         /// <summary>
         /// 获取等待加载资源任务数量。
         /// </summary>
-        public int LoadWaitingTaskCount
-        {
-            get
-            {
-                return m_ResourceLoader.WaitingTaskCount;
-            }
-        }
+        public int LoadWaitingTaskCount => m_ResourceLoader.WaitingTaskCount;
 
         /// <summary>
         /// 获取或设置资源对象池自动释放可释放对象的间隔秒数。
         /// </summary>
         public float AssetAutoReleaseInterval
         {
-            get
-            {
-                return m_ResourceLoader.AssetAutoReleaseInterval;
-            }
-            set
-            {
-                m_ResourceLoader.AssetAutoReleaseInterval = value;
-            }
+            get => m_ResourceLoader.AssetAutoReleaseInterval;
+            set => m_ResourceLoader.AssetAutoReleaseInterval = value;
         }
 
         /// <summary>
@@ -471,14 +309,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public int AssetCapacity
         {
-            get
-            {
-                return m_ResourceLoader.AssetCapacity;
-            }
-            set
-            {
-                m_ResourceLoader.AssetCapacity = value;
-            }
+            get => m_ResourceLoader.AssetCapacity;
+            set => m_ResourceLoader.AssetCapacity = value;
         }
 
         /// <summary>
@@ -486,14 +318,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public float AssetExpireTime
         {
-            get
-            {
-                return m_ResourceLoader.AssetExpireTime;
-            }
-            set
-            {
-                m_ResourceLoader.AssetExpireTime = value;
-            }
+            get => m_ResourceLoader.AssetExpireTime;
+            set => m_ResourceLoader.AssetExpireTime = value;
         }
 
         /// <summary>
@@ -501,14 +327,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public int AssetPriority
         {
-            get
-            {
-                return m_ResourceLoader.AssetPriority;
-            }
-            set
-            {
-                m_ResourceLoader.AssetPriority = value;
-            }
+            get => m_ResourceLoader.AssetPriority;
+            set => m_ResourceLoader.AssetPriority = value;
         }
 
         /// <summary>
@@ -516,14 +336,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public float ResourceAutoReleaseInterval
         {
-            get
-            {
-                return m_ResourceLoader.ResourceAutoReleaseInterval;
-            }
-            set
-            {
-                m_ResourceLoader.ResourceAutoReleaseInterval = value;
-            }
+            get => m_ResourceLoader.ResourceAutoReleaseInterval;
+            set => m_ResourceLoader.ResourceAutoReleaseInterval = value;
         }
 
         /// <summary>
@@ -531,14 +345,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public int ResourceCapacity
         {
-            get
-            {
-                return m_ResourceLoader.ResourceCapacity;
-            }
-            set
-            {
-                m_ResourceLoader.ResourceCapacity = value;
-            }
+            get => m_ResourceLoader.ResourceCapacity;
+            set => m_ResourceLoader.ResourceCapacity = value;
         }
 
         /// <summary>
@@ -546,14 +354,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public float ResourceExpireTime
         {
-            get
-            {
-                return m_ResourceLoader.ResourceExpireTime;
-            }
-            set
-            {
-                m_ResourceLoader.ResourceExpireTime = value;
-            }
+            get => m_ResourceLoader.ResourceExpireTime;
+            set => m_ResourceLoader.ResourceExpireTime = value;
         }
 
         /// <summary>
@@ -561,14 +363,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public int ResourcePriority
         {
-            get
-            {
-                return m_ResourceLoader.ResourcePriority;
-            }
-            set
-            {
-                m_ResourceLoader.ResourcePriority = value;
-            }
+            get => m_ResourceLoader.ResourcePriority;
+            set => m_ResourceLoader.ResourcePriority = value;
         }
 
         /// <summary>
@@ -576,14 +372,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<ResourceVerifyStartEventArgs> ResourceVerifyStart
         {
-            add
-            {
-                m_ResourceVerifyStartEventHandler += value;
-            }
-            remove
-            {
-                m_ResourceVerifyStartEventHandler -= value;
-            }
+            add => m_ResourceVerifyStartEventHandler += value;
+            remove => m_ResourceVerifyStartEventHandler -= value;
         }
 
         /// <summary>
@@ -591,14 +381,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<ResourceVerifySuccessEventArgs> ResourceVerifySuccess
         {
-            add
-            {
-                m_ResourceVerifySuccessEventHandler += value;
-            }
-            remove
-            {
-                m_ResourceVerifySuccessEventHandler -= value;
-            }
+            add => m_ResourceVerifySuccessEventHandler += value;
+            remove => m_ResourceVerifySuccessEventHandler -= value;
         }
 
         /// <summary>
@@ -606,14 +390,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<ResourceVerifyFailureEventArgs> ResourceVerifyFailure
         {
-            add
-            {
-                m_ResourceVerifyFailureEventHandler += value;
-            }
-            remove
-            {
-                m_ResourceVerifyFailureEventHandler -= value;
-            }
+            add => m_ResourceVerifyFailureEventHandler += value;
+            remove => m_ResourceVerifyFailureEventHandler -= value;
         }
 
         /// <summary>
@@ -621,14 +399,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<ResourceApplyStartEventArgs> ResourceApplyStart
         {
-            add
-            {
-                m_ResourceApplyStartEventHandler += value;
-            }
-            remove
-            {
-                m_ResourceApplyStartEventHandler -= value;
-            }
+            add => m_ResourceApplyStartEventHandler += value;
+            remove => m_ResourceApplyStartEventHandler -= value;
         }
 
         /// <summary>
@@ -636,14 +408,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<ResourceApplySuccessEventArgs> ResourceApplySuccess
         {
-            add
-            {
-                m_ResourceApplySuccessEventHandler += value;
-            }
-            remove
-            {
-                m_ResourceApplySuccessEventHandler -= value;
-            }
+            add => m_ResourceApplySuccessEventHandler += value;
+            remove => m_ResourceApplySuccessEventHandler -= value;
         }
 
         /// <summary>
@@ -651,14 +417,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<ResourceApplyFailureEventArgs> ResourceApplyFailure
         {
-            add
-            {
-                m_ResourceApplyFailureEventHandler += value;
-            }
-            remove
-            {
-                m_ResourceApplyFailureEventHandler -= value;
-            }
+            add => m_ResourceApplyFailureEventHandler += value;
+            remove => m_ResourceApplyFailureEventHandler -= value;
         }
 
         /// <summary>
@@ -666,14 +426,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<ResourceUpdateStartEventArgs> ResourceUpdateStart
         {
-            add
-            {
-                m_ResourceUpdateStartEventHandler += value;
-            }
-            remove
-            {
-                m_ResourceUpdateStartEventHandler -= value;
-            }
+            add => m_ResourceUpdateStartEventHandler += value;
+            remove => m_ResourceUpdateStartEventHandler -= value;
         }
 
         /// <summary>
@@ -681,14 +435,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<ResourceUpdateChangedEventArgs> ResourceUpdateChanged
         {
-            add
-            {
-                m_ResourceUpdateChangedEventHandler += value;
-            }
-            remove
-            {
-                m_ResourceUpdateChangedEventHandler -= value;
-            }
+            add => m_ResourceUpdateChangedEventHandler += value;
+            remove => m_ResourceUpdateChangedEventHandler -= value;
         }
 
         /// <summary>
@@ -696,14 +444,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<ResourceUpdateSuccessEventArgs> ResourceUpdateSuccess
         {
-            add
-            {
-                m_ResourceUpdateSuccessEventHandler += value;
-            }
-            remove
-            {
-                m_ResourceUpdateSuccessEventHandler -= value;
-            }
+            add => m_ResourceUpdateSuccessEventHandler += value;
+            remove => m_ResourceUpdateSuccessEventHandler -= value;
         }
 
         /// <summary>
@@ -711,14 +453,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<ResourceUpdateFailureEventArgs> ResourceUpdateFailure
         {
-            add
-            {
-                m_ResourceUpdateFailureEventHandler += value;
-            }
-            remove
-            {
-                m_ResourceUpdateFailureEventHandler -= value;
-            }
+            add => m_ResourceUpdateFailureEventHandler += value;
+            remove => m_ResourceUpdateFailureEventHandler -= value;
         }
 
         /// <summary>
@@ -726,14 +462,8 @@ namespace UnityGameFramework.Runtime
         /// </summary>
         public event EventHandler<ResourceUpdateAllCompleteEventArgs> ResourceUpdateAllComplete
         {
-            add
-            {
-                m_ResourceUpdateAllCompleteEventHandler += value;
-            }
-            remove
-            {
-                m_ResourceUpdateAllCompleteEventHandler -= value;
-            }
+            add => m_ResourceUpdateAllCompleteEventHandler += value;
+            remove => m_ResourceUpdateAllCompleteEventHandler -= value;
         }
 
         /// <summary>

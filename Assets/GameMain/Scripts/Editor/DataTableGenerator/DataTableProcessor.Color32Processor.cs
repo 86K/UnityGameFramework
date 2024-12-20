@@ -14,21 +14,9 @@ namespace StarForce.Editor.DataTableTools
     {
         private sealed class Color32Processor : GenericDataProcessor<Color32>
         {
-            public override bool IsSystem
-            {
-                get
-                {
-                    return false;
-                }
-            }
+            public override bool IsSystem => false;
 
-            public override string LanguageKeyword
-            {
-                get
-                {
-                    return "Color32";
-                }
-            }
+            public override string LanguageKeyword => "Color32";
 
             public override string[] GetTypeStrings()
             {

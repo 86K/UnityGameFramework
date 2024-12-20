@@ -16,15 +16,9 @@ namespace StarForce
     public abstract class TargetableObject : Entity
     {
         [SerializeField]
-        private TargetableObjectData m_TargetableObjectData = null;
+        private TargetableObjectData m_TargetableObjectData;
 
-        public bool IsDead
-        {
-            get
-            {
-                return m_TargetableObjectData.HP <= 0;
-            }
-        }
+        public bool IsDead => m_TargetableObjectData.HP <= 0;
 
         public abstract ImpactData GetImpactData();
 
@@ -66,7 +60,6 @@ namespace StarForce
             if (m_TargetableObjectData == null)
             {
                 Log.Error("Targetable object data is invalid.");
-                return;
             }
         }
 
