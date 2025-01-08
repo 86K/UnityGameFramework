@@ -23,12 +23,12 @@ namespace StarForce
 
         public void OnSettingButtonClick()
         {
-            GameEntry.UI.OpenUIForm(UIFormId.SettingForm);
+            GameEntry.UI.OpenUIForm((int)UIFormId.SettingForm);
         }
 
         public void OnAboutButtonClick()
         {
-            GameEntry.UI.OpenUIForm(UIFormId.AboutForm);
+            GameEntry.UI.OpenUIForm((int)UIFormId.AboutForm);
         }
 
         public void OnQuitButtonClick()

@@ -42,11 +42,6 @@ namespace StarForce
             slider.value = value;
         }
 
-        public static bool HasUIForm(this UIComponent uiComponent, UIFormId uiFormId, string uiGroupName = null)
-        {
-            return uiComponent.HasUIForm((int)uiFormId, uiGroupName);
-        }
-
         public static bool HasUIForm(this UIComponent uiComponent, int uiFormId, string uiGroupName = null)
         {
             IDataTable<DRUIForm> dtUIForm = GameEntry.DataTable.GetDataTable<DRUIForm>();
@@ -69,11 +64,6 @@ namespace StarForce
             }
 
             return uiGroup.HasUIForm(assetName);
-        }
-
-        public static UGuiForm GetUIForm(this UIComponent uiComponent, UIFormId uiFormId, string uiGroupName = null)
-        {
-            return uiComponent.GetUIForm((int)uiFormId, uiGroupName);
         }
 
         public static UGuiForm GetUIForm(this UIComponent uiComponent, int uiFormId, string uiGroupName = null)
@@ -118,11 +108,6 @@ namespace StarForce
             uiComponent.CloseUIForm(uiForm.UIForm);
         }
 
-        public static int? OpenUIForm(this UIComponent uiComponent, UIFormId uiFormId, object userData = null)
-        {
-            return uiComponent.OpenUIForm((int)uiFormId, userData);
-        }
-
         public static int? OpenUIForm(this UIComponent uiComponent, int uiFormId, object userData = null)
         {
             IDataTable<DRUIForm> dtUIForm = GameEntry.DataTable.GetDataTable<DRUIForm>();
@@ -143,7 +128,12 @@ namespace StarForce
 
                 if (uiComponent.HasUIForm(assetName))
                 {
-                    return null;
+                    // 单实例面板被重复打开时，先关闭，再去打开
+                    var uiForm = GetUIForm(uiComponent, uiFormId);
+                    if (uiForm != null && uiForm.Visible)
+                    {
+                        uiForm.Close(true);
+                    }
                 }
             }
 
@@ -158,7 +148,7 @@ namespace StarForce
             }
             else
             {
-                uiComponent.OpenUIForm(UIFormId.DialogForm, dialogParams);
+                uiComponent.OpenUIForm((int)UIFormId.DialogForm, dialogParams);
             }
         }
 
