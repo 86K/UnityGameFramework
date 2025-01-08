@@ -100,33 +100,13 @@ namespace UnityGameFramework.Runtime
         }
 
         /// <summary>
-        /// 是否存在流程。
-        /// </summary>
-        /// <param name="procedureType">要检查的流程类型。</param>
-        /// <returns>是否存在流程。</returns>
-        public bool HasProcedure(Type procedureType)
-        {
-            return m_ProcedureManager.HasProcedure(procedureType);
-        }
-
-        /// <summary>
         /// 获取流程。
         /// </summary>
         /// <typeparam name="T">要获取的流程类型。</typeparam>
         /// <returns>要获取的流程。</returns>
-        public ProcedureBase GetProcedure<T>() where T : ProcedureBase
+        public T GetProcedure<T>() where T : ProcedureBase
         {
             return m_ProcedureManager.GetProcedure<T>();
-        }
-
-        /// <summary>
-        /// 获取流程。
-        /// </summary>
-        /// <param name="procedureType">要获取的流程类型。</param>
-        /// <returns>要获取的流程。</returns>
-        public ProcedureBase GetProcedure(Type procedureType)
-        {
-            return m_ProcedureManager.GetProcedure(procedureType);
         }
     }
 }

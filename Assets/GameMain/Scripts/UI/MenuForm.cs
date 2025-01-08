@@ -15,11 +15,10 @@ namespace StarForce
         [SerializeField]
         private GameObject m_QuitButton;
 
-        private ProcedureMenu m_ProcedureMenu;
-
         public void OnStartButtonClick()
         {
-            m_ProcedureMenu.StartGame();
+            Close();
+            GameEntry.Procedure.GetProcedure<ProcedureMenu>().StartGame();
         }
 
         public void OnSettingButtonClick()
@@ -50,14 +49,7 @@ namespace StarForce
 #endif
         {
             base.OnOpen(userData);
-
-            m_ProcedureMenu = (ProcedureMenu)userData;
-            if (m_ProcedureMenu == null)
-            {
-                Log.Warning("ProcedureMenu is invalid when open MenuForm.");
-                return;
-            }
-
+            
             m_QuitButton.SetActive(Application.platform != RuntimePlatform.IPhonePlayer);
         }
 
@@ -67,8 +59,6 @@ namespace StarForce
         protected internal override void OnClose(bool isShutdown, object userData)
 #endif
         {
-            m_ProcedureMenu = null;
-
             base.OnClose(isShutdown, userData);
         }
     }

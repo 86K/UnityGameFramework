@@ -57,31 +57,11 @@ namespace UnityGameFramework.Runtime
         bool HasProcedure<T>() where T : ProcedureBase;
 
         /// <summary>
-        /// 是否存在流程。
-        /// </summary>
-        /// <param name="procedureType">要检查的流程类型。</param>
-        /// <returns>是否存在流程。</returns>
-        bool HasProcedure(Type procedureType);
-
-        /// <summary>
         /// 获取流程。
+        /// 这里返回泛型，就是为了得到框架流程基类的继承类（业务流程基类类型）。
         /// </summary>
         /// <typeparam name="T">要获取的流程类型。</typeparam>
-        /// <returns>要获取的流程。</returns>
-        ProcedureBase GetProcedure<T>() where T : ProcedureBase;
-        
-        /// <summary>
-        /// 获取流程。
-        /// </summary>
-        /// <param name="procedureType">要获取的流程类型。</param>
-        /// <returns>要获取的流程。</returns>
-        ProcedureBase GetProcedure(Type procedureType);
-        
-        // /// <summary>
-        // /// 获取流程。
-        // /// </summary>
-        // /// <typeparam name="T">要获取的流程类型。</typeparam>
-        // /// <returns></returns>
-        // T GetProcedure<T>() where T : ProcedureBase;
+        /// <returns></returns>
+        T GetProcedure<T>() where T : ProcedureBase;
     }
 }

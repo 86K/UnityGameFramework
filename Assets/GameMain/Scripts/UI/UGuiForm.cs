@@ -80,21 +80,21 @@ namespace StarForce
 
             m_CanvasGroup = gameObject.GetOrAddComponent<CanvasGroup>();
 
-            RectTransform transform = GetComponent<RectTransform>();
-            transform.anchorMin = Vector2.zero;
-            transform.anchorMax = Vector2.one;
-            transform.anchoredPosition = Vector2.zero;
-            transform.sizeDelta = Vector2.zero;
+            RectTransform rectTransform = GetComponent<RectTransform>();
+            rectTransform.anchorMin = Vector2.zero;
+            rectTransform.anchorMax = Vector2.one;
+            rectTransform.anchoredPosition = Vector2.zero;
+            rectTransform.sizeDelta = Vector2.zero;
 
             gameObject.GetOrAddComponent<GraphicRaycaster>();
 
             Text[] texts = GetComponentsInChildren<Text>(true);
-            for (int i = 0; i < texts.Length; i++)
+            foreach (var text in texts)
             {
-                texts[i].font = s_MainFont;
-                if (!string.IsNullOrEmpty(texts[i].text))
+                text.font = s_MainFont;
+                if (!string.IsNullOrEmpty(text.text))
                 {
-                    texts[i].text = GameEntry.Localization.GetString(texts[i].text);
+                    text.text = GameEntry.Localization.GetString(text.text);
                 }
             }
         }
