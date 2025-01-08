@@ -18,8 +18,11 @@ namespace StarForce
     /// </summary>
     public static class AIUtility
     {
-        private static Dictionary<CampPair, RelationType> s_CampPairToRelation = new Dictionary<CampPair, RelationType>();
-        private static Dictionary<KeyValuePair<CampType, RelationType>, CampType[]> s_CampAndRelationToCamps = new Dictionary<KeyValuePair<CampType, RelationType>, CampType[]>();
+        private static Dictionary<CampPair, RelationType> s_CampPairToRelation =
+            new Dictionary<CampPair, RelationType>();
+
+        private static Dictionary<KeyValuePair<CampType, RelationType>, CampType[]> s_CampAndRelationToCamps =
+            new Dictionary<KeyValuePair<CampType, RelationType>, CampType[]>();
 
         static AIUtility()
         {
