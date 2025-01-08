@@ -75,14 +75,14 @@ namespace UnityGameFramework.Runtime
                     m_EntranceProcedure = procedures[i];
                 }
             }
+            
+            m_ProcedureManager.Initialize(GameFrameworkEntry.GetModule<IFsmManager>(), procedures);
 
             if (m_EntranceProcedure == null)
             {
                 Log.Error("Entrance procedure is invalid.");
                 yield break;
             }
-
-            m_ProcedureManager.Initialize(GameFrameworkEntry.GetModule<IFsmManager>(), procedures);
 
             yield return new WaitForEndOfFrame();
 

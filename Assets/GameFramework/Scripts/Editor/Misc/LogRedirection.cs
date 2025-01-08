@@ -5,7 +5,8 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-#if !UNITY_2019_1_OR_NEWER
+// itsxwz：开启日志重定向
+#if UNITY_2019_1_OR_NEWER
 
 using System.IO;
 using System.Reflection;

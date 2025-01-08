@@ -97,12 +97,7 @@ namespace UnityGameFramework.Runtime
         /// <param name="procedures">流程管理器包含的流程。</param>
         public void Initialize(IFsmManager fsmManager, params ProcedureBase[] procedures)
         {
-            if (fsmManager == null)
-            {
-                throw new GameFrameworkException("FSM manager is invalid.");
-            }
-
-            m_FsmManager = fsmManager;
+            m_FsmManager = fsmManager ?? throw new GameFrameworkException("FSM manager is invalid.");
             m_ProcedureFsm = m_FsmManager.CreateFsm(this, procedures);
         }
 

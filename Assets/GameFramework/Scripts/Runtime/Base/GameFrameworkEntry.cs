@@ -64,7 +64,7 @@ namespace UnityGameFramework.Runtime
                     Utility.Text.Format("You must get module by interface, but '{0}' is not.", interfaceType.FullName));
             }
 
-            if (!interfaceType.FullName.StartsWith("UnityGameFramework.", StringComparison.Ordinal))
+            if (interfaceType.FullName != null && !interfaceType.FullName.StartsWith("UnityGameFramework.", StringComparison.Ordinal))
             {
                 throw new GameFrameworkException(
                     Utility.Text.Format("You must get a Unity Game Framework module, but '{0}' is not.",

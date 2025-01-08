@@ -8,7 +8,7 @@
 using System;
 using UnityEngine;
 
-namespace StarForce
+namespace UnityGameFramework.Runtime
 {
     [Serializable]
     public abstract class EntityData
@@ -24,8 +24,11 @@ namespace StarForce
 
         [SerializeField]
         private Quaternion m_Rotation = Quaternion.identity;
+        
+        [SerializeField]
+        private Vector3 m_Scale = Vector3.one;
 
-        public EntityData(int entityId, int typeId)
+        protected EntityData(int entityId, int typeId)
         {
             m_Id = entityId;
             m_TypeId = typeId;
@@ -33,11 +36,13 @@ namespace StarForce
 
         /// <summary>
         /// 实体编号。
+        /// 通过GameEntry.Entity.GenerateSerialId()生成。
         /// </summary>
         public int Id => m_Id;
 
         /// <summary>
         /// 实体类型编号。
+        /// 配置表中填写的编号。
         /// </summary>
         public int TypeId => m_TypeId;
 
@@ -57,6 +62,15 @@ namespace StarForce
         {
             get => m_Rotation;
             set => m_Rotation = value;
+        }
+
+        /// <summary>
+        /// 实体缩放。
+        /// </summary>
+        public Vector3 Scale
+        {
+            get => m_Scale;
+            set => m_Scale = value;
         }
     }
 }

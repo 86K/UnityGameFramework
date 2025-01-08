@@ -69,12 +69,19 @@ namespace UnityGameFramework.Runtime
         /// <typeparam name="T">要获取的流程类型。</typeparam>
         /// <returns>要获取的流程。</returns>
         ProcedureBase GetProcedure<T>() where T : ProcedureBase;
-
+        
         /// <summary>
         /// 获取流程。
         /// </summary>
         /// <param name="procedureType">要获取的流程类型。</param>
         /// <returns>要获取的流程。</returns>
         ProcedureBase GetProcedure(Type procedureType);
+        
+        // /// <summary>
+        // /// 获取流程。
+        // /// </summary>
+        // /// <typeparam name="T">要获取的流程类型。</typeparam>
+        // /// <returns></returns>
+        // T GetProcedure<T>() where T : ProcedureBase;
     }
 }
