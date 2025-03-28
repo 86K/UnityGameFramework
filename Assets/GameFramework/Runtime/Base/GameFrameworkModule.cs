@@ -16,11 +16,7 @@ namespace UnityGameFramework.Runtime
         /// 获取游戏框架模块优先级。
         /// </summary>
         /// <remarks>优先级较高的模块会优先轮询，并且关闭操作会后进行。</remarks>
-<<<<<<< HEAD:Assets/GameFramework/Scripts/Runtime/Base/GameFrameworkModule.cs
         public virtual int Priority => 0;
-=======
-        internal virtual int Priority => 0;
->>>>>>> a50ae8f (1):Assets/GameFramework/Libraries/Base/GameFrameworkModule.cs
 
         /// <summary>
         /// 游戏框架模块轮询。
