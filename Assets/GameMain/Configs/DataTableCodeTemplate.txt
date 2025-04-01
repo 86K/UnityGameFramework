@@ -8,7 +8,6 @@
 // 生成时间：__DATA_TABLE_CREATE_TIME__
 //------------------------------------------------------------
 
-using GameFramework;
 using System;
 using System.Collections.Generic;
 using System.IO;

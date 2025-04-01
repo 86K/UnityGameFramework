@@ -13,9 +13,10 @@ namespace StarForce.Editor.DataTableTools
 {
     public sealed class DataTableGeneratorMenu
     {
-        [MenuItem("Star Force/Generate DataTables")]
+        [MenuItem("Game Framework/Generate DataTables")]
         private static void GenerateDataTables()
         {
+            // NOTE：这里生成数据表对应的脚本，是从ProcedurePreload中获取的数据表名称
             foreach (string dataTableName in ProcedurePreload.DataTableNames)
             {
                 DataTableProcessor dataTableProcessor = DataTableGenerator.CreateDataTableProcessor(dataTableName);

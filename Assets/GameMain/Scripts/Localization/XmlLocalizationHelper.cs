@@ -19,6 +19,7 @@ namespace StarForce
         /// <summary>
         /// 解析字典。
         /// </summary>
+        /// <param name="localizationManager"></param>
         /// <param name="dictionaryString">要解析的字典字符串。</param>
         /// <param name="userData">用户自定义数据。</param>
         /// <returns>是否解析字典成功。</returns>
@@ -30,36 +31,48 @@ namespace StarForce
                 XmlDocument xmlDocument = new XmlDocument();
                 xmlDocument.LoadXml(dictionaryString);
                 XmlNode xmlRoot = xmlDocument.SelectSingleNode("Dictionaries");
-                XmlNodeList xmlNodeDictionaryList = xmlRoot.ChildNodes;
-                for (int i = 0; i < xmlNodeDictionaryList.Count; i++)
+                if (xmlRoot != null)
                 {
-                    XmlNode xmlNodeDictionary = xmlNodeDictionaryList.Item(i);
-                    if (xmlNodeDictionary.Name != "Dictionary")
+                    XmlNodeList xmlNodeDictionaryList = xmlRoot.ChildNodes;
+                    for (int i = 0; i < xmlNodeDictionaryList.Count; i++)
                     {
-                        continue;
-                    }
-
-                    string language = xmlNodeDictionary.Attributes.GetNamedItem("Language").Value;
-                    if (language != currentLanguage)
-                    {
-                        continue;
-                    }
-
-                    XmlNodeList xmlNodeStringList = xmlNodeDictionary.ChildNodes;
-                    for (int j = 0; j < xmlNodeStringList.Count; j++)
-                    {
-                        XmlNode xmlNodeString = xmlNodeStringList.Item(j);
-                        if (xmlNodeString.Name != "String")
+                        XmlNode xmlNodeDictionary = xmlNodeDictionaryList.Item(i);
+                        if (xmlNodeDictionary != null && xmlNodeDictionary.Name != "Dictionary")
                         {
                             continue;
                         }
 
-                        string key = xmlNodeString.Attributes.GetNamedItem("Key").Value;
-                        string value = xmlNodeString.Attributes.GetNamedItem("Value").Value;
-                        if (!localizationManager.AddRawString(key, value))
+                        if (xmlNodeDictionary != null && xmlNodeDictionary.Attributes != null)
                         {
-                            Log.Warning("Can not add raw string with key '{0}' which may be invalid or duplicate.", key);
-                            return false;
+                            string language = xmlNodeDictionary.Attributes.GetNamedItem("Language").Value;
+                            if (language != currentLanguage)
+                            {
+                                continue;
+                            }
+                        }
+
+                        if (xmlNodeDictionary != null)
+                        {
+                            XmlNodeList xmlNodeStringList = xmlNodeDictionary.ChildNodes;
+                            for (int j = 0; j < xmlNodeStringList.Count; j++)
+                            {
+                                XmlNode xmlNodeString = xmlNodeStringList.Item(j);
+                                if (xmlNodeString != null && xmlNodeString.Name != "String")
+                                {
+                                    continue;
+                                }
+
+                                if (xmlNodeString != null && xmlNodeString.Attributes != null)
+                                {
+                                    string key = xmlNodeString.Attributes.GetNamedItem("Key").Value;
+                                    string value = xmlNodeString.Attributes.GetNamedItem("Value").Value;
+                                    if (!localizationManager.AddRawString(key, value))
+                                    {
+                                        Log.Warning("Can not add raw string with key '{0}' which may be invalid or duplicate.", key);
+                                        return false;
+                                    }
+                                }
+                            }
                         }
                     }
                 }

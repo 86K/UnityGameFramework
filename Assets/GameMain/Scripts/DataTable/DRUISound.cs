@@ -5,11 +5,14 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 // 此文件由工具自动生成，请勿直接修改。
-// 生成时间：2021-06-16 21:54:35.666
+// 生成时间：2025-04-01 15:08:02.446
 //------------------------------------------------------------
 
+using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using UnityEngine;
 using UnityGameFramework.Runtime;
 
 namespace StarForce
@@ -19,12 +22,18 @@ namespace StarForce
     /// </summary>
     public class DRUISound : DataRowBase
     {
-        private int m_Id;
+        private int m_Id = 0;
 
         /// <summary>
         /// 获取声音编号。
         /// </summary>
-        public override int Id => m_Id;
+        public override int Id
+        {
+            get
+            {
+                return m_Id;
+            }
+        }
 
         /// <summary>
         /// 获取资源名称。
