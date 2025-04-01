@@ -17,8 +17,6 @@ namespace StarForce
         private bool m_NeedUpdateVersion;
         private VersionInfo m_VersionInfo;
 
-        public override bool UseNativeDialog => true;
-
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
             base.OnEnter(procedureOwner);

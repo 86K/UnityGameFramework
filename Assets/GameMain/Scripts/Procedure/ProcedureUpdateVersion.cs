@@ -15,8 +15,6 @@ namespace StarForce
         private bool m_UpdateVersionComplete;
         private UpdateVersionListCallbacks m_UpdateVersionListCallbacks;
 
-        public override bool UseNativeDialog => true;
-
         protected override void OnInit(ProcedureOwner procedureOwner)
         {
             base.OnInit(procedureOwner);

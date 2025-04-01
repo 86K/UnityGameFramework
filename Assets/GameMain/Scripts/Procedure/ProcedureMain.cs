@@ -19,9 +19,7 @@ namespace StarForce
         private GameBase m_CurrentGame;
         private bool m_GotoMenu;
         private float m_GotoMenuDelaySeconds;
-
-        public override bool UseNativeDialog => false;
-
+        
         public void GotoMenu()
         {
             m_GotoMenu = true;

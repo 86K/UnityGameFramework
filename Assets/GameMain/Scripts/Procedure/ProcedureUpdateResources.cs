@@ -13,9 +13,7 @@ namespace StarForce
         private int m_UpdateSuccessCount;
         private List<UpdateLengthData> m_UpdateLengthData = new List<UpdateLengthData>();
         private UpdateResourceForm m_UpdateResourceForm;
-
-        public override bool UseNativeDialog => true;
-
+        
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
             base.OnEnter(procedureOwner);

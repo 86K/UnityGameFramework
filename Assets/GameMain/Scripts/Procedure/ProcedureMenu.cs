@@ -14,9 +14,7 @@ namespace StarForce
     {
         private bool m_StartGame;
         private MenuForm m_MenuForm;
-
-        public override bool UseNativeDialog => false;
-
+        
         public void StartGame()
         {
             m_StartGame = true;

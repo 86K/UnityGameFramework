@@ -18,8 +18,6 @@ namespace StarForce
         private bool m_IsChangeSceneComplete;
         private int m_BackgroundMusicId;
 
-        public override bool UseNativeDialog => false;
-
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
             base.OnEnter(procedureOwner);

@@ -30,9 +30,7 @@ namespace StarForce
         };
 
         private Dictionary<string, bool> m_LoadedFlag = new Dictionary<string, bool>();
-
-        public override bool UseNativeDialog => true;
-
+        
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
             base.OnEnter(procedureOwner);

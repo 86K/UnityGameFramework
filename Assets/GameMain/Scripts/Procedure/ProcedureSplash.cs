@@ -12,15 +12,10 @@ namespace StarForce
 {
     public class ProcedureSplash : ProcedureBase
     {
-        public override bool UseNativeDialog => true;
-
         protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)
         {
             base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
-
-            // TODO: 这里可以播放一个 Splash 动画
-            // ...
-
+            
             if (GameEntry.Base.EditorResourceMode)
             {
                 // 编辑器模式
